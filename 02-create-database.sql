@@ -54,17 +54,38 @@ create table if not exists role_type(
   constraint role_type_pk primary key(id)
 );
 
-create table if not exists party_role(
+create table if not exists role_type(
   id uuid default uuid_generate_v4(),
-  from_date date,
+  from_date date not null,
   thru_date date,
   role_type_id uuid not null references role_type(id),
   party_id uuid not null references party(id),
   constraint party_role_pk primary key(id)
 );
 
+create table if not exists party_role_type() inherits(role_type);
+
 create table if not exists person_role()inherits(party_role);
 create table if not exists organization_role()inherits(party_role);
 create table if not exists organization_unit()inherits(organization_role);
 create table if not exists internal_organization()inherits(organization_role);
 create table if not exists customer_role()inherits(party_role);
+
+create table if not exists party_relationship_type(
+  id uuid default uuid_generate_v4(),
+  name text unique not null constraint party_relationship_type_name_not_empty check (name <> ''),
+  description text,
+  from_party_role_type uuid references party_role_type(id),
+  to_party_role_type uuid references party_role_type(id),
+  constraint party_relationship_type_pk primary key(id)
+);
+
+
+create table if not exists party_relationship(
+  id uuid default uuid_generate_v4(),
+  from_date date not null,
+  thru_date date,
+  comment text,
+  party_relationship_type_id uuid not null references party_relationship_type(id),
+  constraint party_relationship_pk primary key(id)
+);
