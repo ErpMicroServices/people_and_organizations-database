@@ -1,0 +1,10 @@
+{
+  "generator-micro-services": {
+    "promptValues": {
+      "name": "party-database",
+      "description": "Database for a service",
+      "author_name": "Jim Barrows",
+      "author_email": "Jim.Barrows@gmail.com"
+    }
+  }
+}
