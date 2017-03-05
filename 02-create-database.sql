@@ -54,16 +54,16 @@ create table if not exists role_type(
   constraint role_type_pk primary key(id)
 );
 
-create table if not exists role_type(
+create table if not exists party_role_type() inherits(role_type);
+
+create table if not exists party_role(
   id uuid default uuid_generate_v4(),
   from_date date not null,
   thru_date date,
-  role_type_id uuid not null references role_type(id),
+  party_role_type uuid not null references party_role_type(id),
   party_id uuid not null references party(id),
   constraint party_role_pk primary key(id)
 );
-
-create table if not exists party_role_type() inherits(role_type);
 
 create table if not exists person_role()inherits(party_role);
 create table if not exists organization_role()inherits(party_role);
@@ -80,6 +80,19 @@ create table if not exists party_relationship_type(
   constraint party_relationship_type_pk primary key(id)
 );
 
+create table if not exists priority_type(
+  id uuid default uuid_generate_v4(),
+  description text unique not null constraint priority_type_description_not_empty check (description <> ''),
+  constraint priority_type_pk primary key(id)
+);
+
+create table if not exists status_type(
+  id uuid default uuid_generate_v4(),
+  description text unique not null constraint status_type_description_not_empty check (description <> ''),
+  constraint status_type_pk primary key(id)
+);
+
+create table if not exists party_relationship_status_type() inherits (status_type);
 
 create table if not exists party_relationship(
   id uuid default uuid_generate_v4(),
@@ -87,5 +100,50 @@ create table if not exists party_relationship(
   thru_date date,
   comment text,
   party_relationship_type_id uuid not null references party_relationship_type(id),
+  party_relationship_status_type_id uuid not null references party_relationship_status_type(id),
   constraint party_relationship_pk primary key(id)
+);
+
+create table if not exists geographic_boundary_type(
+  id uuid default uuid_generate_v4(),
+  description text unique not null constraint geographic_boundary_type_description_not_empty check (description <> ''),
+  constraint geographic_boundary_type_pk primary key(id)
+);
+
+create table if not exists geographic_boundary(
+  id uuid default uuid_generate_v4(),
+  geo_code text,
+  name text,
+  abbreviation text,
+  constraint geographic_boundary_pk primary key(id)
+);
+
+create table if not exists geographic_boundary_association(
+  id uuid default uuid_generate_v4(),
+  within_boundary uuid not null references geographic_boundary(id),
+  in_boundary uuid not null references geographic_boundary(id),
+  constraint geographic_boundary_association_pk primary key(id)
+);
+
+create table if not exists postal_address(
+  id uuid default uuid_generate_v4(),
+  address text,
+  directions text,
+  constraint postal_address_pk primary key(id)
+);
+
+create table if not exists party_postal_address(
+  id uuid default uuid_generate_v4(),
+  from_date date not null,
+  thru_date date,
+  party_id uuid not null references party(id),
+  postal_address_id uuid not null references postal_address(id),
+  constraint party_postal_address_pk primary key(id)
+);
+
+create table if not exists postal_address_boundary(
+  id uuid default uuid_generate_v4(),
+  postal_address_id uuid not null references postal_address(id),
+  geographic_boundary_id uuid not null references geographic_boundary(id),
+  constraint postal_address_boundary_pk primary key(id)
 );
