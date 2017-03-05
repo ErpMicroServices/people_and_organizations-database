@@ -60,7 +60,7 @@ create table if not exists party_role(
   id uuid default uuid_generate_v4(),
   from_date date not null,
   thru_date date,
-  party_role_type uuid not null references party_role_type(id),
+  party_role_type_id uuid not null references party_role_type(id),
   party_id uuid not null references party(id),
   constraint party_role_pk primary key(id)
 );
@@ -147,3 +147,26 @@ create table if not exists postal_address_boundary(
   geographic_boundary_id uuid not null references geographic_boundary(id),
   constraint postal_address_boundary_pk primary key(id)
 );
+
+create table if not exists contact_mechanism_type(
+  id uuid default uuid_generate_v4(),
+  description text unique not null constraint contact_mechanism_type_type_description_not_empty check (description <> ''),
+  constraint contact_mechanism_type_pk primary key(id)
+);
+
+create table if not exists contact_mechanism(
+  id uuid default uuid_generate_v4(),
+  end_point text not null constraint contact_mechanism_end_point_not_empty check (end_point <> ''),
+  constraint contact_mechanism_pk primary key(id)
+);
+
+create table if not exists party_contact_mechanism(
+  id uuid default uuid_generate_v4(),
+  from_date date not null,
+  thru_date date,
+  do_not_solicit_indicator boolean default true,
+  comment text,
+  party_id uuid references party(id),
+  contact_mechanism_id uuid references contact_mechanism(id),
+  constraint party_contact_mechanism_pk primary key(id)
+)
