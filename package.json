@@ -8,9 +8,9 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "build": "docker build --tag party-database .",
-    "start": "docker run --detach --publish 5432:5432 --name party-database-1 party-database",
-    "test": "cucumber-js --compiler es6:babel-core/register  -r ./features ../e-commerce-features"
+    "build": "docker build --tag erpmicroservices/party-database .",
+    "start": "docker run --detach --publish 5432:5432 --name party-database-1 erpmicroservices/party-database",
+    "test": "cucumber-js --compiler es6:babel-core/register  -r ./features ../party-features"
   },
   "repository": {
     "type": "git",

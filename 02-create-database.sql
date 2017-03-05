@@ -191,14 +191,6 @@ create table if not exists communication_event_role_type(
   constraint communication_event_role_type_pk primary key(id)
 );
 
-create table if not exists communication_event_role(
-  id uuid default uuid_generate_v4(),
-  communication_event_id uuid not null references communciation_event(id),
-  communication_event_role_type_id uuid not null references communication_event_role(id),
-  party_id uuid not null references party(id),
-  constraint communication_event_role_pk primary key(id)
-);
-
 create table if not exists communication_event_purpose(
   id uuid default uuid_generate_v4(),
   description text unique not null constraint communication_event_purpose__description_not_empty check (description <> ''),
@@ -235,7 +227,7 @@ create table if not exists "case"(
   description text unique not null constraint communication_event_status_type_description_not_empty check (description <> ''),
   started_at timestamp not null,
   case_status_type_id uuid not null references case_status_type(id),
-  constraint communication_event_status_type_pk primary key(id)
+  constraint case_pk primary key(id)
 );
 
 create table if not exists case_role(
@@ -260,7 +252,15 @@ create table if not exists communication_event(
 
 create table if not exists communication_event_work_effort(
   id uuid default uuid_generate_v4(),
-  communication_event_id uuid not null references communciation_event(id),
+  communication_event_id uuid not null references communication_event(id),
   work_effort_id uuid not null,
   constraint communication_event_work_effort_pk primary key(id)
+);
+
+create table if not exists communication_event_role(
+  id uuid default uuid_generate_v4(),
+  communication_event_id uuid not null references communication_event(id),
+  communication_event_role_type_id uuid not null references communication_event_role(id),
+  party_id uuid not null references party(id),
+  constraint communication_event_role_pk primary key(id)
 );
