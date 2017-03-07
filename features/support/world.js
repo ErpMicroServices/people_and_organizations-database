@@ -9,9 +9,14 @@ var {
 function CustomWorld() {
   this.config = config;
   this.db = database;
-  this.user = {
-      user_id: '',
-      password: ''
+  this.person = {
+      id: '',
+      first_name: '',
+      last_name: '',
+      title: '',
+      nickname: '',
+      date_of_birth: '',
+      comment: ''
   };
 
   this.result = {

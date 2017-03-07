@@ -11,11 +11,11 @@ defineSupportCode(function({
 }) {
 
     Before(function(result, callback) {
-      // Promise.all([
-      //   this.db.any("delete from ")
-      // ])
-      // .then((data) => callback())
-      // .catch((error) => callback(error));
+      Promise.all([
+        this.db.any("delete from party")
+      ])
+      .then((data) => callback())
+      .catch((error) => callback(error));
     });
 
     After(function() {});
