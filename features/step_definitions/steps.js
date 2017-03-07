@@ -55,4 +55,90 @@ defineSupportCode(function({
             });
 
     });
+
+    Given('the person is in the database', function() {
+        return database.one("insert into person (first_name, last_name, title, nickname, date_of_birth, comment) values($1, $2, $3, $4, $5, $6) returning id", [this.person.first_name, this.person.last_name, this.person.title, this.person.nickname, this.person.date_of_birth, this.person.comment])
+            .then((data) => this.person.id = data.id)
+
+    });
+
+    When('I search by the person\'s id', function() {
+        return database.one("select id, first_name, last_name, title, nickname, date_of_birth, comment from person where id=$1", [this.person.id])
+            .then(data => this.result.data = data);
+    });
+
+    Then('I find the person', function(callback) {
+        let data = this.result.data;
+        expect(data.id).to.be.equal(this.person.id);
+        expect(data.first_name).to.be.equal(this.person.first_name);
+        expect(data.last_name).to.be.equal(this.person.last_name);
+        expect(data.title).to.be.equal(this.person.title);
+        expect(data.nickname).to.be.equal(this.person.nickname);
+        expect(data.date_of_birth.toString()).to.be.equal(this.person.date_of_birth.toString());
+        expect(data.comment).to.be.equal(this.person.comment);
+        callback();
+    });
+
+    When('I search for all people', function() {
+        return database.any("select id, first_name, last_name, title, nickname, date_of_birth, comment from person ")
+            .then(data => this.result.data = data);
+    });
+
+    Then('I find the person in the list', function(callback) {
+        expect(this.result.data).to.be.instanceof(Array);
+        expect(this.result.data.length).to.be.equal(1);
+        expect(this.result.data.find(p => p.id == this.person.id)).to.be.deep.equal(this.person);
+        callback();
+    });
+
+    When('I update the first name to {first_name:stringInDoubleQuotes}', function(first_name) {
+        return database
+            .none("update person set first_name=$1 where id=$2 ", [first_name, this.person.id])
+            .then(() => database.one("select id, first_name, last_name, title, nickname, date_of_birth, comment from person where id=$1", [this.person.id]))
+            .then(data => this.result.data = data);
+    });
+
+    Then('the first name is {first_name:stringInDoubleQuotes}', function(first_name, callback) {
+        expect(this.result.data.first_name).to.be.equal(first_name);
+        callback();
+    });
+
+    Then('the last name is {last_name:stringInDoubleQuotes}', function(last_name, callback) {
+        expect(this.result.data.last_name).to.be.equal(last_name);
+        callback();
+    });
+
+    Then('the title is {title:stringInDoubleQuotes}', function(title, callback) {
+        expect(this.result.data.title).to.be.equal(title);
+        callback();
+    });
+
+    Then('the nickname is {nickname:stringInDoubleQuotes}', function(nickname, callback) {
+        expect(this.result.data.nickname).to.be.equal(nickname);
+        callback();
+    });
+
+    Then('the date of birth is {date_of_birth:stringInDoubleQuotes}', function(date_of_birth, callback) {
+        expect(this.result.data.date_of_birth.toString()).to.be.equal(moment(date_of_birth, "MM-DD-YYYY").toDate().toString());
+        callback();
+    });
+
+    Then('the comment is {comment:stringInDoubleQuotes}', function(comment, callback) {
+        expect(this.result.data.comment).to.be.equal(comment);
+        callback();
+    });
+
+    When('I delete the person', function() {
+        return database
+            .none("delete from person where id=$1 ", [this.person.id])
+    });
+
+    Then('the person is no longer in the databse', function() {
+        return database.any("select id, first_name, last_name, title, nickname, date_of_birth, comment from person where id = $1", [this.person.id])
+            .then(data => {
+                expect(data).to.be.instanceof(Array);
+                expect(data.length).to.be.equal(0);
+            });
+    });
+
 });
