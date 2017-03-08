@@ -16,12 +16,20 @@ function CustomWorld() {
       title: '',
       nickname: '',
       date_of_birth: '',
-      comment: ''
+      comment: '',
+      email_address: ''
   };
 
+  this.contact_mechanism_types = [];
+  this.party_types = [];
+
+  this.email_id = () => this.contact_mechanism_types.find((cm) => cm.description === 'Email Address').id;
+
+  this.party_type_id = (party_type) => this.party_types.find(pt => pt.description === party_type).id;
+
   this.result = {
-      error: null,
-      data: null
+      error: {},
+      data: {}
   };
 }
 
