@@ -182,3 +182,38 @@ CREATE TABLE IF NOT EXISTS communication_event_role(  id uuid DEFAULT uuid_gener
                                                       communication_event_role_type_id uuid NOT NULL REFERENCES communication_event_role(id),
                                                       party_id uuid NOT NULL REFERENCES party(id),
                                                       CONSTRAINT communication_event_role_pk PRIMARY key(id));
+
+create table if not exists facility_type(
+  id uuid DEFAULT uuid_generate_v4(),
+  description text not null CONSTRAINT facility_type_description_not_empty CHECK (description <> ''),
+  CONSTRAINT facility_type_pk PRIMARY key(id)
+);
+
+create table if not exists facility(
+  id uuid DEFAULT uuid_generate_v4(),
+  description text not null CONSTRAINT facility_description_not_empty CHECK (description <> ''),
+  square_footage bigint,
+  part_of uuid references facility(id),
+  described_by uuid not null references facility_type(id),
+  CONSTRAINT _pk PRIMARY key(id)
+);
+
+create table if not exists facility_role_type(
+  id uuid DEFAULT uuid_generate_v4(),
+  description text not null CONSTRAINT facility_role_type_description_not_empty CHECK (description <> ''),
+  CONSTRAINT facility_role_type_pk PRIMARY key(id)
+);
+
+create table if not exists facility_role(
+  id uuid DEFAULT uuid_generate_v4(),
+  described_by uuid not null references facility_role_type(id),
+  party_id uuid not null references party(id),
+  CONSTRAINT facility_role_pk PRIMARY key(id)
+);
+
+create table if not exists facility_contact_mechanism(
+  id uuid DEFAULT uuid_generate_v4(),
+  facility_id uuid not null references facility(id),
+  contact_mechanism_id uuid not null references contact_mechanism(id),
+  CONSTRAINT facility_contact_mechanism_pk PRIMARY key(id)
+);

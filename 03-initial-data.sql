@@ -244,3 +244,10 @@ VALUES ('Informal Organization');
 
 INSERT INTO party_type (description)
 VALUES ('Person');
+
+insert into facility_type (description) values ('Warehouse');
+insert into facility_type (description) values ('Plant');
+insert into facility_type (description) values ('Building');
+insert into facility_type (description) values ('Floor');
+insert into facility_type (description) values ('Office');
+insert into facility_type (description) values ('Room');
