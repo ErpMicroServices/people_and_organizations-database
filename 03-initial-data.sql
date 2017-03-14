@@ -46,29 +46,15 @@ INSERT INTO communication_event_type (description)
 VALUES ('Email Communication');
 
 
-INSERT INTO communication_event_type (description)
-VALUES ('Web Site Correspondence');
+INSERT INTO communication_event_type (description) VALUES ('Web Site Correspondence');
 
-
-INSERT INTO contact_mechanism_type (description)
-VALUES ('Postal Address');
-
-
-INSERT INTO contact_mechanism_type (description)
-VALUES ('Telecommunications Number');
-
-
-INSERT INTO contact_mechanism_type (description)
-VALUES ('Email Address');
-
-
-INSERT INTO contact_mechanism_type (description)
-VALUES ('Facebook');
-
-
-INSERT INTO contact_mechanism_type (description)
-VALUES ('Twitter');
-
+insert into contact_mechanism_type (description) values ('Email Address');
+insert into contact_mechanism_type (description) values ('Facebook');
+insert into contact_mechanism_type (description) values ('IP Address');
+insert into contact_mechanism_type (description) values ('Postal Address');
+insert into contact_mechanism_type (description) values ('Telecommunications Number');
+insert into contact_mechanism_type (description) values ('Twitter');
+insert into contact_mechanism_type (description) values ('Web Address');
 
 INSERT INTO geographic_boundary_type (description)
 VALUES ('Country');
@@ -137,98 +123,43 @@ VALUES ('Partnership');
 INSERT INTO party_relationship_type (name)
 VALUES ('Organization Rollup');
 
+INSERT INTO party_relationship_type (name)
+VALUES ('Web Master Assignment');
 
-INSERT INTO party_role_type (description)
-VALUES ('Employee');
+insert into party_relationship_type (name) values ('Visitor ISP');
 
+insert into party_relationship_type (name) values ('Host Server Visitor');
 
-INSERT INTO party_role_type (description)
-VALUES ('Contractor');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Family member');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Contact');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Bill to Customer');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Ship to Customer');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('End user Customer');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Prospect');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Shareholder');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Agent');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Distributor');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Partner');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Competitor');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Household');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Regulatory Agency');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Supplier');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Association');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Parent Organization');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Department');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Subsidiary');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Division');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Other Organization Unit');
-
-
-INSERT INTO party_role_type (description)
-VALUES ('Internal Organization');
-
+insert into party_role_type (description) values ('Agent');
+insert into party_role_type (description) values ('Association');
+insert into party_role_type (description) values ('Bill to Customer');
+insert into party_role_type (description) values ('Contact');
+insert into party_role_type (description) values ('Competitor');
+insert into party_role_type (description) values ('Contractor');
+insert into party_role_type (description) values ('Customer');
+insert into party_role_type (description) values ('Distributor');
+insert into party_role_type (description) values ('Division');
+insert into party_role_type (description) values ('Department');
+insert into party_role_type (description) values ('Employee');
+insert into party_role_type (description) values ('End user Customer');
+insert into party_role_type (description) values ('Family member');
+insert into party_role_type (description) values ('Hosting Server');
+insert into party_role_type (description) values ('Household');
+insert into party_role_type (description) values ('Internal Organization');
+insert into party_role_type (description) values ('ISP');
+insert into party_role_type (description) values ('Other Organization Unit');
+insert into party_role_type (description) values ('Parent Organization');
+insert into party_role_type (description) values ('Partner');
+insert into party_role_type (description) values ('Prospect');
+insert into party_role_type (description) values ('Referrer');
+insert into party_role_type (description) values ('Regulatory Agency');
+insert into party_role_type (description) values ('Shareholder');
+insert into party_role_type (description) values ('Ship to Customer');
+insert into party_role_type (description) values ('Subscriber');
+insert into party_role_type (description) values ('Subsidiary');
+insert into party_role_type (description) values ('Supplier');
+insert into party_role_type (description) values ('Visitor');
+insert into party_role_type (description) values ('Webmaster');
 
 INSERT INTO party_type (description)
 VALUES ('Organization');
@@ -244,6 +175,8 @@ VALUES ('Informal Organization');
 
 INSERT INTO party_type (description)
 VALUES ('Person');
+
+insert into party_type (description) values ('Automated Agent');
 
 insert into facility_type (description) values ('Warehouse');
 insert into facility_type (description) values ('Plant');
