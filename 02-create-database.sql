@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS party_role(  id uuid DEFAULT uuid_generate_v4(),
                                         CONSTRAINT party_role_pk PRIMARY key(id));
 
 CREATE TABLE IF NOT EXISTS party_relationship_type(   id uuid DEFAULT uuid_generate_v4(),
-                                                      name text UNIQUE NOT NULL CONSTRAINT party_relationship_type_name_not_empty CHECK (name <> ''), description text,
+                                                      description text UNIQUE NOT NULL CONSTRAINT party_relationship_type_description_not_empty CHECK (description <> ''),
                                                       from_party_role_type uuid REFERENCES party_role_type(id),
                                                       to_party_role_type uuid REFERENCES party_role_type(id),
                                                       CONSTRAINT party_relationship_type_pk PRIMARY key(id));
@@ -55,10 +55,12 @@ CREATE TABLE IF NOT EXISTS party_relationship_status_type(  id uuid DEFAULT uuid
                                                             CONSTRAINT party_relationship_status_type_pk PRIMARY key(id));
 
 
-CREATE TABLE IF NOT EXISTS party_relationship(  id uuid DEFAULT uuid_generate_v4(),
+CREATE TABLE IF NOT EXISTS party_relationship(  id uuid default uuid_generate_v4(),
                                                 from_date date NOT NULL default CURRENT_DATE,
                                                 thru_date date,
-                                                COMMENT text,
+                                                comment text,
+                                                from_party_role_id uuid not null references party_role(id),
+                                                to_party_role_id uuid not null references party_role(id),
                                                 party_relationship_type_id uuid NOT NULL REFERENCES party_relationship_type(id),
                                                 party_relationship_status_type_id uuid NOT NULL REFERENCES party_relationship_status_type(id),
                                                 CONSTRAINT party_relationship_pk PRIMARY key(id));
@@ -115,7 +117,8 @@ CREATE TABLE IF NOT EXISTS party_contact_mechanism( id uuid DEFAULT uuid_generat
                                                     from_date date not null default CURRENT_DATE,
                                                     thru_date date,
                                                     do_not_solicit_indicator boolean DEFAULT TRUE,
-                                                    COMMENT text, party_id uuid REFERENCES party(id),
+                                                    COMMENT text,
+                                                    party_id uuid REFERENCES party(id),
                                                     contact_mechanism_id uuid REFERENCES contact_mechanism(id),
                                                     CONSTRAINT party_contact_mechanism_pk PRIMARY key(id));
 

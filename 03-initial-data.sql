@@ -1,52 +1,52 @@
-INSERT INTO communication_event_purpose_type (description)
-VALUES ('Support Call');
+insert into communication_event_purpose_type (description)
+values ('Support Call');
 
 
-INSERT INTO communication_event_purpose_type (description)
-VALUES ('Inquiry');
+insert into communication_event_purpose_type (description)
+values ('Inquiry');
 
 
-INSERT INTO communication_event_purpose_type (description)
-VALUES ('Customer Service Call');
+insert into communication_event_purpose_type (description)
+values ('Customer Service Call');
 
 
-INSERT INTO communication_event_purpose_type (description)
-VALUES ('Sales Follow Up');
+insert into communication_event_purpose_type (description)
+values ('Sales Follow Up');
 
 
-INSERT INTO communication_event_purpose_type (description)
-VALUES ('Meeting');
+insert into communication_event_purpose_type (description)
+values ('Meeting');
 
 
-INSERT INTO communication_event_purpose_type (description)
-VALUES ('Conference');
+insert into communication_event_purpose_type (description)
+values ('Conference');
 
 
-INSERT INTO communication_event_purpose_type (description)
-VALUES ('Activity Request');
+insert into communication_event_purpose_type (description)
+values ('Activity Request');
 
 
-INSERT INTO communication_event_type (description)
-VALUES ('Phone Communication');
+insert into communication_event_type (description)
+values ('Phone Communication');
 
 
-INSERT INTO communication_event_type (description)
-VALUES ('Fax Communication');
+insert into communication_event_type (description)
+values ('Fax Communication');
 
 
-INSERT INTO communication_event_type (description)
-VALUES ('Face-to-Face Communication');
+insert into communication_event_type (description)
+values ('Face-to-Face Communication');
 
 
-INSERT INTO communication_event_type (description)
-VALUES ('Letter Correspondence');
+insert into communication_event_type (description)
+values ('Letter Correspondence');
 
 
-INSERT INTO communication_event_type (description)
-VALUES ('Email Communication');
+insert into communication_event_type (description)
+values ('Email Communication');
 
 
-INSERT INTO communication_event_type (description) VALUES ('Web Site Correspondence');
+insert into communication_event_type (description) values ('Web Site Correspondence');
 
 insert into contact_mechanism_type (description) values ('Email Address');
 insert into contact_mechanism_type (description) values ('Facebook');
@@ -56,79 +56,56 @@ insert into contact_mechanism_type (description) values ('Telecommunications Num
 insert into contact_mechanism_type (description) values ('Twitter');
 insert into contact_mechanism_type (description) values ('Web Address');
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('Country');
+insert into geographic_boundary_type (description)
+values ('Country');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('Postal Code');
+insert into geographic_boundary_type (description)
+values ('Postal Code');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('Province');
+insert into geographic_boundary_type (description)
+values ('Province');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('Territory');
+insert into geographic_boundary_type (description)
+values ('Territory');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('State');
+insert into geographic_boundary_type (description)
+values ('State');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('County');
+insert into geographic_boundary_type (description)
+values ('County');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('City');
+insert into geographic_boundary_type (description)
+values ('City');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('Sales Territory');
+insert into geographic_boundary_type (description)
+values ('Sales Territory');
 
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('Service Territory');
+insert into geographic_boundary_type (description)
+values ('Service Territory');
+insert into geographic_boundary_type (description)values ('Region');
 
+insert into party_relationship_status_type (description) values ('Leads');
+insert into party_relationship_status_type (description) values ('Prospects');
+insert into party_relationship_status_type (description) values ('Customers');
 
-INSERT INTO geographic_boundary_type (description)
-VALUES ('Region');
-
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Supplier Relationship');
-
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Organization Contact Relationship');
-
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Employment');
-
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Customer Relationship');
-
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Distribution Channel Relationship');
-
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Partnership');
-
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Organization Rollup');
-
-INSERT INTO party_relationship_type (name)
-VALUES ('Web Master Assignment');
-
-insert into party_relationship_type (name) values ('Visitor ISP');
-
-insert into party_relationship_type (name) values ('Host Server Visitor');
+insert into party_relationship_type (description) values ('Supplier Relationship');
+insert into party_relationship_type (description) values ('Organization Contact Relationship');
+insert into party_relationship_type (description) values ('Employment');
+insert into party_relationship_type (description) values ('Customer Relationship');
+insert into party_relationship_type (description) values ('Distribution Channel Relationship');
+insert into party_relationship_type (description) values ('Partnership');
+insert into party_relationship_type (description) values ('Organization Rollup');
+insert into party_relationship_type (description) values ('Web Master Assignment');
+insert into party_relationship_type (description) values ('Visitor ISP');
+insert into party_relationship_type (description) values ('Host Server Visitor');
 
 insert into party_role_type (description) values ('Agent');
 insert into party_role_type (description) values ('Association');
@@ -143,7 +120,6 @@ insert into party_role_type (description) values ('Department');
 insert into party_role_type (description) values ('Employee');
 insert into party_role_type (description) values ('End user Customer');
 insert into party_role_type (description) values ('Family member');
-insert into party_role_type (description) values ('Hosting Server');
 insert into party_role_type (description) values ('Household');
 insert into party_role_type (description) values ('Internal Organization');
 insert into party_role_type (description) values ('ISP');
@@ -158,25 +134,12 @@ insert into party_role_type (description) values ('Ship to Customer');
 insert into party_role_type (description) values ('Subscriber');
 insert into party_role_type (description) values ('Subsidiary');
 insert into party_role_type (description) values ('Supplier');
-insert into party_role_type (description) values ('Visitor');
 insert into party_role_type (description) values ('Webmaster');
 
-INSERT INTO party_type (description)
-VALUES ('Organization');
-
-
-INSERT INTO party_type (description)
-VALUES ('Legal Organization');
-
-
-INSERT INTO party_type (description)
-VALUES ('Informal Organization');
-
-
-INSERT INTO party_type (description)
-VALUES ('Person');
-
-insert into party_type (description) values ('Automated Agent');
+insert into party_type (description) values ('Organization');
+insert into party_type (description) values ('Legal Organization');
+insert into party_type (description) values ('Informal Organization');
+insert into party_type (description) values ('Person');
 
 insert into facility_type (description) values ('Warehouse');
 insert into facility_type (description) values ('Plant');

@@ -8,7 +8,7 @@ defineSupportCode(function({
     When,
     Then
 }) {
-    Given('I have an email {email:stringInDoubleQuotes}', function(email, callback) {
+    Given('I have provided an email {email:stringInDoubleQuotes}', function(email, callback) {
         this.person.email_address = email;
         callback();
     });
@@ -30,7 +30,7 @@ defineSupportCode(function({
 	       pcm.party_id = $1
          and pcm.contact_mechanism_id = cm.id
          and cm.contact_mechanism_type_id = cmt.id
-        `, [this.result.data.id])
+        `, [this.person.id])
         .then((data) => {
           expect(data.length).to.be.equal(1);
           expect(data[0].end_point).to.be.equal(this.person.email_address)
