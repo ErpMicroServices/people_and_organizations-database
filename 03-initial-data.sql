@@ -61,9 +61,9 @@ insert into geographic_boundary (geo_code, name, abbreviation, geographic_bounda
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Phoenix', 'PHX', (select id from geographic_boundary_type where description = 'City' ));
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', '85037', 'PHX', (select id from geographic_boundary_type where description = 'Postal Code' ));
 
-insert into geographic_boundary (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Arizona'));
-insert into geographic_boundary (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='Arizona'), (select id from geographic_boundary where name='Phoenix'));
-insert into geographic_boundary (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='Phoenix'), (select id from geographic_boundary where name='85037'));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Arizona'));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='Arizona'), (select id from geographic_boundary where name='Phoenix'));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='Phoenix'), (select id from geographic_boundary where name='85037'));
 
 insert into party_relationship_status_type (description) values ('Leads');
 insert into party_relationship_status_type (description) values ('Prospects');
