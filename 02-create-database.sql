@@ -75,6 +75,7 @@ CREATE TABLE IF NOT EXISTS geographic_boundary( id uuid DEFAULT uuid_generate_v4
                                                 geo_code text,
                                                 name text,
                                                 abbreviation text,
+                                                geographic_boundary_type_id uuid not null references geographic_boundary_type(id),
                                                 CONSTRAINT geographic_boundary_pk PRIMARY key(id));
 
 
