@@ -84,24 +84,6 @@ CREATE TABLE IF NOT EXISTS geographic_boundary_association( id uuid DEFAULT uuid
                                                             CONSTRAINT geographic_boundary_association_pk PRIMARY key(id));
 
 
-CREATE TABLE IF NOT EXISTS postal_address(  id uuid DEFAULT uuid_generate_v4(),
-                                            address text,
-                                            directions text,
-                                            CONSTRAINT postal_address_pk PRIMARY key(id));
-
-
-CREATE TABLE IF NOT EXISTS party_postal_address(  id uuid DEFAULT uuid_generate_v4(),
-                                                  from_date date NOT NULL default CURRENT_DATE,
-                                                  thru_date date,
-                                                  party_id uuid NOT NULL REFERENCES party(id),
-                                                  postal_address_id uuid NOT NULL REFERENCES postal_address(id),
-                                                  CONSTRAINT party_postal_address_pk PRIMARY key(id));
-
-CREATE TABLE IF NOT EXISTS postal_address_boundary( id uuid DEFAULT uuid_generate_v4(),
-                                                    postal_address_id uuid NOT NULL REFERENCES postal_address(id),
-                                                    geographic_boundary_id uuid NOT NULL REFERENCES geographic_boundary(id),
-                                                    CONSTRAINT postal_address_boundary_pk PRIMARY key(id));
-
 CREATE TABLE IF NOT EXISTS contact_mechanism_type(  id uuid DEFAULT uuid_generate_v4(),
                                                     description text UNIQUE NOT NULL CONSTRAINT contact_mechanism_type_description_not_empty CHECK (description <> ''),
                                                     CONSTRAINT contact_mechanism_type_pk PRIMARY key(id));
@@ -109,9 +91,14 @@ CREATE TABLE IF NOT EXISTS contact_mechanism_type(  id uuid DEFAULT uuid_generat
 
 CREATE TABLE IF NOT EXISTS contact_mechanism( id uuid DEFAULT uuid_generate_v4(),
                                               end_point text NOT NULL CONSTRAINT contact_mechanism_end_point_not_empty CHECK (end_point <> ''),
+                                              directions text,
                                               contact_mechanism_type_id uuid NOT NULL REFERENCES contact_mechanism_type(id),
                                               CONSTRAINT contact_mechanism_pk PRIMARY key(id));
 
+CREATE TABLE IF NOT EXISTS contact_mechanism_geographic_boundary( id uuid DEFAULT uuid_generate_v4(),
+                                                    contact_mechanism_id uuid NOT NULL REFERENCES contact_mechanism(id),
+                                                    geographic_boundary_id uuid NOT NULL REFERENCES geographic_boundary(id),
+                                                    CONSTRAINT contact_mechanism_geographic_boundary_pk PRIMARY key(id));
 
 CREATE TABLE IF NOT EXISTS party_contact_mechanism( id uuid DEFAULT uuid_generate_v4(),
                                                     from_date date not null default CURRENT_DATE,

@@ -32,20 +32,9 @@ values ('Phone Communication');
 
 insert into communication_event_type (description)
 values ('Fax Communication');
-
-
-insert into communication_event_type (description)
-values ('Face-to-Face Communication');
-
-
-insert into communication_event_type (description)
-values ('Letter Correspondence');
-
-
-insert into communication_event_type (description)
-values ('Email Communication');
-
-
+insert into communication_event_type (description) values ('Face-to-Face Communication');
+insert into communication_event_type (description) values ('Letter Correspondence');
+insert into communication_event_type (description) values ('Email Communication');
 insert into communication_event_type (description) values ('Web Site Correspondence');
 
 insert into contact_mechanism_type (description) values ('Email Address');
@@ -56,40 +45,15 @@ insert into contact_mechanism_type (description) values ('Telecommunications Num
 insert into contact_mechanism_type (description) values ('Twitter');
 insert into contact_mechanism_type (description) values ('Web Address');
 
-insert into geographic_boundary_type (description)
-values ('Country');
-
-
-insert into geographic_boundary_type (description)
-values ('Postal Code');
-
-
-insert into geographic_boundary_type (description)
-values ('Province');
-
-
-insert into geographic_boundary_type (description)
-values ('Territory');
-
-
-insert into geographic_boundary_type (description)
-values ('State');
-
-
-insert into geographic_boundary_type (description)
-values ('County');
-
-
-insert into geographic_boundary_type (description)
-values ('City');
-
-
-insert into geographic_boundary_type (description)
-values ('Sales Territory');
-
-
-insert into geographic_boundary_type (description)
-values ('Service Territory');
+insert into geographic_boundary_type (description) values ('Country');
+insert into geographic_boundary_type (description) values ('Postal Code');
+insert into geographic_boundary_type (description) values ('Province');
+insert into geographic_boundary_type (description) values ('Territory');
+insert into geographic_boundary_type (description) values ('State');
+insert into geographic_boundary_type (description) values ('County');
+insert into geographic_boundary_type (description) values ('City');
+insert into geographic_boundary_type (description) values ('Sales Territory');
+insert into geographic_boundary_type (description) values ('Service Territory');
 insert into geographic_boundary_type (description)values ('Region');
 
 insert into party_relationship_status_type (description) values ('Leads');
