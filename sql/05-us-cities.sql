@@ -1,0 +1,2 @@
+insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Phoenix', 'PHX', (select id from geographic_boundary_type where description = 'City' ));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Arizona'));
