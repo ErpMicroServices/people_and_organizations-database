@@ -1,8 +1,8 @@
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Alabama', 'AL', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Alabama'));
 
-insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Alasaka', 'AK', (select id from geographic_boundary_type where description = 'State' ));
-insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Alasaka'));
+insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Alaska', 'AK', (select id from geographic_boundary_type where description = 'State' ));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Alaska'));
 
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Arizona', 'AZ', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Arizona'));
