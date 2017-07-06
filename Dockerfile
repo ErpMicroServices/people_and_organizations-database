@@ -8,3 +8,4 @@ RUN apt-get update -qq && \
     apt-get install -y apt-utils postgresql-contrib
 
 ADD sql/*.sql /docker-entrypoint-initdb.d/
+ADD generated-sql/*.sql /docker-entrypoint-initdb.d/
