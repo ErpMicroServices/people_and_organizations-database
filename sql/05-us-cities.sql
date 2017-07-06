@@ -1,1843 +1,1843 @@
 
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('50772d37-1ffc-4bfa-a98f-45d39935bc17', 'New York City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5fa85796-ef9a-4fb4-b072-1162cb62c6c3', 'New York City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New York'), '50772d37-1ffc-4bfa-a98f-45d39935bc17');
+    values ( (select id from geographic_boundary where name='New York'), '5fa85796-ef9a-4fb4-b072-1162cb62c6c3');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2e756bba-25a4-4e53-b52d-5004a84661cc', 'Los Angeles', (select id from geographic_boundary_type where description = 'City' ));
+    values ('550f6027-503c-4adb-9e2c-0e597d357eb7', 'Los Angeles', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '2e756bba-25a4-4e53-b52d-5004a84661cc');
+    values ( (select id from geographic_boundary where name='California'), '550f6027-503c-4adb-9e2c-0e597d357eb7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a6da385e-9c30-49c8-b32d-79981d6cd498', 'Chicago', (select id from geographic_boundary_type where description = 'City' ));
+    values ('9f3718e0-ab1d-41d1-a81e-59c333349c29', 'Chicago', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), 'a6da385e-9c30-49c8-b32d-79981d6cd498');
+    values ( (select id from geographic_boundary where name='Illinois'), '9f3718e0-ab1d-41d1-a81e-59c333349c29');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2d33bbe5-a262-4b0a-962a-7b712104dc8d', 'Houston', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5de88f7e-17f8-4ec6-94a3-bdbece633eae', 'Houston', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '2d33bbe5-a262-4b0a-962a-7b712104dc8d');
+    values ( (select id from geographic_boundary where name='Texas'), '5de88f7e-17f8-4ec6-94a3-bdbece633eae');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4a90c3e0-7d26-4a9b-8beb-ade4cd45ff91', 'Phoenix', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f5f54f9f-32dd-4f7d-9652-cb29fc38196a', 'Phoenix', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), '4a90c3e0-7d26-4a9b-8beb-ade4cd45ff91');
+    values ( (select id from geographic_boundary where name='Arizona'), 'f5f54f9f-32dd-4f7d-9652-cb29fc38196a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('79d9fcdd-3394-4e8c-9d09-c821fa3cbe4a', 'Philadelphia', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e710b575-aa8e-4b8a-8346-c00461c03b4b', 'Philadelphia', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Pennsylvania'), '79d9fcdd-3394-4e8c-9d09-c821fa3cbe4a');
+    values ( (select id from geographic_boundary where name='Pennsylvania'), 'e710b575-aa8e-4b8a-8346-c00461c03b4b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f9cc1b79-c171-45dd-b62c-002150b3ab94', 'San Antonio', (select id from geographic_boundary_type where description = 'City' ));
+    values ('aa1bfb15-379c-4163-89e0-01ddd54bfe31', 'San Antonio', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'f9cc1b79-c171-45dd-b62c-002150b3ab94');
+    values ( (select id from geographic_boundary where name='Texas'), 'aa1bfb15-379c-4163-89e0-01ddd54bfe31');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('926494ea-95ca-4514-849c-b4ff2e24232d', 'San Diego', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cf89b5d5-7a2e-4cd9-814e-246fc8c03906', 'San Diego', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '926494ea-95ca-4514-849c-b4ff2e24232d');
+    values ( (select id from geographic_boundary where name='California'), 'cf89b5d5-7a2e-4cd9-814e-246fc8c03906');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4d8ab4af-2f3b-4d59-9ee7-38fd82ad12e0', 'Dallas', (select id from geographic_boundary_type where description = 'City' ));
+    values ('08eb87db-f355-4f92-8899-669a783162c4', 'Dallas', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '4d8ab4af-2f3b-4d59-9ee7-38fd82ad12e0');
+    values ( (select id from geographic_boundary where name='Texas'), '08eb87db-f355-4f92-8899-669a783162c4');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('32a265d8-986f-43d2-91e7-6657037a5fc2', 'San Jose', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4afba631-9613-48d3-bb38-84aa347089a7', 'San Jose', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '32a265d8-986f-43d2-91e7-6657037a5fc2');
+    values ( (select id from geographic_boundary where name='California'), '4afba631-9613-48d3-bb38-84aa347089a7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1b632a0d-d240-40b0-8341-04f468cb1dee', 'Austin', (select id from geographic_boundary_type where description = 'City' ));
+    values ('621c0fe4-2af9-403d-b7ab-289d6d505ac9', 'Austin', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '1b632a0d-d240-40b0-8341-04f468cb1dee');
+    values ( (select id from geographic_boundary where name='Texas'), '621c0fe4-2af9-403d-b7ab-289d6d505ac9');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9e60e4a6-374e-48d8-9c4f-70f436de70da', 'Jacksonville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('69fc5d4a-d615-4857-a1ba-d317fc0f3f41', 'Jacksonville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '9e60e4a6-374e-48d8-9c4f-70f436de70da');
+    values ( (select id from geographic_boundary where name='Florida'), '69fc5d4a-d615-4857-a1ba-d317fc0f3f41');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5ee1b5c5-3be5-43bd-b8a3-939ece438c18', 'San Francisco', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e87443ce-fe0b-4325-a45d-04ce0e84ab3c', 'San Francisco', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '5ee1b5c5-3be5-43bd-b8a3-939ece438c18');
+    values ( (select id from geographic_boundary where name='California'), 'e87443ce-fe0b-4325-a45d-04ce0e84ab3c');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1974d68c-ab46-46af-b4c9-2d6ee0de809d', 'Columbus', (select id from geographic_boundary_type where description = 'City' ));
+    values ('bbf3dbc6-74af-4cfb-b3a4-cc8090648bf6', 'Columbus', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Ohio'), '1974d68c-ab46-46af-b4c9-2d6ee0de809d');
+    values ( (select id from geographic_boundary where name='Ohio'), 'bbf3dbc6-74af-4cfb-b3a4-cc8090648bf6');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('06df950f-c24d-4965-aab2-064fdd1f06ba', 'Indianapolis', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c465912f-a90f-44c5-862d-d9eeaca22db4', 'Indianapolis', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Indiana'), '06df950f-c24d-4965-aab2-064fdd1f06ba');
+    values ( (select id from geographic_boundary where name='Indiana'), 'c465912f-a90f-44c5-862d-d9eeaca22db4');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b671f649-6256-407e-9e67-11f2989c76b2', 'Fort Worth', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b7254236-671f-4545-9a51-b3e8aff6e491', 'Fort Worth', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'b671f649-6256-407e-9e67-11f2989c76b2');
+    values ( (select id from geographic_boundary where name='Texas'), 'b7254236-671f-4545-9a51-b3e8aff6e491');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('aad6a013-d84a-40bc-8289-872542a21d8e', 'Charlotte', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8e915ac6-40d9-4d6c-aec6-e1a7e7799123', 'Charlotte', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), 'aad6a013-d84a-40bc-8289-872542a21d8e');
+    values ( (select id from geographic_boundary where name='North Carolina'), '8e915ac6-40d9-4d6c-aec6-e1a7e7799123');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a32831cd-4fa6-426e-9222-e755c1d694a7', 'Seattle', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e838ee8f-4463-4b05-a515-9573d44ef7f6', 'Seattle', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), 'a32831cd-4fa6-426e-9222-e755c1d694a7');
+    values ( (select id from geographic_boundary where name='Washington'), 'e838ee8f-4463-4b05-a515-9573d44ef7f6');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('14bee129-a14c-4fc2-a02c-d0255a73ea96', 'Denver', (select id from geographic_boundary_type where description = 'City' ));
+    values ('9a935a3e-0f4e-4370-8385-8f27d42c3c10', 'Denver', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '14bee129-a14c-4fc2-a02c-d0255a73ea96');
+    values ( (select id from geographic_boundary where name='Colorado'), '9a935a3e-0f4e-4370-8385-8f27d42c3c10');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('054ebc49-29a9-4643-9ffd-c93b133a57ae', 'El Paso', (select id from geographic_boundary_type where description = 'City' ));
+    values ('95a6f5a3-0c12-452a-b67e-3919d9c2acb1', 'El Paso', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '054ebc49-29a9-4643-9ffd-c93b133a57ae');
+    values ( (select id from geographic_boundary where name='Texas'), '95a6f5a3-0c12-452a-b67e-3919d9c2acb1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fad497e7-42d0-471d-bf8e-1ac1673a08d0', 'Washington D.C.', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0b5ff513-3cb7-4cdd-9ced-49dd431f6e21', 'Washington D.C.', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='United States'), 'fad497e7-42d0-471d-bf8e-1ac1673a08d0');
+    values ( (select id from geographic_boundary where name='United States'), '0b5ff513-3cb7-4cdd-9ced-49dd431f6e21');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3494b5df-7f38-4eab-acf1-017c9c571d76', 'Boston', (select id from geographic_boundary_type where description = 'City' ));
+    values ('90e002e6-0b4a-455d-8f2d-47548d79be42', 'Boston', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Massachusetts'), '3494b5df-7f38-4eab-acf1-017c9c571d76');
+    values ( (select id from geographic_boundary where name='Massachusetts'), '90e002e6-0b4a-455d-8f2d-47548d79be42');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('383c184d-08d0-45c8-b8d9-251006cdb545', 'Detroit', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5bf5fec0-5080-4c5d-9bb7-d76114555d6a', 'Detroit', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Michigan'), '383c184d-08d0-45c8-b8d9-251006cdb545');
+    values ( (select id from geographic_boundary where name='Michigan'), '5bf5fec0-5080-4c5d-9bb7-d76114555d6a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2ef30aae-b941-4e38-8af6-3bf6f905e6fe', 'Nashville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('baa12210-43bc-4ba7-baaf-9643d1d03dad', 'Nashville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Tennessee'), '2ef30aae-b941-4e38-8af6-3bf6f905e6fe');
+    values ( (select id from geographic_boundary where name='Tennessee'), 'baa12210-43bc-4ba7-baaf-9643d1d03dad');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('932e2d4c-2d98-4847-ad4a-9979711f58a3', 'Memphis', (select id from geographic_boundary_type where description = 'City' ));
+    values ('66092d94-702e-4ae9-a7c1-893e62f3fcce', 'Memphis', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Tennessee'), '932e2d4c-2d98-4847-ad4a-9979711f58a3');
+    values ( (select id from geographic_boundary where name='Tennessee'), '66092d94-702e-4ae9-a7c1-893e62f3fcce');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d52b9bac-389b-4d98-98a6-6c69ce7d3fc2', 'Portland', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3cf68603-3a65-4715-bdd2-d201ed0f02b9', 'Portland', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oregon'), 'd52b9bac-389b-4d98-98a6-6c69ce7d3fc2');
+    values ( (select id from geographic_boundary where name='Oregon'), '3cf68603-3a65-4715-bdd2-d201ed0f02b9');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a1f203a5-9ce1-4c3b-8f8b-df3802eb04fd', 'Oklahoma City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('23130a72-09fc-4b75-9bbb-19c1d5b2f831', 'Oklahoma City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oklahoma'), 'a1f203a5-9ce1-4c3b-8f8b-df3802eb04fd');
+    values ( (select id from geographic_boundary where name='Oklahoma'), '23130a72-09fc-4b75-9bbb-19c1d5b2f831');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5f8ca313-090d-4eeb-ab27-b5a5db21a6e7', 'Las Vegas', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d88d25b9-7ddb-4f8b-ac5b-37a59b0d2311', 'Las Vegas', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Nevada'), '5f8ca313-090d-4eeb-ab27-b5a5db21a6e7');
+    values ( (select id from geographic_boundary where name='Nevada'), 'd88d25b9-7ddb-4f8b-ac5b-37a59b0d2311');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('937152bf-39cb-4c10-a75b-c64d65618a0e', 'Louisville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('91597c07-41d5-43c4-a8a1-980ac8f2b7f2', 'Louisville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Kentucky'), '937152bf-39cb-4c10-a75b-c64d65618a0e');
+    values ( (select id from geographic_boundary where name='Kentucky'), '91597c07-41d5-43c4-a8a1-980ac8f2b7f2');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b177362a-d27b-4be3-a9bb-d2a90ec7a056', 'Baltimore', (select id from geographic_boundary_type where description = 'City' ));
+    values ('14874f9f-2f9b-4eea-8e89-e0dc46d59b0f', 'Baltimore', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Maryland'), 'b177362a-d27b-4be3-a9bb-d2a90ec7a056');
+    values ( (select id from geographic_boundary where name='Maryland'), '14874f9f-2f9b-4eea-8e89-e0dc46d59b0f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f74a4f42-3f2f-49ab-b897-864c23ba9d0b', 'Milwaukee', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5c713683-a037-4b56-ac12-a0693abd6920', 'Milwaukee', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Wisconsin'), 'f74a4f42-3f2f-49ab-b897-864c23ba9d0b');
+    values ( (select id from geographic_boundary where name='Wisconsin'), '5c713683-a037-4b56-ac12-a0693abd6920');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7dd12e4f-e72c-4ff1-bfda-e54b0abf0213', 'Albuquerque', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b1ec19e9-6d23-4bf1-af3b-c7c47a0cde0d', 'Albuquerque', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Mexico'), '7dd12e4f-e72c-4ff1-bfda-e54b0abf0213');
+    values ( (select id from geographic_boundary where name='New Mexico'), 'b1ec19e9-6d23-4bf1-af3b-c7c47a0cde0d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2712099d-0984-43d9-bd25-3cedd2497df1', 'Tucson', (select id from geographic_boundary_type where description = 'City' ));
+    values ('545767fd-f0dd-44bc-808d-88dae8bac38a', 'Tucson', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), '2712099d-0984-43d9-bd25-3cedd2497df1');
+    values ( (select id from geographic_boundary where name='Arizona'), '545767fd-f0dd-44bc-808d-88dae8bac38a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0bac9116-bd62-477f-b7be-8406972c6534', 'Fresno', (select id from geographic_boundary_type where description = 'City' ));
+    values ('063814fd-782b-4f29-b6bb-c52f9c174f9d', 'Fresno', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '0bac9116-bd62-477f-b7be-8406972c6534');
+    values ( (select id from geographic_boundary where name='California'), '063814fd-782b-4f29-b6bb-c52f9c174f9d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3eea74b1-b800-428e-a7ad-726d0b684f58', 'Sacramento', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1d06b663-645c-41c2-a0fe-03d4eb8eaf5c', 'Sacramento', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '3eea74b1-b800-428e-a7ad-726d0b684f58');
+    values ( (select id from geographic_boundary where name='California'), '1d06b663-645c-41c2-a0fe-03d4eb8eaf5c');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('20b26606-c367-42e7-8652-6bb470d62a61', 'Mesa', (select id from geographic_boundary_type where description = 'City' ));
+    values ('38457896-ad13-493a-b96a-f408aaab2817', 'Mesa', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), '20b26606-c367-42e7-8652-6bb470d62a61');
+    values ( (select id from geographic_boundary where name='Arizona'), '38457896-ad13-493a-b96a-f408aaab2817');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2da37a9a-62e5-4a75-bf46-8c2e06eaf426', 'Kansas City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('602f30bb-7c9f-4956-81fa-fd8aeb91a6ab', 'Kansas City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Missouri'), '2da37a9a-62e5-4a75-bf46-8c2e06eaf426');
+    values ( (select id from geographic_boundary where name='Missouri'), '602f30bb-7c9f-4956-81fa-fd8aeb91a6ab');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9acd6c5a-5493-413a-aa4b-4258920334e6', 'Atlanta', (select id from geographic_boundary_type where description = 'City' ));
+    values ('574876fa-c49c-4144-b903-8202ec090451', 'Atlanta', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Georgia'), '9acd6c5a-5493-413a-aa4b-4258920334e6');
+    values ( (select id from geographic_boundary where name='Georgia'), '574876fa-c49c-4144-b903-8202ec090451');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6a3ecbfe-01d3-4721-ab34-eaf216e4af1e', 'Long Beach', (select id from geographic_boundary_type where description = 'City' ));
+    values ('63eed421-2deb-433f-94ae-c656df65b8c0', 'Long Beach', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '6a3ecbfe-01d3-4721-ab34-eaf216e4af1e');
+    values ( (select id from geographic_boundary where name='California'), '63eed421-2deb-433f-94ae-c656df65b8c0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d72a12a4-d1a6-4c4e-91fb-8e38f572c405', 'Colorado Springs', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1153414e-4a4e-4d18-bd26-1af9df2bc5cf', 'Colorado Springs', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), 'd72a12a4-d1a6-4c4e-91fb-8e38f572c405');
+    values ( (select id from geographic_boundary where name='Colorado'), '1153414e-4a4e-4d18-bd26-1af9df2bc5cf');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('939c15a9-0d8f-4851-9560-019945e4a2fe', 'Raleigh', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7f02e4be-b87f-47ba-a63b-ded9766fe208', 'Raleigh', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), '939c15a9-0d8f-4851-9560-019945e4a2fe');
+    values ( (select id from geographic_boundary where name='North Carolina'), '7f02e4be-b87f-47ba-a63b-ded9766fe208');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5b3d900c-6a86-45d3-b64a-28e5aa7438e0', 'Miami', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c9454330-e213-4f60-8382-301d0c17806b', 'Miami', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '5b3d900c-6a86-45d3-b64a-28e5aa7438e0');
+    values ( (select id from geographic_boundary where name='Florida'), 'c9454330-e213-4f60-8382-301d0c17806b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d5a70f8e-4280-4be4-9644-4be579d8e405', 'Virginia Beach', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c9c7a5e7-a15e-4b7b-947b-bf471ec59f54', 'Virginia Beach', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Virginia'), 'd5a70f8e-4280-4be4-9644-4be579d8e405');
+    values ( (select id from geographic_boundary where name='Virginia'), 'c9c7a5e7-a15e-4b7b-947b-bf471ec59f54');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6c4a8f4b-ab66-469f-b488-72467c797090', 'Omaha', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f49510e2-062a-45c4-8c09-212208d84918', 'Omaha', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Nebraska'), '6c4a8f4b-ab66-469f-b488-72467c797090');
+    values ( (select id from geographic_boundary where name='Nebraska'), 'f49510e2-062a-45c4-8c09-212208d84918');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('53a82254-24bc-41b6-b0cf-d8cede4dbea8', 'Oakland', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a7d0046a-1b1a-4ace-b580-43523e53f7e9', 'Oakland', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '53a82254-24bc-41b6-b0cf-d8cede4dbea8');
+    values ( (select id from geographic_boundary where name='California'), 'a7d0046a-1b1a-4ace-b580-43523e53f7e9');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('44a095e3-c268-41f7-ada1-0e5de37e4dca', 'Minneapolis', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c7295ada-aefd-4c59-b315-e273ea9e7b6f', 'Minneapolis', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Minnesota'), '44a095e3-c268-41f7-ada1-0e5de37e4dca');
+    values ( (select id from geographic_boundary where name='Minnesota'), 'c7295ada-aefd-4c59-b315-e273ea9e7b6f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('48283466-fba4-4ffd-8cc2-64dc0ad82401', 'Tulsa', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5baade31-e932-4c64-8bb6-332214133af8', 'Tulsa', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oklahoma'), '48283466-fba4-4ffd-8cc2-64dc0ad82401');
+    values ( (select id from geographic_boundary where name='Oklahoma'), '5baade31-e932-4c64-8bb6-332214133af8');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7cf0eae8-3ed2-440f-b1a0-7447a9c598f5', 'Arlington', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3bfbfad0-cf28-4844-851b-3f2c174a998c', 'Arlington', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '7cf0eae8-3ed2-440f-b1a0-7447a9c598f5');
+    values ( (select id from geographic_boundary where name='Texas'), '3bfbfad0-cf28-4844-851b-3f2c174a998c');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6f841bc1-2584-497d-855e-d6096caf1b91', 'New Orleans', (select id from geographic_boundary_type where description = 'City' ));
+    values ('95d89266-82bd-4b0f-8907-1b727ce6cc15', 'New Orleans', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Louisiana'), '6f841bc1-2584-497d-855e-d6096caf1b91');
+    values ( (select id from geographic_boundary where name='Louisiana'), '95d89266-82bd-4b0f-8907-1b727ce6cc15');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('af26ce42-326d-4112-aad2-23c4901a3bf1', 'Wichita', (select id from geographic_boundary_type where description = 'City' ));
+    values ('aa9ccaab-9c0b-43e4-b3c4-5b95e7e4727d', 'Wichita', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Kansas'), 'af26ce42-326d-4112-aad2-23c4901a3bf1');
+    values ( (select id from geographic_boundary where name='Kansas'), 'aa9ccaab-9c0b-43e4-b3c4-5b95e7e4727d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('47037c15-0cd7-48a3-9427-b4e4307d1f3f', 'Cleveland', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f7653dcb-f197-4246-bb06-f588112716ff', 'Cleveland', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Ohio'), '47037c15-0cd7-48a3-9427-b4e4307d1f3f');
+    values ( (select id from geographic_boundary where name='Ohio'), 'f7653dcb-f197-4246-bb06-f588112716ff');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6258eb33-59b0-46bc-85ae-60f24f4838e0', 'Tampa', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ee2339da-49f8-4bdd-b331-84088c819713', 'Tampa', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '6258eb33-59b0-46bc-85ae-60f24f4838e0');
+    values ( (select id from geographic_boundary where name='Florida'), 'ee2339da-49f8-4bdd-b331-84088c819713');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('02c01e18-e294-4ac6-8871-36e7fbf19f1f', 'Bakersfield', (select id from geographic_boundary_type where description = 'City' ));
+    values ('64df4f49-f821-4f6b-bcbe-9f72441286c5', 'Bakersfield', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '02c01e18-e294-4ac6-8871-36e7fbf19f1f');
+    values ( (select id from geographic_boundary where name='California'), '64df4f49-f821-4f6b-bcbe-9f72441286c5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('28b69715-abb8-4e98-a005-d751daa6336d', 'Aurora', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d2bdaf76-5fd8-487a-a883-538b89b3ddd2', 'Aurora', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '28b69715-abb8-4e98-a005-d751daa6336d');
+    values ( (select id from geographic_boundary where name='Colorado'), 'd2bdaf76-5fd8-487a-a883-538b89b3ddd2');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('318416cc-1d76-4f00-ad94-36692edb28ca', 'Honolulu', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ad0e93db-15ef-402a-b9b6-fa67e72c76c1', 'Honolulu', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Hawaii'), '318416cc-1d76-4f00-ad94-36692edb28ca');
+    values ( (select id from geographic_boundary where name='Hawaii'), 'ad0e93db-15ef-402a-b9b6-fa67e72c76c1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('14f7c14b-321c-454f-86fe-9b48f267c339', 'Anaheim', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0df6df59-a907-44ef-be2c-ba9a84661ebe', 'Anaheim', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '14f7c14b-321c-454f-86fe-9b48f267c339');
+    values ( (select id from geographic_boundary where name='California'), '0df6df59-a907-44ef-be2c-ba9a84661ebe');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('94b6949b-8a78-4d27-9e06-504d58c1695e', 'Santa Ana', (select id from geographic_boundary_type where description = 'City' ));
+    values ('800fda7c-b4a7-45ba-ba46-3ea0ae4e09df', 'Santa Ana', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '94b6949b-8a78-4d27-9e06-504d58c1695e');
+    values ( (select id from geographic_boundary where name='California'), '800fda7c-b4a7-45ba-ba46-3ea0ae4e09df');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0bca6218-46a9-478a-98f5-55a13bde5366', 'Corpus Christi', (select id from geographic_boundary_type where description = 'City' ));
+    values ('512401a1-9bef-43d8-bf12-4d9b6a4028c3', 'Corpus Christi', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '0bca6218-46a9-478a-98f5-55a13bde5366');
+    values ( (select id from geographic_boundary where name='Texas'), '512401a1-9bef-43d8-bf12-4d9b6a4028c3');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('03e7965f-ef93-41e9-9526-05ed9613f752', 'Riverside', (select id from geographic_boundary_type where description = 'City' ));
+    values ('53975869-1ab6-49f1-83e9-c674d2ca957f', 'Riverside', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '03e7965f-ef93-41e9-9526-05ed9613f752');
+    values ( (select id from geographic_boundary where name='California'), '53975869-1ab6-49f1-83e9-c674d2ca957f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c555f5e1-7d60-4913-bfe6-ff37db4edac4', 'Lexington', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f2232d25-33eb-4c27-a9d8-2ed33299ff87', 'Lexington', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Kentucky'), 'c555f5e1-7d60-4913-bfe6-ff37db4edac4');
+    values ( (select id from geographic_boundary where name='Kentucky'), 'f2232d25-33eb-4c27-a9d8-2ed33299ff87');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2f2260f6-e586-469d-956e-9e8510ba543b', 'St. Louis', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a19381cc-9b41-4f5e-adf3-a899bd977995', 'St. Louis', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Missouri'), '2f2260f6-e586-469d-956e-9e8510ba543b');
+    values ( (select id from geographic_boundary where name='Missouri'), 'a19381cc-9b41-4f5e-adf3-a899bd977995');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('960f9980-70ef-4368-8321-f4985187d6ff', 'Stockton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f5f5acb5-b7ef-463c-a7a0-548984ce64ff', 'Stockton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '960f9980-70ef-4368-8321-f4985187d6ff');
+    values ( (select id from geographic_boundary where name='California'), 'f5f5acb5-b7ef-463c-a7a0-548984ce64ff');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d8dafd7e-6117-46e1-bea6-b8abf6294bba', 'Pittsburgh', (select id from geographic_boundary_type where description = 'City' ));
+    values ('dcca7938-d4d2-4a9f-80e9-6cc03e0f7b27', 'Pittsburgh', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Pennsylvania'), 'd8dafd7e-6117-46e1-bea6-b8abf6294bba');
+    values ( (select id from geographic_boundary where name='Pennsylvania'), 'dcca7938-d4d2-4a9f-80e9-6cc03e0f7b27');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6a8d4c09-a55f-494d-a90c-b9d9c03ba5e4', 'Saint Paul', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5ced41b1-1a0d-418e-9cbb-2a6b276d214b', 'Saint Paul', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Minnesota'), '6a8d4c09-a55f-494d-a90c-b9d9c03ba5e4');
+    values ( (select id from geographic_boundary where name='Minnesota'), '5ced41b1-1a0d-418e-9cbb-2a6b276d214b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fa03ae7f-24c2-4d21-acd1-47370f02e96b', 'Cincinnati', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7b8e55c9-0361-434f-8124-63944ff0ccea', 'Cincinnati', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Ohio'), 'fa03ae7f-24c2-4d21-acd1-47370f02e96b');
+    values ( (select id from geographic_boundary where name='Ohio'), '7b8e55c9-0361-434f-8124-63944ff0ccea');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('79f4c9f6-7f96-407a-be46-729235c5cab9', 'Anchorage', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b38f2fba-44c8-4435-8bac-fca6aa8f1fad', 'Anchorage', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Alaska'), '79f4c9f6-7f96-407a-be46-729235c5cab9');
+    values ( (select id from geographic_boundary where name='Alaska'), 'b38f2fba-44c8-4435-8bac-fca6aa8f1fad');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2474cd3a-efd8-4945-ac00-f7988e3dc33e', 'Henderson', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2f48b30f-7c13-4cc1-9e03-d8ab514eacbe', 'Henderson', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Nevada'), '2474cd3a-efd8-4945-ac00-f7988e3dc33e');
+    values ( (select id from geographic_boundary where name='Nevada'), '2f48b30f-7c13-4cc1-9e03-d8ab514eacbe');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a64738c6-6b8b-4f15-b37f-fb7625287cdc', 'Greensboro', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e44d37e1-c607-4fe5-b5b9-6b852b12163a', 'Greensboro', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), 'a64738c6-6b8b-4f15-b37f-fb7625287cdc');
+    values ( (select id from geographic_boundary where name='North Carolina'), 'e44d37e1-c607-4fe5-b5b9-6b852b12163a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('e7582adf-b094-41e9-8a3b-530a62a0ca5d', 'Plano', (select id from geographic_boundary_type where description = 'City' ));
+    values ('69fcfeb1-9f80-4a5c-8dbf-225408e7d06a', 'Plano', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'e7582adf-b094-41e9-8a3b-530a62a0ca5d');
+    values ( (select id from geographic_boundary where name='Texas'), '69fcfeb1-9f80-4a5c-8dbf-225408e7d06a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('db78679c-8594-4018-98b3-dd0295737aa3', 'Newark', (select id from geographic_boundary_type where description = 'City' ));
+    values ('07c701a5-fa8d-453b-957c-a222eb9add2a', 'Newark', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Jersey'), 'db78679c-8594-4018-98b3-dd0295737aa3');
+    values ( (select id from geographic_boundary where name='New Jersey'), '07c701a5-fa8d-453b-957c-a222eb9add2a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0e231167-34bf-4f19-9430-3c8a8580cf86', 'Lincoln', (select id from geographic_boundary_type where description = 'City' ));
+    values ('41cc2ec2-9662-42ab-b538-853cf8728d84', 'Lincoln', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Nebraska'), '0e231167-34bf-4f19-9430-3c8a8580cf86');
+    values ( (select id from geographic_boundary where name='Nebraska'), '41cc2ec2-9662-42ab-b538-853cf8728d84');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6b8b9c77-445d-447e-8c11-73c177951ad3', 'Toledo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cd7aeaf0-c0e8-4f3e-a922-9ffce972553b', 'Toledo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Ohio'), '6b8b9c77-445d-447e-8c11-73c177951ad3');
+    values ( (select id from geographic_boundary where name='Ohio'), 'cd7aeaf0-c0e8-4f3e-a922-9ffce972553b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d311caf1-cd1e-4ddf-84f5-72dd5adbcb4c', 'Orlando', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4799d411-381c-4d9b-96e3-18257b64a2a1', 'Orlando', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), 'd311caf1-cd1e-4ddf-84f5-72dd5adbcb4c');
+    values ( (select id from geographic_boundary where name='Florida'), '4799d411-381c-4d9b-96e3-18257b64a2a1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2edd783d-a0ec-4a46-aa59-09340fbf02d4', 'Chula Vista', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8e0ee313-a744-40a4-b2f1-5be3b3898d0e', 'Chula Vista', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '2edd783d-a0ec-4a46-aa59-09340fbf02d4');
+    values ( (select id from geographic_boundary where name='California'), '8e0ee313-a744-40a4-b2f1-5be3b3898d0e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('967865d0-b189-4eeb-b350-7dd5df922cd8', 'Irvine', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a533884d-7010-4585-b860-6228e970a7df', 'Irvine', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '967865d0-b189-4eeb-b350-7dd5df922cd8');
+    values ( (select id from geographic_boundary where name='California'), 'a533884d-7010-4585-b860-6228e970a7df');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('957f216e-8c8b-4242-8a80-749369e6e63b', 'Fort Wayne', (select id from geographic_boundary_type where description = 'City' ));
+    values ('fae7d17f-13ea-4817-8990-766198b9b083', 'Fort Wayne', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Indiana'), '957f216e-8c8b-4242-8a80-749369e6e63b');
+    values ( (select id from geographic_boundary where name='Indiana'), 'fae7d17f-13ea-4817-8990-766198b9b083');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ee5400c2-4965-4d67-8666-3fdf8401e7ef', 'Jersey City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('edd75733-d3c3-4962-99af-a0ca694a2637', 'Jersey City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Jersey'), 'ee5400c2-4965-4d67-8666-3fdf8401e7ef');
+    values ( (select id from geographic_boundary where name='New Jersey'), 'edd75733-d3c3-4962-99af-a0ca694a2637');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f273f1ce-99a4-401d-9893-502444360ae6', 'Durham', (select id from geographic_boundary_type where description = 'City' ));
+    values ('18016153-a6d5-4679-a769-18de07db712a', 'Durham', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), 'f273f1ce-99a4-401d-9893-502444360ae6');
+    values ( (select id from geographic_boundary where name='North Carolina'), '18016153-a6d5-4679-a769-18de07db712a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5d1ca8f5-0592-41ab-a56e-310db0618e6c', 'St. Petersburg', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2a2e1695-5593-4437-bfbd-c49e6a5b7ca0', 'St. Petersburg', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '5d1ca8f5-0592-41ab-a56e-310db0618e6c');
+    values ( (select id from geographic_boundary where name='Florida'), '2a2e1695-5593-4437-bfbd-c49e6a5b7ca0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4e1c8c6a-5b8c-41de-b371-eebc7e8fa732', 'Laredo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('72c59d57-5fbe-4f50-8a74-37c4ed27f699', 'Laredo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '4e1c8c6a-5b8c-41de-b371-eebc7e8fa732');
+    values ( (select id from geographic_boundary where name='Texas'), '72c59d57-5fbe-4f50-8a74-37c4ed27f699');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5e2ec021-8ccd-44fd-999f-e36e481f654b', 'Buffalo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c4fbcbbb-e9a4-4116-9c63-b5a24e6ac52f', 'Buffalo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New York'), '5e2ec021-8ccd-44fd-999f-e36e481f654b');
+    values ( (select id from geographic_boundary where name='New York'), 'c4fbcbbb-e9a4-4116-9c63-b5a24e6ac52f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('02d578ee-51c1-4f90-bb4f-457541265ed2', 'Madison', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4b3374a2-abe5-4f72-b427-5dbb9fde2785', 'Madison', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Wisconsin'), '02d578ee-51c1-4f90-bb4f-457541265ed2');
+    values ( (select id from geographic_boundary where name='Wisconsin'), '4b3374a2-abe5-4f72-b427-5dbb9fde2785');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4dbeef35-57e3-4ae1-b1c3-af113147d9f7', 'Lubbock', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d6fb1dcd-a19c-432b-8df9-7e7f1a07f52d', 'Lubbock', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '4dbeef35-57e3-4ae1-b1c3-af113147d9f7');
+    values ( (select id from geographic_boundary where name='Texas'), 'd6fb1dcd-a19c-432b-8df9-7e7f1a07f52d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d811e61c-3681-40fb-b017-99e3d19a40e4', 'Chandler', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a999b605-9ff3-4ce7-ad80-fe54a108fc8a', 'Chandler', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), 'd811e61c-3681-40fb-b017-99e3d19a40e4');
+    values ( (select id from geographic_boundary where name='Arizona'), 'a999b605-9ff3-4ce7-ad80-fe54a108fc8a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('16f07332-a560-4b34-b370-719ede48837e', 'Scottsdale', (select id from geographic_boundary_type where description = 'City' ));
+    values ('bde093b5-489f-48e8-97d8-23d681af9243', 'Scottsdale', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), '16f07332-a560-4b34-b370-719ede48837e');
+    values ( (select id from geographic_boundary where name='Arizona'), 'bde093b5-489f-48e8-97d8-23d681af9243');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c55cea35-d6e5-4dae-b238-d99ee1e91f07', 'Glendale', (select id from geographic_boundary_type where description = 'City' ));
+    values ('33dea54b-46e6-4b89-b5aa-6b1996fe8da9', 'Glendale', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), 'c55cea35-d6e5-4dae-b238-d99ee1e91f07');
+    values ( (select id from geographic_boundary where name='Arizona'), '33dea54b-46e6-4b89-b5aa-6b1996fe8da9');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('16414743-3435-4daf-9ba1-ebff7950c0eb', 'Reno', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2de119a1-3169-484c-ad90-1bfb92aea2dc', 'Reno', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Nevada'), '16414743-3435-4daf-9ba1-ebff7950c0eb');
+    values ( (select id from geographic_boundary where name='Nevada'), '2de119a1-3169-484c-ad90-1bfb92aea2dc');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c4b8b1f7-41f4-4151-afeb-131e8c04c650', 'Norfolk', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f3732de1-ae88-413a-a41c-5cd499ced65a', 'Norfolk', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Virginia'), 'c4b8b1f7-41f4-4151-afeb-131e8c04c650');
+    values ( (select id from geographic_boundary where name='Virginia'), 'f3732de1-ae88-413a-a41c-5cd499ced65a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ad9a69cc-22d8-453a-ba0c-102969a6022d', 'Winston–Salem', (select id from geographic_boundary_type where description = 'City' ));
+    values ('87814e83-d406-4576-b383-80b57faa8d31', 'Winston–Salem', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), 'ad9a69cc-22d8-453a-ba0c-102969a6022d');
+    values ( (select id from geographic_boundary where name='North Carolina'), '87814e83-d406-4576-b383-80b57faa8d31');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9dfe8404-0a43-448f-adbe-4271ddee69f0', 'North Las Vegas', (select id from geographic_boundary_type where description = 'City' ));
+    values ('fbdd4604-6586-4c29-95e6-a43ce3991ab6', 'North Las Vegas', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Nevada'), '9dfe8404-0a43-448f-adbe-4271ddee69f0');
+    values ( (select id from geographic_boundary where name='Nevada'), 'fbdd4604-6586-4c29-95e6-a43ce3991ab6');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('eb3f7f3c-bcfc-49d6-96cb-194ccfb094e1', 'Irving', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cead8bad-fac6-47bd-8173-c934755aa211', 'Irving', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'eb3f7f3c-bcfc-49d6-96cb-194ccfb094e1');
+    values ( (select id from geographic_boundary where name='Texas'), 'cead8bad-fac6-47bd-8173-c934755aa211');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('774be2e4-423c-4a11-8e46-0caee1b53095', 'Chesapeake', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c81f91eb-d105-4cff-9647-cfa44d4e8a51', 'Chesapeake', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Virginia'), '774be2e4-423c-4a11-8e46-0caee1b53095');
+    values ( (select id from geographic_boundary where name='Virginia'), 'c81f91eb-d105-4cff-9647-cfa44d4e8a51');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f292ef31-9018-4352-bc9d-ce4050e888ac', 'Gilbert', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cb27f8c1-17cd-4869-a8be-ed2d3f475516', 'Gilbert', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), 'f292ef31-9018-4352-bc9d-ce4050e888ac');
+    values ( (select id from geographic_boundary where name='Arizona'), 'cb27f8c1-17cd-4869-a8be-ed2d3f475516');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('af23d339-f17e-4ae5-8b2e-41b5d2520fe3', 'Hialeah', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d26a3626-1cbe-4d0e-9782-f16d67477e6a', 'Hialeah', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), 'af23d339-f17e-4ae5-8b2e-41b5d2520fe3');
+    values ( (select id from geographic_boundary where name='Florida'), 'd26a3626-1cbe-4d0e-9782-f16d67477e6a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c7c97b51-0593-4786-9886-fd4aea241c19', 'Garland', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4d9d44f5-de5b-4882-bda8-9ec222f0eb4c', 'Garland', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'c7c97b51-0593-4786-9886-fd4aea241c19');
+    values ( (select id from geographic_boundary where name='Texas'), '4d9d44f5-de5b-4882-bda8-9ec222f0eb4c');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2adf8fe5-0311-4b3d-877b-e9cbc8e19642', 'Fremont', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8828b080-de32-4759-a5ae-674a67addce3', 'Fremont', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '2adf8fe5-0311-4b3d-877b-e9cbc8e19642');
+    values ( (select id from geographic_boundary where name='California'), '8828b080-de32-4759-a5ae-674a67addce3');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('13868a3a-ef40-40ed-afb8-6702938379f1', 'Baton Rouge', (select id from geographic_boundary_type where description = 'City' ));
+    values ('824ec9ec-d973-441e-ac69-51f133ab5c0b', 'Baton Rouge', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Louisiana'), '13868a3a-ef40-40ed-afb8-6702938379f1');
+    values ( (select id from geographic_boundary where name='Louisiana'), '824ec9ec-d973-441e-ac69-51f133ab5c0b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('80783c5e-f04c-4a34-8455-878a10cb8e70', 'Richmond', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3ab07aa3-d668-46c3-aa67-87e815225af9', 'Richmond', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Virginia'), '80783c5e-f04c-4a34-8455-878a10cb8e70');
+    values ( (select id from geographic_boundary where name='Virginia'), '3ab07aa3-d668-46c3-aa67-87e815225af9');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('93cdd955-eb0d-4391-9d96-a0dfcba22f7c', 'Boise', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a4fc0802-d466-453a-86f1-137458a7bbb9', 'Boise', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Idaho'), '93cdd955-eb0d-4391-9d96-a0dfcba22f7c');
+    values ( (select id from geographic_boundary where name='Idaho'), 'a4fc0802-d466-453a-86f1-137458a7bbb9');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('35925122-77f9-4da8-b017-68d07a311622', 'San Bernardino', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8943b6c0-6510-4174-aee9-6d6e6c27a3ef', 'San Bernardino', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '35925122-77f9-4da8-b017-68d07a311622');
+    values ( (select id from geographic_boundary where name='California'), '8943b6c0-6510-4174-aee9-6d6e6c27a3ef');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('98ed8cd6-3596-4244-b54b-db7aa0c84db0', 'Spokane', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ce240f24-01c3-4256-98d8-fb28bcd77df5', 'Spokane', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), '98ed8cd6-3596-4244-b54b-db7aa0c84db0');
+    values ( (select id from geographic_boundary where name='Washington'), 'ce240f24-01c3-4256-98d8-fb28bcd77df5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('bd2c11ef-c915-4b35-9012-ffa89ec5cf5a', 'Des Moines', (select id from geographic_boundary_type where description = 'City' ));
+    values ('fbed59dd-f19a-499d-a59e-5b544e09f380', 'Des Moines', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Iowa'), 'bd2c11ef-c915-4b35-9012-ffa89ec5cf5a');
+    values ( (select id from geographic_boundary where name='Iowa'), 'fbed59dd-f19a-499d-a59e-5b544e09f380');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4b9d7407-20f3-455e-9030-82def98fd1ba', 'Modesto', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d2754548-be83-46ef-952d-0cc30437500d', 'Modesto', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '4b9d7407-20f3-455e-9030-82def98fd1ba');
+    values ( (select id from geographic_boundary where name='California'), 'd2754548-be83-46ef-952d-0cc30437500d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d0df5d21-d722-4451-8d25-13aef6d69d44', 'Birmingham', (select id from geographic_boundary_type where description = 'City' ));
+    values ('335af15a-f045-4611-b0ff-bd0e6fac362e', 'Birmingham', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Alabama'), 'd0df5d21-d722-4451-8d25-13aef6d69d44');
+    values ( (select id from geographic_boundary where name='Alabama'), '335af15a-f045-4611-b0ff-bd0e6fac362e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0c5b762b-533c-43d3-91f9-fd71d6f35d97', 'Tacoma', (select id from geographic_boundary_type where description = 'City' ));
+    values ('9c785f64-a03e-4a35-88c7-6177fb03f56d', 'Tacoma', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), '0c5b762b-533c-43d3-91f9-fd71d6f35d97');
+    values ( (select id from geographic_boundary where name='Washington'), '9c785f64-a03e-4a35-88c7-6177fb03f56d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fc2e26df-bad2-4f5c-9962-49672ec48452', 'Fontana', (select id from geographic_boundary_type where description = 'City' ));
+    values ('74544cea-3274-4d50-bfe3-b8a6d8d6ffa5', 'Fontana', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'fc2e26df-bad2-4f5c-9962-49672ec48452');
+    values ( (select id from geographic_boundary where name='California'), '74544cea-3274-4d50-bfe3-b8a6d8d6ffa5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('faf16a33-d677-43a8-a6ec-95d3f549ed66', 'Rochester', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ef572670-2bae-44ff-8315-1ddc4e5e6257', 'Rochester', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New York'), 'faf16a33-d677-43a8-a6ec-95d3f549ed66');
+    values ( (select id from geographic_boundary where name='New York'), 'ef572670-2bae-44ff-8315-1ddc4e5e6257');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f143b729-7a4b-48fd-94d7-820e9c51dc22', 'Oxnard', (select id from geographic_boundary_type where description = 'City' ));
+    values ('df9cf86c-1edc-4bef-93e2-b50f635a54a2', 'Oxnard', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'f143b729-7a4b-48fd-94d7-820e9c51dc22');
+    values ( (select id from geographic_boundary where name='California'), 'df9cf86c-1edc-4bef-93e2-b50f635a54a2');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3be7003c-2f49-4f56-8c2b-898045c72aa4', 'Moreno Valley', (select id from geographic_boundary_type where description = 'City' ));
+    values ('090c1a5c-9db2-404c-af5a-46194f224118', 'Moreno Valley', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '3be7003c-2f49-4f56-8c2b-898045c72aa4');
+    values ( (select id from geographic_boundary where name='California'), '090c1a5c-9db2-404c-af5a-46194f224118');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('565e155f-0de3-4d90-9d29-b6de8aaffd2c', 'Fayetteville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2fcecbd1-9db9-4044-b01b-1d03c51564d5', 'Fayetteville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), '565e155f-0de3-4d90-9d29-b6de8aaffd2c');
+    values ( (select id from geographic_boundary where name='North Carolina'), '2fcecbd1-9db9-4044-b01b-1d03c51564d5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1ae4ba38-9aea-4b24-8a80-712c8843cdc5', 'Aurora', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3e7c5129-b0ab-47df-b9ef-82aab67638c9', 'Aurora', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), '1ae4ba38-9aea-4b24-8a80-712c8843cdc5');
+    values ( (select id from geographic_boundary where name='Illinois'), '3e7c5129-b0ab-47df-b9ef-82aab67638c9');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('8e264d05-bc72-43e9-a933-a4dbeeffe8b7', 'Glendale', (select id from geographic_boundary_type where description = 'City' ));
+    values ('32617c9f-1890-42e8-960d-3c8d350719fc', 'Glendale', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '8e264d05-bc72-43e9-a933-a4dbeeffe8b7');
+    values ( (select id from geographic_boundary where name='California'), '32617c9f-1890-42e8-960d-3c8d350719fc');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('77e7c5ba-4e5a-4e43-9d91-b8e9a002026b', 'Yonkers', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1f16ea4f-090d-49b4-bda3-753c703431ea', 'Yonkers', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New York'), '77e7c5ba-4e5a-4e43-9d91-b8e9a002026b');
+    values ( (select id from geographic_boundary where name='New York'), '1f16ea4f-090d-49b4-bda3-753c703431ea');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6898cc14-6e17-4c20-bcc5-64ad79f81a85', 'Huntington Beach', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a57f2b37-0c3e-4f5d-9641-b38e43b37f76', 'Huntington Beach', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '6898cc14-6e17-4c20-bcc5-64ad79f81a85');
+    values ( (select id from geographic_boundary where name='California'), 'a57f2b37-0c3e-4f5d-9641-b38e43b37f76');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('175fcd24-afa9-4dad-a7ed-dcce05414143', 'Montgomery', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a2819dae-d880-49e8-a720-c65cd7af8bd0', 'Montgomery', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Alabama'), '175fcd24-afa9-4dad-a7ed-dcce05414143');
+    values ( (select id from geographic_boundary where name='Alabama'), 'a2819dae-d880-49e8-a720-c65cd7af8bd0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('23521e5d-486f-4086-9e16-42f22a0fabb7', 'Amarillo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('fb26ba2e-d1a1-415e-babf-fa0c48dbc4b1', 'Amarillo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '23521e5d-486f-4086-9e16-42f22a0fabb7');
+    values ( (select id from geographic_boundary where name='Texas'), 'fb26ba2e-d1a1-415e-babf-fa0c48dbc4b1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('088d9fe7-4310-4a84-98ab-7bedebb33438', 'Little Rock', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a8758797-a612-40a6-99e7-0ddec97c47b8', 'Little Rock', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arkansas'), '088d9fe7-4310-4a84-98ab-7bedebb33438');
+    values ( (select id from geographic_boundary where name='Arkansas'), 'a8758797-a612-40a6-99e7-0ddec97c47b8');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5c2dd898-0ea3-4758-960f-4accac843c3e', 'Akron', (select id from geographic_boundary_type where description = 'City' ));
+    values ('348c746a-e236-4ca4-86f6-a9e109623338', 'Akron', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Ohio'), '5c2dd898-0ea3-4758-960f-4accac843c3e');
+    values ( (select id from geographic_boundary where name='Ohio'), '348c746a-e236-4ca4-86f6-a9e109623338');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('97ba2d6c-69a0-4e17-9497-ec9ad4fdc144', 'Columbus', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4b2004ff-3a80-40ee-b370-33efb9255936', 'Columbus', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Georgia'), '97ba2d6c-69a0-4e17-9497-ec9ad4fdc144');
+    values ( (select id from geographic_boundary where name='Georgia'), '4b2004ff-3a80-40ee-b370-33efb9255936');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b71936f1-21e5-48d8-b3af-cbb2bffa9936', 'Augusta', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8a432546-8424-44ba-8b26-010defe1c497', 'Augusta', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Georgia'), 'b71936f1-21e5-48d8-b3af-cbb2bffa9936');
+    values ( (select id from geographic_boundary where name='Georgia'), '8a432546-8424-44ba-8b26-010defe1c497');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('8ab7ed2f-40b5-4bad-bec9-059edbb145f3', 'Grand Rapids', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f6f5d443-a4b7-4eee-a74a-0d3d781e1728', 'Grand Rapids', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Michigan'), '8ab7ed2f-40b5-4bad-bec9-059edbb145f3');
+    values ( (select id from geographic_boundary where name='Michigan'), 'f6f5d443-a4b7-4eee-a74a-0d3d781e1728');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1f200dd7-4f0b-4001-bdef-cc17cba47a26', 'Shreveport', (select id from geographic_boundary_type where description = 'City' ));
+    values ('6e43dd64-3784-455a-9782-27f3adba8f36', 'Shreveport', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Louisiana'), '1f200dd7-4f0b-4001-bdef-cc17cba47a26');
+    values ( (select id from geographic_boundary where name='Louisiana'), '6e43dd64-3784-455a-9782-27f3adba8f36');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d78d4b77-0298-4f8c-9ab3-12f262ca7202', 'Salt Lake City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d46b9595-6db9-4d89-b5ae-ab596baaee01', 'Salt Lake City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Utah'), 'd78d4b77-0298-4f8c-9ab3-12f262ca7202');
+    values ( (select id from geographic_boundary where name='Utah'), 'd46b9595-6db9-4d89-b5ae-ab596baaee01');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('68d03fd4-2ee7-40ce-b1ab-63a9b3c3ad62', 'Huntsville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2d6d021c-3e48-48de-b061-4252e5db2dde', 'Huntsville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Alabama'), '68d03fd4-2ee7-40ce-b1ab-63a9b3c3ad62');
+    values ( (select id from geographic_boundary where name='Alabama'), '2d6d021c-3e48-48de-b061-4252e5db2dde');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4ac9ef4a-0c6a-4ab7-a9fe-0893dc7593b3', 'Mobile', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2b9bc6c4-d07e-44c8-af0c-f5f6eff574fe', 'Mobile', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Alabama'), '4ac9ef4a-0c6a-4ab7-a9fe-0893dc7593b3');
+    values ( (select id from geographic_boundary where name='Alabama'), '2b9bc6c4-d07e-44c8-af0c-f5f6eff574fe');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('67051e15-3910-478a-a841-ca698a34d75a', 'Tallahassee', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a46d1503-e5f8-4fc1-8583-c5010ae6e187', 'Tallahassee', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '67051e15-3910-478a-a841-ca698a34d75a');
+    values ( (select id from geographic_boundary where name='Florida'), 'a46d1503-e5f8-4fc1-8583-c5010ae6e187');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('22a5f5b6-2466-48c0-b0a8-7d4ccc720a09', 'Grand Prairie', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cf229ae3-9179-4cfe-b4a4-77d6bbfc70ff', 'Grand Prairie', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '22a5f5b6-2466-48c0-b0a8-7d4ccc720a09');
+    values ( (select id from geographic_boundary where name='Texas'), 'cf229ae3-9179-4cfe-b4a4-77d6bbfc70ff');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fe0fd680-db0e-4be6-88a0-9df89770313a', 'Overland Park', (select id from geographic_boundary_type where description = 'City' ));
+    values ('510ff474-b1a2-4bef-9a29-cbea8a4bb7d5', 'Overland Park', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Kansas'), 'fe0fd680-db0e-4be6-88a0-9df89770313a');
+    values ( (select id from geographic_boundary where name='Kansas'), '510ff474-b1a2-4bef-9a29-cbea8a4bb7d5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('924d2419-5ab5-438c-a2e8-b68d77eea8db', 'Knoxville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d88b4102-3a9c-46fe-99ea-636d21990c5d', 'Knoxville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Tennessee'), '924d2419-5ab5-438c-a2e8-b68d77eea8db');
+    values ( (select id from geographic_boundary where name='Tennessee'), 'd88b4102-3a9c-46fe-99ea-636d21990c5d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('cff82e6a-54b8-4bf5-ac2d-95bbc86e0531', 'Port St. Lucie', (select id from geographic_boundary_type where description = 'City' ));
+    values ('576fb08a-8f99-4b55-b3d2-7c5a8fbf27f1', 'Port St. Lucie', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), 'cff82e6a-54b8-4bf5-ac2d-95bbc86e0531');
+    values ( (select id from geographic_boundary where name='Florida'), '576fb08a-8f99-4b55-b3d2-7c5a8fbf27f1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('95f68f5f-6b3f-49c3-ab4a-8337b245bcc4', 'Worcester', (select id from geographic_boundary_type where description = 'City' ));
+    values ('bce052d6-92eb-4b90-ab6d-135a7a217e88', 'Worcester', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Massachusetts'), '95f68f5f-6b3f-49c3-ab4a-8337b245bcc4');
+    values ( (select id from geographic_boundary where name='Massachusetts'), 'bce052d6-92eb-4b90-ab6d-135a7a217e88');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7bf0d848-e61f-4155-95c1-a5984208856d', 'Brownsville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b63dded1-482a-4df9-929c-49934eccfe35', 'Brownsville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '7bf0d848-e61f-4155-95c1-a5984208856d');
+    values ( (select id from geographic_boundary where name='Texas'), 'b63dded1-482a-4df9-929c-49934eccfe35');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('336830f3-ba7f-4468-99cf-5865ce276a2c', 'Tempe', (select id from geographic_boundary_type where description = 'City' ));
+    values ('00689944-6941-422e-8133-5b3864bf0cb0', 'Tempe', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), '336830f3-ba7f-4468-99cf-5865ce276a2c');
+    values ( (select id from geographic_boundary where name='Arizona'), '00689944-6941-422e-8133-5b3864bf0cb0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5a2f05a5-bd8a-4415-9892-b46670f86460', 'Santa Clarita', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ee9276db-c6af-4d7b-b6cf-a87ed77b381e', 'Santa Clarita', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '5a2f05a5-bd8a-4415-9892-b46670f86460');
+    values ( (select id from geographic_boundary where name='California'), 'ee9276db-c6af-4d7b-b6cf-a87ed77b381e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a02c82a1-228c-466d-995b-5e61de258b4d', 'Newport News', (select id from geographic_boundary_type where description = 'City' ));
+    values ('03df0862-06da-4f38-934b-5370a9f916af', 'Newport News', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Virginia'), 'a02c82a1-228c-466d-995b-5e61de258b4d');
+    values ( (select id from geographic_boundary where name='Virginia'), '03df0862-06da-4f38-934b-5370a9f916af');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1d71df4a-4c24-450b-baca-ce4d48c19e04', 'Cape Coral', (select id from geographic_boundary_type where description = 'City' ));
+    values ('fed11c15-0733-4ad9-8af0-8ea1d4094332', 'Cape Coral', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '1d71df4a-4c24-450b-baca-ce4d48c19e04');
+    values ( (select id from geographic_boundary where name='Florida'), 'fed11c15-0733-4ad9-8af0-8ea1d4094332');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f6ff6f2e-842f-43e8-9550-ecfecde38e06', 'Providence', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f7629695-71b1-4daa-9384-d81eec8e7f4e', 'Providence', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Rhode Island'), 'f6ff6f2e-842f-43e8-9550-ecfecde38e06');
+    values ( (select id from geographic_boundary where name='Rhode Island'), 'f7629695-71b1-4daa-9384-d81eec8e7f4e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2a6288e9-2e28-4c75-95dc-14bfed8d08ad', 'Fort Lauderdale', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f78d98b1-a3a5-4fc3-995f-83d09eaade26', 'Fort Lauderdale', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '2a6288e9-2e28-4c75-95dc-14bfed8d08ad');
+    values ( (select id from geographic_boundary where name='Florida'), 'f78d98b1-a3a5-4fc3-995f-83d09eaade26');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ddbcee7b-3547-4027-a8ba-983e8f427257', 'Chattanooga', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0298bb66-27c3-4f2c-9416-42b1b322bc0d', 'Chattanooga', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Tennessee'), 'ddbcee7b-3547-4027-a8ba-983e8f427257');
+    values ( (select id from geographic_boundary where name='Tennessee'), '0298bb66-27c3-4f2c-9416-42b1b322bc0d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('748fc820-83b2-4204-ab1b-d106498d3340', 'Rancho Cucamonga', (select id from geographic_boundary_type where description = 'City' ));
+    values ('51fadc1f-533a-435e-8c6c-26fbab25c26c', 'Rancho Cucamonga', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '748fc820-83b2-4204-ab1b-d106498d3340');
+    values ( (select id from geographic_boundary where name='California'), '51fadc1f-533a-435e-8c6c-26fbab25c26c');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('77cb5f86-df57-4406-88c0-46ec6d840398', 'Oceanside', (select id from geographic_boundary_type where description = 'City' ));
+    values ('005f4204-5124-4aa1-a878-3aa6d7c19c67', 'Oceanside', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '77cb5f86-df57-4406-88c0-46ec6d840398');
+    values ( (select id from geographic_boundary where name='California'), '005f4204-5124-4aa1-a878-3aa6d7c19c67');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0c04241b-b22e-423c-80bf-8e07ed72a6e5', 'Santa Rosa', (select id from geographic_boundary_type where description = 'City' ));
+    values ('02344ff5-0c84-446a-89ad-24cfd3894e19', 'Santa Rosa', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '0c04241b-b22e-423c-80bf-8e07ed72a6e5');
+    values ( (select id from geographic_boundary where name='California'), '02344ff5-0c84-446a-89ad-24cfd3894e19');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7db73673-31fe-4e15-8430-cc5ce2adb7a7', 'Garden Grove', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3f45049f-d9da-4557-b6fd-edde466067dd', 'Garden Grove', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '7db73673-31fe-4e15-8430-cc5ce2adb7a7');
+    values ( (select id from geographic_boundary where name='California'), '3f45049f-d9da-4557-b6fd-edde466067dd');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('956fe6b1-e68b-4e15-ba8d-2271dc6182aa', 'Vancouver', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d344e35a-5595-4fe9-a3a7-cca5f17ae09a', 'Vancouver', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), '956fe6b1-e68b-4e15-ba8d-2271dc6182aa');
+    values ( (select id from geographic_boundary where name='Washington'), 'd344e35a-5595-4fe9-a3a7-cca5f17ae09a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('8f15fdf5-5984-42c4-9b51-b7512d1985ce', 'Sioux Falls', (select id from geographic_boundary_type where description = 'City' ));
+    values ('693b0752-7bbf-4c5e-99f7-362fcd0b8e1f', 'Sioux Falls', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='South Dakota'), '8f15fdf5-5984-42c4-9b51-b7512d1985ce');
+    values ( (select id from geographic_boundary where name='South Dakota'), '693b0752-7bbf-4c5e-99f7-362fcd0b8e1f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('01382283-8580-4cd8-80e6-3e29ee591c6e', 'Ontario', (select id from geographic_boundary_type where description = 'City' ));
+    values ('74f99028-55ce-4626-9d6d-ed181544c714', 'Ontario', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '01382283-8580-4cd8-80e6-3e29ee591c6e');
+    values ( (select id from geographic_boundary where name='California'), '74f99028-55ce-4626-9d6d-ed181544c714');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b7df7150-b171-4a25-a956-44d9f1ea6bb8', 'McKinney', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e98d1c74-9a7a-42ac-a968-c6aef0087321', 'McKinney', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'b7df7150-b171-4a25-a956-44d9f1ea6bb8');
+    values ( (select id from geographic_boundary where name='Texas'), 'e98d1c74-9a7a-42ac-a968-c6aef0087321');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f3ca5e1b-646d-4786-8367-be949f815413', 'Elk Grove', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d2481b22-fbe6-4e68-a0b3-4ce2385e073b', 'Elk Grove', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'f3ca5e1b-646d-4786-8367-be949f815413');
+    values ( (select id from geographic_boundary where name='California'), 'd2481b22-fbe6-4e68-a0b3-4ce2385e073b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('edf62b6f-b631-48c8-b682-edd38fb9d92b', 'Jackson', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3d605690-46fc-4421-bb92-6bcaabfa2c18', 'Jackson', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Mississippi'), 'edf62b6f-b631-48c8-b682-edd38fb9d92b');
+    values ( (select id from geographic_boundary where name='Mississippi'), '3d605690-46fc-4421-bb92-6bcaabfa2c18');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2d97059f-5f9a-4d17-b383-ff697b73e44b', 'Pembroke Pines', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4e94dcc9-30b9-48a6-ba06-6d2af61343e7', 'Pembroke Pines', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '2d97059f-5f9a-4d17-b383-ff697b73e44b');
+    values ( (select id from geographic_boundary where name='Florida'), '4e94dcc9-30b9-48a6-ba06-6d2af61343e7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d526301e-48f5-4f01-ad44-6da1a86e56dd', 'Salem', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ceb20b24-dd67-4673-97f0-5452b4af0b7f', 'Salem', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oregon'), 'd526301e-48f5-4f01-ad44-6da1a86e56dd');
+    values ( (select id from geographic_boundary where name='Oregon'), 'ceb20b24-dd67-4673-97f0-5452b4af0b7f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('cccfb7a7-ae7a-4a9c-92d5-055aae916f0b', 'Springfield', (select id from geographic_boundary_type where description = 'City' ));
+    values ('03b68361-e87e-461c-8093-f69ed1616023', 'Springfield', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Missouri'), 'cccfb7a7-ae7a-4a9c-92d5-055aae916f0b');
+    values ( (select id from geographic_boundary where name='Missouri'), '03b68361-e87e-461c-8093-f69ed1616023');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4ca1b785-4373-4c4a-b0a3-8a7828d4877e', 'Corona', (select id from geographic_boundary_type where description = 'City' ));
+    values ('256e2d79-f75d-4e82-a557-b9156ff91802', 'Corona', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '4ca1b785-4373-4c4a-b0a3-8a7828d4877e');
+    values ( (select id from geographic_boundary where name='California'), '256e2d79-f75d-4e82-a557-b9156ff91802');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('394b118c-340f-4a6a-8409-0158ef99da8b', 'Eugene', (select id from geographic_boundary_type where description = 'City' ));
+    values ('10bb0a62-1319-42fd-9a36-d2f8767d8a92', 'Eugene', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oregon'), '394b118c-340f-4a6a-8409-0158ef99da8b');
+    values ( (select id from geographic_boundary where name='Oregon'), '10bb0a62-1319-42fd-9a36-d2f8767d8a92');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c99073bb-e4a5-462e-b0f8-281c6a36238d', 'Fort Collins', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3f95ca2c-dea8-4066-8e31-1e404a136046', 'Fort Collins', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), 'c99073bb-e4a5-462e-b0f8-281c6a36238d');
+    values ( (select id from geographic_boundary where name='Colorado'), '3f95ca2c-dea8-4066-8e31-1e404a136046');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c14601ef-31e5-43a1-96ad-ac5b056b1dbd', 'Peoria', (select id from geographic_boundary_type where description = 'City' ));
+    values ('9f0be3a4-0694-4509-af01-e1a59ea05355', 'Peoria', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), 'c14601ef-31e5-43a1-96ad-ac5b056b1dbd');
+    values ( (select id from geographic_boundary where name='Arizona'), '9f0be3a4-0694-4509-af01-e1a59ea05355');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3a141875-d7a4-4f04-a56e-69a7181cc6a1', 'Frisco', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ecb6bcc0-a204-4665-b5b3-397157c3250f', 'Frisco', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '3a141875-d7a4-4f04-a56e-69a7181cc6a1');
+    values ( (select id from geographic_boundary where name='Texas'), 'ecb6bcc0-a204-4665-b5b3-397157c3250f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ea7cd345-b23d-4c3a-b4cb-bfa5a0323c36', 'Cary', (select id from geographic_boundary_type where description = 'City' ));
+    values ('41fe5a26-fb93-4389-9d93-75cc6889a3eb', 'Cary', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), 'ea7cd345-b23d-4c3a-b4cb-bfa5a0323c36');
+    values ( (select id from geographic_boundary where name='North Carolina'), '41fe5a26-fb93-4389-9d93-75cc6889a3eb');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('67b9c62b-6a85-4004-98df-0da3c0ddcc16', 'Lancaster', (select id from geographic_boundary_type where description = 'City' ));
+    values ('765b7322-dcb2-43b2-ad56-84bdd8415de5', 'Lancaster', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '67b9c62b-6a85-4004-98df-0da3c0ddcc16');
+    values ( (select id from geographic_boundary where name='California'), '765b7322-dcb2-43b2-ad56-84bdd8415de5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ea34ddb0-da81-4e2f-83be-58e5db54c9e6', 'Hayward', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8134ddd5-679e-4f0b-8163-36e3b0e4228f', 'Hayward', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'ea34ddb0-da81-4e2f-83be-58e5db54c9e6');
+    values ( (select id from geographic_boundary where name='California'), '8134ddd5-679e-4f0b-8163-36e3b0e4228f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a8151c42-97c8-4359-b6c1-d54771dddede', 'Palmdale', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b591783a-a712-4d03-92c5-719b6ba5fec3', 'Palmdale', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'a8151c42-97c8-4359-b6c1-d54771dddede');
+    values ( (select id from geographic_boundary where name='California'), 'b591783a-a712-4d03-92c5-719b6ba5fec3');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7a1a40dc-eeee-4c19-9ac0-37011a2b0f52', 'Salinas', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3ddc5e1c-9a07-4555-a7ba-f5c07486db5b', 'Salinas', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '7a1a40dc-eeee-4c19-9ac0-37011a2b0f52');
+    values ( (select id from geographic_boundary where name='California'), '3ddc5e1c-9a07-4555-a7ba-f5c07486db5b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('086ee29a-e8a2-44c2-891a-6d93dc84ac09', 'Alexandria', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ae9d5ae2-4543-4c17-a26b-54c14b5c0014', 'Alexandria', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Virginia'), '086ee29a-e8a2-44c2-891a-6d93dc84ac09');
+    values ( (select id from geographic_boundary where name='Virginia'), 'ae9d5ae2-4543-4c17-a26b-54c14b5c0014');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('397dcb60-1e72-4ce2-af64-1234db631b18', 'Lakewood', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2e6fa680-f24c-49c2-a4af-d255df70b3cf', 'Lakewood', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '397dcb60-1e72-4ce2-af64-1234db631b18');
+    values ( (select id from geographic_boundary where name='Colorado'), '2e6fa680-f24c-49c2-a4af-d255df70b3cf');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('082bbd93-9d67-4c36-9d48-6f5e1978cd51', 'Springfield', (select id from geographic_boundary_type where description = 'City' ));
+    values ('69a3cb0f-317e-4874-be89-7118e7492b5a', 'Springfield', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Massachusetts'), '082bbd93-9d67-4c36-9d48-6f5e1978cd51');
+    values ( (select id from geographic_boundary where name='Massachusetts'), '69a3cb0f-317e-4874-be89-7118e7492b5a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9e8bb602-d54e-4968-a208-dd83ee1a5c97', 'Pasadena', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c2477f4b-f4f9-4a55-b936-1fe8e1edb521', 'Pasadena', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '9e8bb602-d54e-4968-a208-dd83ee1a5c97');
+    values ( (select id from geographic_boundary where name='Texas'), 'c2477f4b-f4f9-4a55-b936-1fe8e1edb521');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a2ae3ce3-6c29-4607-aaa5-5bdffc12d1fa', 'Sunnyvale', (select id from geographic_boundary_type where description = 'City' ));
+    values ('677fdc8a-6e50-4ae4-970a-75b289837a8b', 'Sunnyvale', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'a2ae3ce3-6c29-4607-aaa5-5bdffc12d1fa');
+    values ( (select id from geographic_boundary where name='California'), '677fdc8a-6e50-4ae4-970a-75b289837a8b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4dececd0-4c87-489f-b48d-c5b4a6a857c6', 'Macon', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0392f402-baef-42b5-95dc-99aeb0aad7ca', 'Macon', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Georgia'), '4dececd0-4c87-489f-b48d-c5b4a6a857c6');
+    values ( (select id from geographic_boundary where name='Georgia'), '0392f402-baef-42b5-95dc-99aeb0aad7ca');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('400bd764-7f88-46f2-a3f3-39b297137fb8', 'Pomona', (select id from geographic_boundary_type where description = 'City' ));
+    values ('699b802b-81e5-4a16-8fe7-975361810e8b', 'Pomona', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '400bd764-7f88-46f2-a3f3-39b297137fb8');
+    values ( (select id from geographic_boundary where name='California'), '699b802b-81e5-4a16-8fe7-975361810e8b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('043979c8-5c6b-44ee-afcd-7a5a52b98c4b', 'Hollywood', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7082ca6b-1214-46f5-b940-4a8d14c9f067', 'Hollywood', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '043979c8-5c6b-44ee-afcd-7a5a52b98c4b');
+    values ( (select id from geographic_boundary where name='Florida'), '7082ca6b-1214-46f5-b940-4a8d14c9f067');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0acd8a0c-3fb6-4046-ba8f-d4f80b03ad86', 'Kansas City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4de7c26e-bc95-486b-b319-5090806633db', 'Kansas City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Kansas'), '0acd8a0c-3fb6-4046-ba8f-d4f80b03ad86');
+    values ( (select id from geographic_boundary where name='Kansas'), '4de7c26e-bc95-486b-b319-5090806633db');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9e0991b3-a493-4314-9179-4c0f0c30164e', 'Escondido', (select id from geographic_boundary_type where description = 'City' ));
+    values ('beae3e13-47b5-4c9f-8ea8-6e96324abbe0', 'Escondido', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '9e0991b3-a493-4314-9179-4c0f0c30164e');
+    values ( (select id from geographic_boundary where name='California'), 'beae3e13-47b5-4c9f-8ea8-6e96324abbe0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a8c5be48-3eb4-4ef9-8f34-e40060aaf87a', 'Clarksville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('965e49cb-c0c3-47d4-8f82-c9c85d2aedac', 'Clarksville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Tennessee'), 'a8c5be48-3eb4-4ef9-8f34-e40060aaf87a');
+    values ( (select id from geographic_boundary where name='Tennessee'), '965e49cb-c0c3-47d4-8f82-c9c85d2aedac');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('672b0b64-3f00-459f-918d-33bd6a70635c', 'Joliet', (select id from geographic_boundary_type where description = 'City' ));
+    values ('69bef244-bc8d-40b9-a74e-713d5ee65723', 'Joliet', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), '672b0b64-3f00-459f-918d-33bd6a70635c');
+    values ( (select id from geographic_boundary where name='Illinois'), '69bef244-bc8d-40b9-a74e-713d5ee65723');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('efd58310-b10a-4e35-a63c-86a8174e18f1', 'Rockford', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a7f6f623-0c6b-4347-8d89-faaec819c773', 'Rockford', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), 'efd58310-b10a-4e35-a63c-86a8174e18f1');
+    values ( (select id from geographic_boundary where name='Illinois'), 'a7f6f623-0c6b-4347-8d89-faaec819c773');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('99d17499-b80b-4557-a670-2648f7ac358d', 'Torrance', (select id from geographic_boundary_type where description = 'City' ));
+    values ('88a1c744-88d8-4f82-b314-31d4eecc120e', 'Torrance', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '99d17499-b80b-4557-a670-2648f7ac358d');
+    values ( (select id from geographic_boundary where name='California'), '88a1c744-88d8-4f82-b314-31d4eecc120e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9776dd73-d84b-4bc4-9da8-eabf0db36690', 'Naperville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('6a2cac79-1bad-4b31-8d30-0bb557eff7b0', 'Naperville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), '9776dd73-d84b-4bc4-9da8-eabf0db36690');
+    values ( (select id from geographic_boundary where name='Illinois'), '6a2cac79-1bad-4b31-8d30-0bb557eff7b0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0f231bb6-f036-49f3-851d-e83b8bb69047', 'Paterson', (select id from geographic_boundary_type where description = 'City' ));
+    values ('9f3c9414-b306-4c8c-92aa-d5b90e3aa854', 'Paterson', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Jersey'), '0f231bb6-f036-49f3-851d-e83b8bb69047');
+    values ( (select id from geographic_boundary where name='New Jersey'), '9f3c9414-b306-4c8c-92aa-d5b90e3aa854');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('58fabb9e-24d1-4098-a04f-cdd31e9eb240', 'Savannah', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5f2a9cd1-dadf-42db-9100-81b60aa5f04b', 'Savannah', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Georgia'), '58fabb9e-24d1-4098-a04f-cdd31e9eb240');
+    values ( (select id from geographic_boundary where name='Georgia'), '5f2a9cd1-dadf-42db-9100-81b60aa5f04b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d60fd5e1-1429-4953-a216-45d186821e82', 'Bridgeport', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b8af61a1-c083-49a4-ac7d-9ed44a2c6020', 'Bridgeport', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Connecticut'), 'd60fd5e1-1429-4953-a216-45d186821e82');
+    values ( (select id from geographic_boundary where name='Connecticut'), 'b8af61a1-c083-49a4-ac7d-9ed44a2c6020');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('eff8c0b0-6ba6-48df-8cb1-ef416ab1359e', 'Mesquite', (select id from geographic_boundary_type where description = 'City' ));
+    values ('39bb504e-d183-4786-be23-71a5b36132e7', 'Mesquite', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'eff8c0b0-6ba6-48df-8cb1-ef416ab1359e');
+    values ( (select id from geographic_boundary where name='Texas'), '39bb504e-d183-4786-be23-71a5b36132e7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('06a9e893-4dec-44c1-8945-a4a6ca6c0dab', 'Killeen', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7fb78160-c7b6-44f0-8756-e8b73493fc58', 'Killeen', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '06a9e893-4dec-44c1-8945-a4a6ca6c0dab');
+    values ( (select id from geographic_boundary where name='Texas'), '7fb78160-c7b6-44f0-8756-e8b73493fc58');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3d456767-5cc8-4597-9380-dc85dccc3b31', 'Syracuse', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e53cc5a7-e4e5-4dfe-a354-40c6aa56df30', 'Syracuse', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New York'), '3d456767-5cc8-4597-9380-dc85dccc3b31');
+    values ( (select id from geographic_boundary where name='New York'), 'e53cc5a7-e4e5-4dfe-a354-40c6aa56df30');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('32579141-e5e1-4fbe-83b0-7ed985338a4a', 'McAllen', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2fc1d1ab-f7c0-427b-953d-53a8d6d2f1fd', 'McAllen', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '32579141-e5e1-4fbe-83b0-7ed985338a4a');
+    values ( (select id from geographic_boundary where name='Texas'), '2fc1d1ab-f7c0-427b-953d-53a8d6d2f1fd');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('313b5307-8ca0-4707-9107-865bed0b321c', 'Pasadena', (select id from geographic_boundary_type where description = 'City' ));
+    values ('51167336-8594-48f4-be9d-b1a15468a0c1', 'Pasadena', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '313b5307-8ca0-4707-9107-865bed0b321c');
+    values ( (select id from geographic_boundary where name='California'), '51167336-8594-48f4-be9d-b1a15468a0c1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9b62478c-191e-452e-8994-c51ee58c6797', 'Bellevue', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ddcb3814-9f6b-4d2c-bbdf-89e896769586', 'Bellevue', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), '9b62478c-191e-452e-8994-c51ee58c6797');
+    values ( (select id from geographic_boundary where name='Washington'), 'ddcb3814-9f6b-4d2c-bbdf-89e896769586');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d97e9c93-517a-4ea0-8bda-e0355f204491', 'Fullerton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8a07a4f7-a3e4-4c14-9633-d211c29a7cf6', 'Fullerton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'd97e9c93-517a-4ea0-8bda-e0355f204491');
+    values ( (select id from geographic_boundary where name='California'), '8a07a4f7-a3e4-4c14-9633-d211c29a7cf6');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b2770091-fe52-4125-931d-8e70cff42758', 'Orange', (select id from geographic_boundary_type where description = 'City' ));
+    values ('647dcddc-81ea-4b50-b4b2-f511c92aa2a0', 'Orange', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'b2770091-fe52-4125-931d-8e70cff42758');
+    values ( (select id from geographic_boundary where name='California'), '647dcddc-81ea-4b50-b4b2-f511c92aa2a0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('57f1d4e3-08e5-4e0b-9bba-e48cd088620f', 'Dayton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1545b344-54b1-4422-88d2-25d123a783a5', 'Dayton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Ohio'), '57f1d4e3-08e5-4e0b-9bba-e48cd088620f');
+    values ( (select id from geographic_boundary where name='Ohio'), '1545b344-54b1-4422-88d2-25d123a783a5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('21b5f1d1-c640-4099-8018-4d099087fbc5', 'Miramar', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0fc7a7b1-11d9-4874-8fda-c4a8197cadd7', 'Miramar', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '21b5f1d1-c640-4099-8018-4d099087fbc5');
+    values ( (select id from geographic_boundary where name='Florida'), '0fc7a7b1-11d9-4874-8fda-c4a8197cadd7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('993457f9-7ab8-4690-be2b-382bcd0a5f9d', 'Thornton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7f7186ff-c8cd-4f82-bca7-8afd33749743', 'Thornton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '993457f9-7ab8-4690-be2b-382bcd0a5f9d');
+    values ( (select id from geographic_boundary where name='Colorado'), '7f7186ff-c8cd-4f82-bca7-8afd33749743');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('764343cb-0da7-4007-9475-8de66259fd5c', 'West Valley City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1fcffb61-5b85-4194-8e49-12a658b1a56a', 'West Valley City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Utah'), '764343cb-0da7-4007-9475-8de66259fd5c');
+    values ( (select id from geographic_boundary where name='Utah'), '1fcffb61-5b85-4194-8e49-12a658b1a56a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('08463d70-abe1-4fa6-9b99-9d7da9cfe700', 'Olathe', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f2eea7a4-092a-455b-8533-bf3d811db4a1', 'Olathe', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Kansas'), '08463d70-abe1-4fa6-9b99-9d7da9cfe700');
+    values ( (select id from geographic_boundary where name='Kansas'), 'f2eea7a4-092a-455b-8533-bf3d811db4a1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('dc746720-2372-400a-8031-c10c29444763', 'Hampton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e15c1300-ec53-4f30-aa13-cfb43a92d1ef', 'Hampton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Virginia'), 'dc746720-2372-400a-8031-c10c29444763');
+    values ( (select id from geographic_boundary where name='Virginia'), 'e15c1300-ec53-4f30-aa13-cfb43a92d1ef');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('e52ff3c7-9efd-4d1e-b25a-8258f79e1925', 'Warren', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1ed4b2c1-9c19-42d0-9d24-ea100817cd3a', 'Warren', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Michigan'), 'e52ff3c7-9efd-4d1e-b25a-8258f79e1925');
+    values ( (select id from geographic_boundary where name='Michigan'), '1ed4b2c1-9c19-42d0-9d24-ea100817cd3a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('de2f2005-e5b0-4fba-be21-12875ca4c728', 'Midland', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0098330c-8cf3-4941-b826-f1e19740aab0', 'Midland', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'de2f2005-e5b0-4fba-be21-12875ca4c728');
+    values ( (select id from geographic_boundary where name='Texas'), '0098330c-8cf3-4941-b826-f1e19740aab0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b77c57cf-8097-4548-9707-7fd83f3caddc', 'Waco', (select id from geographic_boundary_type where description = 'City' ));
+    values ('52a682d8-94fa-4a1e-9407-8eeeca0bcc79', 'Waco', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'b77c57cf-8097-4548-9707-7fd83f3caddc');
+    values ( (select id from geographic_boundary where name='Texas'), '52a682d8-94fa-4a1e-9407-8eeeca0bcc79');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('83b6f3b6-f26c-4c51-a9ed-353ab62e1a50', 'Charleston', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cc498a3b-86dc-41e7-b6ea-1f1450afa6f5', 'Charleston', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='South Carolina'), '83b6f3b6-f26c-4c51-a9ed-353ab62e1a50');
+    values ( (select id from geographic_boundary where name='South Carolina'), 'cc498a3b-86dc-41e7-b6ea-1f1450afa6f5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9481e521-fd5b-4c36-98f9-675323353a3d', 'Columbia', (select id from geographic_boundary_type where description = 'City' ));
+    values ('075d2306-d394-4ebd-a0f1-a4a03ca9a604', 'Columbia', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='South Carolina'), '9481e521-fd5b-4c36-98f9-675323353a3d');
+    values ( (select id from geographic_boundary where name='South Carolina'), '075d2306-d394-4ebd-a0f1-a4a03ca9a604');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d5e11844-5c1a-41e7-83a3-29a1081b5323', 'Denton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('bb0ca39d-dcb4-4040-9e99-354c95c71787', 'Denton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'd5e11844-5c1a-41e7-83a3-29a1081b5323');
+    values ( (select id from geographic_boundary where name='Texas'), 'bb0ca39d-dcb4-4040-9e99-354c95c71787');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f35330f0-7697-4254-a053-c46cc0df7d2d', 'Carrollton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c8dbe668-90ed-48d7-8446-3c2a8db36e5b', 'Carrollton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'f35330f0-7697-4254-a053-c46cc0df7d2d');
+    values ( (select id from geographic_boundary where name='Texas'), 'c8dbe668-90ed-48d7-8446-3c2a8db36e5b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ecdf6953-176e-4621-b12a-c07c1d27d5f8', 'Surprise', (select id from geographic_boundary_type where description = 'City' ));
+    values ('decc893a-f2de-4573-b6ad-1490708f81e7', 'Surprise', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Arizona'), 'ecdf6953-176e-4621-b12a-c07c1d27d5f8');
+    values ( (select id from geographic_boundary where name='Arizona'), 'decc893a-f2de-4573-b6ad-1490708f81e7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7329c353-4c28-4943-b9b1-8df035f7076d', 'Roseville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d0a36c59-7d59-4e3f-b596-f8a1481a60a8', 'Roseville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '7329c353-4c28-4943-b9b1-8df035f7076d');
+    values ( (select id from geographic_boundary where name='California'), 'd0a36c59-7d59-4e3f-b596-f8a1481a60a8');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('47393be7-fd99-4ff5-a36c-3015a2e2f16d', 'Sterling Heights', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b1a87081-4677-46bb-a82e-526de8f2f984', 'Sterling Heights', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Michigan'), '47393be7-fd99-4ff5-a36c-3015a2e2f16d');
+    values ( (select id from geographic_boundary where name='Michigan'), 'b1a87081-4677-46bb-a82e-526de8f2f984');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c5947156-5497-44c6-8f99-ab023e936e16', 'Murfreesboro', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7e35f133-8c88-4db5-ae00-adbf10946cbc', 'Murfreesboro', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Tennessee'), 'c5947156-5497-44c6-8f99-ab023e936e16');
+    values ( (select id from geographic_boundary where name='Tennessee'), '7e35f133-8c88-4db5-ae00-adbf10946cbc');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('8875eb42-e3e2-4e9b-9f34-9162ca8b193b', 'Gainesville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('30c5e890-cb08-4e5e-be74-fb897a7240ce', 'Gainesville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '8875eb42-e3e2-4e9b-9f34-9162ca8b193b');
+    values ( (select id from geographic_boundary where name='Florida'), '30c5e890-cb08-4e5e-be74-fb897a7240ce');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('cd0c27ce-051c-4628-bdf9-1981a1bbe45e', 'Cedar Rapids', (select id from geographic_boundary_type where description = 'City' ));
+    values ('9b13377d-6fcd-428a-bdd5-ce2f1f597a1d', 'Cedar Rapids', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Iowa'), 'cd0c27ce-051c-4628-bdf9-1981a1bbe45e');
+    values ( (select id from geographic_boundary where name='Iowa'), '9b13377d-6fcd-428a-bdd5-ce2f1f597a1d');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('12b662f7-0f67-4dec-9afd-21e8ff82c638', 'Visalia', (select id from geographic_boundary_type where description = 'City' ));
+    values ('53723817-9ef4-4aab-b659-26f7d7a7ba77', 'Visalia', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '12b662f7-0f67-4dec-9afd-21e8ff82c638');
+    values ( (select id from geographic_boundary where name='California'), '53723817-9ef4-4aab-b659-26f7d7a7ba77');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('72b7276d-f358-4aa3-81bf-78ce2e061452', 'Coral Springs', (select id from geographic_boundary_type where description = 'City' ));
+    values ('59b1497d-f830-4c47-a69e-997707e9b440', 'Coral Springs', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '72b7276d-f358-4aa3-81bf-78ce2e061452');
+    values ( (select id from geographic_boundary where name='Florida'), '59b1497d-f830-4c47-a69e-997707e9b440');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6030c57a-4d4e-4e2c-bc5a-120334b4b788', 'New Haven', (select id from geographic_boundary_type where description = 'City' ));
+    values ('f6d797ef-691c-43d4-b053-82929ea705e1', 'New Haven', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Connecticut'), '6030c57a-4d4e-4e2c-bc5a-120334b4b788');
+    values ( (select id from geographic_boundary where name='Connecticut'), 'f6d797ef-691c-43d4-b053-82929ea705e1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('76b22d1e-d070-44ed-8c04-600acd365d0e', 'Stamford', (select id from geographic_boundary_type where description = 'City' ));
+    values ('27ca55d0-bbfa-40b9-9685-75c8eca136ed', 'Stamford', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Connecticut'), '76b22d1e-d070-44ed-8c04-600acd365d0e');
+    values ( (select id from geographic_boundary where name='Connecticut'), '27ca55d0-bbfa-40b9-9685-75c8eca136ed');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9d341e9f-140f-4c15-bbff-fd0c13027788', 'Thousand Oaks', (select id from geographic_boundary_type where description = 'City' ));
+    values ('514db0f4-1de6-46bb-94b1-0718beab0bc8', 'Thousand Oaks', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '9d341e9f-140f-4c15-bbff-fd0c13027788');
+    values ( (select id from geographic_boundary where name='California'), '514db0f4-1de6-46bb-94b1-0718beab0bc8');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3df04688-6fcd-411c-b88b-60a9b1c47081', 'Concord', (select id from geographic_boundary_type where description = 'City' ));
+    values ('efe79624-0cd7-42bc-94d2-1c3efe6c614e', 'Concord', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '3df04688-6fcd-411c-b88b-60a9b1c47081');
+    values ( (select id from geographic_boundary where name='California'), 'efe79624-0cd7-42bc-94d2-1c3efe6c614e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('03c0eac0-39b1-4e67-a0dc-892c9ca6e058', 'Elizabeth', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c2ddad6f-ce66-45ae-9858-cbb641deea87', 'Elizabeth', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Jersey'), '03c0eac0-39b1-4e67-a0dc-892c9ca6e058');
+    values ( (select id from geographic_boundary where name='New Jersey'), 'c2ddad6f-ce66-45ae-9858-cbb641deea87');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('05d0284d-ed30-4f88-85d6-c1186ccc79e8', 'Lafayette', (select id from geographic_boundary_type where description = 'City' ));
+    values ('14ecf6d7-1035-496c-9ad2-1028a5585c41', 'Lafayette', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Louisiana'), '05d0284d-ed30-4f88-85d6-c1186ccc79e8');
+    values ( (select id from geographic_boundary where name='Louisiana'), '14ecf6d7-1035-496c-9ad2-1028a5585c41');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('56f65ba1-e5b9-43cf-a179-af066769235a', 'Kent', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5cf6fc2a-5c8d-4feb-88a8-6d13d8a10b57', 'Kent', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), '56f65ba1-e5b9-43cf-a179-af066769235a');
+    values ( (select id from geographic_boundary where name='Washington'), '5cf6fc2a-5c8d-4feb-88a8-6d13d8a10b57');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('e03acb34-888e-40b5-812d-b4517c752073', 'Topeka', (select id from geographic_boundary_type where description = 'City' ));
+    values ('db7cfc3c-621a-4d91-99d5-ab6d17c38428', 'Topeka', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Kansas'), 'e03acb34-888e-40b5-812d-b4517c752073');
+    values ( (select id from geographic_boundary where name='Kansas'), 'db7cfc3c-621a-4d91-99d5-ab6d17c38428');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ab6b6d37-e9dc-4f75-a33a-2412c60e29f6', 'Simi Valley', (select id from geographic_boundary_type where description = 'City' ));
+    values ('73edd8a6-713d-4665-8d71-4076a785b5d2', 'Simi Valley', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'ab6b6d37-e9dc-4f75-a33a-2412c60e29f6');
+    values ( (select id from geographic_boundary where name='California'), '73edd8a6-713d-4665-8d71-4076a785b5d2');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9ca91df0-da04-43d5-ad05-5576ee2ed1ab', 'Santa Clara', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8621c616-7f3b-43e4-9a58-f18cef976f22', 'Santa Clara', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '9ca91df0-da04-43d5-ad05-5576ee2ed1ab');
+    values ( (select id from geographic_boundary where name='California'), '8621c616-7f3b-43e4-9a58-f18cef976f22');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('787cbec6-d27f-4ca3-8ba1-e8ba264ccb76', 'Athens', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ae7b645b-01e0-440e-a0f4-3eb1794437dc', 'Athens', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Georgia'), '787cbec6-d27f-4ca3-8ba1-e8ba264ccb76');
+    values ( (select id from geographic_boundary where name='Georgia'), 'ae7b645b-01e0-440e-a0f4-3eb1794437dc');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b39e4a3e-41fb-4e3c-85db-919dc48606e7', 'Hartford', (select id from geographic_boundary_type where description = 'City' ));
+    values ('37ad0a07-cf93-4dbe-859d-a1f285e2d106', 'Hartford', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Connecticut'), 'b39e4a3e-41fb-4e3c-85db-919dc48606e7');
+    values ( (select id from geographic_boundary where name='Connecticut'), '37ad0a07-cf93-4dbe-859d-a1f285e2d106');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fa303800-8642-4f10-817f-aae43e6caa2d', 'Victorville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b6bada70-2c8c-4147-a32a-28052848e7e5', 'Victorville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'fa303800-8642-4f10-817f-aae43e6caa2d');
+    values ( (select id from geographic_boundary where name='California'), 'b6bada70-2c8c-4147-a32a-28052848e7e5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('bb4d7656-5230-43ea-9069-37c65fe39546', 'Abilene', (select id from geographic_boundary_type where description = 'City' ));
+    values ('13fc4cea-60dc-4a67-ab87-692803d80e6c', 'Abilene', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'bb4d7656-5230-43ea-9069-37c65fe39546');
+    values ( (select id from geographic_boundary where name='Texas'), '13fc4cea-60dc-4a67-ab87-692803d80e6c');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('10d8533c-dee2-4243-8125-9880ba7e236c', 'Norman', (select id from geographic_boundary_type where description = 'City' ));
+    values ('163352c8-9e88-4ee9-b31d-156c4996a0dc', 'Norman', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oklahoma'), '10d8533c-dee2-4243-8125-9880ba7e236c');
+    values ( (select id from geographic_boundary where name='Oklahoma'), '163352c8-9e88-4ee9-b31d-156c4996a0dc');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4d4747eb-14a8-446d-b06c-60103fbc7fbe', 'Vallejo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('6f9f16d1-c781-4ebd-8504-06b2f21facf8', 'Vallejo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '4d4747eb-14a8-446d-b06c-60103fbc7fbe');
+    values ( (select id from geographic_boundary where name='California'), '6f9f16d1-c781-4ebd-8504-06b2f21facf8');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('e598a842-461f-4331-ba29-7b7d2cac9bee', 'Berkeley', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b178050a-a27a-4244-a987-ce62db3a5b54', 'Berkeley', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'e598a842-461f-4331-ba29-7b7d2cac9bee');
+    values ( (select id from geographic_boundary where name='California'), 'b178050a-a27a-4244-a987-ce62db3a5b54');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('07d95f3e-eff5-4521-956e-ecca484292a9', 'Round Rock', (select id from geographic_boundary_type where description = 'City' ));
+    values ('bfb57e89-c4f9-4447-98a5-ca031854a727', 'Round Rock', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '07d95f3e-eff5-4521-956e-ecca484292a9');
+    values ( (select id from geographic_boundary where name='Texas'), 'bfb57e89-c4f9-4447-98a5-ca031854a727');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d311cec9-3ad3-4fd1-810d-8fbd2046829c', 'Ann Arbor', (select id from geographic_boundary_type where description = 'City' ));
+    values ('92f073ea-8f36-4c4f-bed9-8674277919c2', 'Ann Arbor', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Michigan'), 'd311cec9-3ad3-4fd1-810d-8fbd2046829c');
+    values ( (select id from geographic_boundary where name='Michigan'), '92f073ea-8f36-4c4f-bed9-8674277919c2');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ef1eb732-bfda-4415-a10b-cbad4a74ba0a', 'Fargo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4a4df3ec-91d2-4fd6-9d1c-9a5cb4933013', 'Fargo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Dakota'), 'ef1eb732-bfda-4415-a10b-cbad4a74ba0a');
+    values ( (select id from geographic_boundary where name='North Dakota'), '4a4df3ec-91d2-4fd6-9d1c-9a5cb4933013');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c4faa183-49cf-4661-91c7-3c4c526a37ae', 'Columbia', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1f2306f7-9572-4c6f-9528-d9f4bb2c5ab5', 'Columbia', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Missouri'), 'c4faa183-49cf-4661-91c7-3c4c526a37ae');
+    values ( (select id from geographic_boundary where name='Missouri'), '1f2306f7-9572-4c6f-9528-d9f4bb2c5ab5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fbc59cc6-b4bd-4676-94a3-f31e89135dce', 'Allentown', (select id from geographic_boundary_type where description = 'City' ));
+    values ('32a201c2-08a8-45b5-9b59-dd2feca81608', 'Allentown', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Pennsylvania'), 'fbc59cc6-b4bd-4676-94a3-f31e89135dce');
+    values ( (select id from geographic_boundary where name='Pennsylvania'), '32a201c2-08a8-45b5-9b59-dd2feca81608');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('014f233f-8eb8-4f9d-848b-9f8b5cecb7ab', 'Evansville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('346caba7-70cd-4d69-851d-011300287f07', 'Evansville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Indiana'), '014f233f-8eb8-4f9d-848b-9f8b5cecb7ab');
+    values ( (select id from geographic_boundary where name='Indiana'), '346caba7-70cd-4d69-851d-011300287f07');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('e5ad4ff4-de75-4d08-a61b-acb9cb86b750', 'Beaumont', (select id from geographic_boundary_type where description = 'City' ));
+    values ('07347649-7ee7-4117-ae51-3d6de9e59f20', 'Beaumont', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'e5ad4ff4-de75-4d08-a61b-acb9cb86b750');
+    values ( (select id from geographic_boundary where name='Texas'), '07347649-7ee7-4117-ae51-3d6de9e59f20');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7cad6ca2-d598-4b03-96f1-ba705cba7c89', 'Odessa', (select id from geographic_boundary_type where description = 'City' ));
+    values ('6edae0c6-8ec7-4044-a489-c14443a95c87', 'Odessa', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '7cad6ca2-d598-4b03-96f1-ba705cba7c89');
+    values ( (select id from geographic_boundary where name='Texas'), '6edae0c6-8ec7-4044-a489-c14443a95c87');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3383385a-b07c-4fbf-9453-4ef003e82430', 'Wilmington', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cc33e2c3-4589-486a-837f-580ace6a9b91', 'Wilmington', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), '3383385a-b07c-4fbf-9453-4ef003e82430');
+    values ( (select id from geographic_boundary where name='North Carolina'), 'cc33e2c3-4589-486a-837f-580ace6a9b91');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('970366a1-8dbe-4c2b-a4ab-1b4dc81fb86b', 'Arvada', (select id from geographic_boundary_type where description = 'City' ));
+    values ('47cc662e-0b33-4a5a-aabe-c6d45ca1a3f1', 'Arvada', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '970366a1-8dbe-4c2b-a4ab-1b4dc81fb86b');
+    values ( (select id from geographic_boundary where name='Colorado'), '47cc662e-0b33-4a5a-aabe-c6d45ca1a3f1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('d32adefc-098c-4754-aeb5-d8a836986c43', 'Independence', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ee36a06d-3db3-454b-ad17-8ce38498b750', 'Independence', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Missouri'), 'd32adefc-098c-4754-aeb5-d8a836986c43');
+    values ( (select id from geographic_boundary where name='Missouri'), 'ee36a06d-3db3-454b-ad17-8ce38498b750');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('2fb5b108-742e-4e8f-b644-f8bc3c60fd4f', 'Provo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1f9e02cc-07a3-48e1-9398-99e2b082e689', 'Provo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Utah'), '2fb5b108-742e-4e8f-b644-f8bc3c60fd4f');
+    values ( (select id from geographic_boundary where name='Utah'), '1f9e02cc-07a3-48e1-9398-99e2b082e689');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('55b7426d-4a6b-41d8-b431-6b97477f5baf', 'Lansing', (select id from geographic_boundary_type where description = 'City' ));
+    values ('501f9677-b449-49bb-b9cb-8769a3613cf1', 'Lansing', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Michigan'), '55b7426d-4a6b-41d8-b431-6b97477f5baf');
+    values ( (select id from geographic_boundary where name='Michigan'), '501f9677-b449-49bb-b9cb-8769a3613cf1');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b1e61b02-9b95-46d2-a259-8e3c1d14cf1c', 'El Monte', (select id from geographic_boundary_type where description = 'City' ));
+    values ('53ad9ad6-060a-44f8-b13c-da4b7a99443e', 'El Monte', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'b1e61b02-9b95-46d2-a259-8e3c1d14cf1c');
+    values ( (select id from geographic_boundary where name='California'), '53ad9ad6-060a-44f8-b13c-da4b7a99443e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('8b08fc80-e498-495c-b95c-29e6bd343e06', 'Springfield', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d3637c96-3eec-47d8-a892-317284888f36', 'Springfield', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), '8b08fc80-e498-495c-b95c-29e6bd343e06');
+    values ( (select id from geographic_boundary where name='Illinois'), 'd3637c96-3eec-47d8-a892-317284888f36');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('71f4e8ee-3010-4dfc-a645-baeb0203b207', 'Fairfield', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8489ab1c-1ebe-410c-aef6-0943fa929675', 'Fairfield', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '71f4e8ee-3010-4dfc-a645-baeb0203b207');
+    values ( (select id from geographic_boundary where name='California'), '8489ab1c-1ebe-410c-aef6-0943fa929675');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('28954a0a-5b6f-45b1-b58e-7d288c75d221', 'Clearwater', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e02c982c-09e4-4e31-9a62-4b55ce43d479', 'Clearwater', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '28954a0a-5b6f-45b1-b58e-7d288c75d221');
+    values ( (select id from geographic_boundary where name='Florida'), 'e02c982c-09e4-4e31-9a62-4b55ce43d479');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('be0a4ae8-7bb9-4724-b211-2dfe422b7c21', 'Peoria', (select id from geographic_boundary_type where description = 'City' ));
+    values ('6b72c5c0-1b9f-4601-9fdb-7a4deb3c324e', 'Peoria', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), 'be0a4ae8-7bb9-4724-b211-2dfe422b7c21');
+    values ( (select id from geographic_boundary where name='Illinois'), '6b72c5c0-1b9f-4601-9fdb-7a4deb3c324e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('84fa549e-935e-4b0e-91d0-59f013063886', 'Rochester', (select id from geographic_boundary_type where description = 'City' ));
+    values ('617d2bd2-662c-48b8-9aa7-1c3bd5a9e925', 'Rochester', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Minnesota'), '84fa549e-935e-4b0e-91d0-59f013063886');
+    values ( (select id from geographic_boundary where name='Minnesota'), '617d2bd2-662c-48b8-9aa7-1c3bd5a9e925');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c4fdf20c-f8a2-4361-b453-f6eab1192179', 'Carlsbad', (select id from geographic_boundary_type where description = 'City' ));
+    values ('082d08c5-226c-4fb1-98e1-ff3312f2126a', 'Carlsbad', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'c4fdf20c-f8a2-4361-b453-f6eab1192179');
+    values ( (select id from geographic_boundary where name='California'), '082d08c5-226c-4fb1-98e1-ff3312f2126a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4aa05c67-6ee6-459b-9f60-fef7de847d2c', 'Westminster', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7a0f8191-fd73-4bc3-9d0c-2a2a3c5bc69a', 'Westminster', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '4aa05c67-6ee6-459b-9f60-fef7de847d2c');
+    values ( (select id from geographic_boundary where name='Colorado'), '7a0f8191-fd73-4bc3-9d0c-2a2a3c5bc69a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fc94c28e-be77-4fee-a6e5-d1ceced6a0b5', 'West Jordan', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d4d220ba-dea6-4af0-8acc-fe5e94494227', 'West Jordan', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Utah'), 'fc94c28e-be77-4fee-a6e5-d1ceced6a0b5');
+    values ( (select id from geographic_boundary where name='Utah'), 'd4d220ba-dea6-4af0-8acc-fe5e94494227');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('92962c05-32c8-434a-9895-6a5f9fa75ada', 'Pearland', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a53cb4e0-bd34-434c-921e-9ef25c70c513', 'Pearland', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '92962c05-32c8-434a-9895-6a5f9fa75ada');
+    values ( (select id from geographic_boundary where name='Texas'), 'a53cb4e0-bd34-434c-921e-9ef25c70c513');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4f138e81-1ee9-4e8f-9944-e315c0fbc0f6', 'Richardson', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b3fa7e95-fe0d-4aa1-887e-aa0aed7a70f8', 'Richardson', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '4f138e81-1ee9-4e8f-9944-e315c0fbc0f6');
+    values ( (select id from geographic_boundary where name='Texas'), 'b3fa7e95-fe0d-4aa1-887e-aa0aed7a70f8');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ff0ef81a-e609-4f4e-9d6f-ccfc9a9dbc22', 'Downey', (select id from geographic_boundary_type where description = 'City' ));
+    values ('5795befa-3a31-457e-9ef5-26d24cf36298', 'Downey', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'ff0ef81a-e609-4f4e-9d6f-ccfc9a9dbc22');
+    values ( (select id from geographic_boundary where name='California'), '5795befa-3a31-457e-9ef5-26d24cf36298');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('58098dd0-7677-4e1c-ac17-2b27827a9de7', 'Miami Gardens', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7055b3eb-14c5-4e32-b385-a49bfbb60ff0', 'Miami Gardens', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '58098dd0-7677-4e1c-ac17-2b27827a9de7');
+    values ( (select id from geographic_boundary where name='Florida'), '7055b3eb-14c5-4e32-b385-a49bfbb60ff0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('9121d061-f76e-4f3c-bcc6-29deedcc0973', 'Temecula', (select id from geographic_boundary_type where description = 'City' ));
+    values ('da196a5d-0e03-4e85-b16a-47deecff8c99', 'Temecula', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '9121d061-f76e-4f3c-bcc6-29deedcc0973');
+    values ( (select id from geographic_boundary where name='California'), 'da196a5d-0e03-4e85-b16a-47deecff8c99');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('97a1ad4c-79b7-4f80-bc41-49cf01bb9784', 'Costa Mesa', (select id from geographic_boundary_type where description = 'City' ));
+    values ('067bc8fc-ade1-4395-8e4f-e3f2fb15f8b7', 'Costa Mesa', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '97a1ad4c-79b7-4f80-bc41-49cf01bb9784');
+    values ( (select id from geographic_boundary where name='California'), '067bc8fc-ade1-4395-8e4f-e3f2fb15f8b7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('f071cb67-33e6-40dd-ad1e-35f4e8db1320', 'College Station', (select id from geographic_boundary_type where description = 'City' ));
+    values ('918e52da-0e90-460a-a49b-8c6901f0dd3f', 'College Station', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'f071cb67-33e6-40dd-ad1e-35f4e8db1320');
+    values ( (select id from geographic_boundary where name='Texas'), '918e52da-0e90-460a-a49b-8c6901f0dd3f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('cb3b01cb-24d6-4b94-8d9b-a71b58e05ed3', 'Elgin', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2e69e9a0-6413-431c-8aae-c263be3367bd', 'Elgin', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Illinois'), 'cb3b01cb-24d6-4b94-8d9b-a71b58e05ed3');
+    values ( (select id from geographic_boundary where name='Illinois'), '2e69e9a0-6413-431c-8aae-c263be3367bd');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('4f0ba281-40a4-4cbe-9136-1faf126572c2', 'Murrieta', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2d40c56a-3a43-48fb-8a77-3f41375c8e31', 'Murrieta', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '4f0ba281-40a4-4cbe-9136-1faf126572c2');
+    values ( (select id from geographic_boundary where name='California'), '2d40c56a-3a43-48fb-8a77-3f41375c8e31');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('eccbf61c-3a42-4289-ae72-a569ed8575f3', 'Gresham', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7b6f9377-0b64-4c95-8893-41cd5b5ccc5e', 'Gresham', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oregon'), 'eccbf61c-3a42-4289-ae72-a569ed8575f3');
+    values ( (select id from geographic_boundary where name='Oregon'), '7b6f9377-0b64-4c95-8893-41cd5b5ccc5e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('46eb9d7f-ee83-4188-97a9-523e727cbbc4', 'High Point', (select id from geographic_boundary_type where description = 'City' ));
+    values ('6b5b90e3-6958-42fe-8b7c-c2c856f36689', 'High Point', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='North Carolina'), '46eb9d7f-ee83-4188-97a9-523e727cbbc4');
+    values ( (select id from geographic_boundary where name='North Carolina'), '6b5b90e3-6958-42fe-8b7c-c2c856f36689');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('56bf0738-f94e-430e-be41-b8c6c79b7966', 'Antioch', (select id from geographic_boundary_type where description = 'City' ));
+    values ('9f60ab25-be50-4180-b512-052275d8e598', 'Antioch', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '56bf0738-f94e-430e-be41-b8c6c79b7966');
+    values ( (select id from geographic_boundary where name='California'), '9f60ab25-be50-4180-b512-052275d8e598');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('cfb63409-89be-4657-8d98-4d5e08c939cc', 'Inglewood', (select id from geographic_boundary_type where description = 'City' ));
+    values ('694e9199-e1f6-4e12-8c17-db8db588e6ca', 'Inglewood', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'cfb63409-89be-4657-8d98-4d5e08c939cc');
+    values ( (select id from geographic_boundary where name='California'), '694e9199-e1f6-4e12-8c17-db8db588e6ca');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c865174b-14f2-482d-814f-7f786a59350a', 'Cambridge', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d3daab0c-36a6-4cd7-b54b-f1d46e8ae958', 'Cambridge', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Massachusetts'), 'c865174b-14f2-482d-814f-7f786a59350a');
+    values ( (select id from geographic_boundary where name='Massachusetts'), 'd3daab0c-36a6-4cd7-b54b-f1d46e8ae958');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('8f28fe9e-dd4b-4746-8ded-2397fb1c2e2e', 'Lowell', (select id from geographic_boundary_type where description = 'City' ));
+    values ('253bc5e0-a550-4cee-93fa-ee8391c185c8', 'Lowell', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Massachusetts'), '8f28fe9e-dd4b-4746-8ded-2397fb1c2e2e');
+    values ( (select id from geographic_boundary where name='Massachusetts'), '253bc5e0-a550-4cee-93fa-ee8391c185c8');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('66ff068a-8674-4590-b731-2c72b5da9b42', 'Manchester', (select id from geographic_boundary_type where description = 'City' ));
+    values ('c963bd30-0203-4b20-a0aa-cab96945c26e', 'Manchester', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Hampshire'), '66ff068a-8674-4590-b731-2c72b5da9b42');
+    values ( (select id from geographic_boundary where name='New Hampshire'), 'c963bd30-0203-4b20-a0aa-cab96945c26e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5f140b28-63b2-4589-bb6f-cc1badd18029', 'Billings', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8d87bdae-bfd0-4124-bb62-2d723a5d7616', 'Billings', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Montana'), '5f140b28-63b2-4589-bb6f-cc1badd18029');
+    values ( (select id from geographic_boundary where name='Montana'), '8d87bdae-bfd0-4124-bb62-2d723a5d7616');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('e76975f5-c2be-4bb2-8b54-dd79ebcef9bc', 'Pueblo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('7c6d0eab-3f2f-4d71-97a8-6ca810d7211e', 'Pueblo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), 'e76975f5-c2be-4bb2-8b54-dd79ebcef9bc');
+    values ( (select id from geographic_boundary where name='Colorado'), '7c6d0eab-3f2f-4d71-97a8-6ca810d7211e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('6acf4f89-55e1-4fcd-9420-36df562ac810', 'Palm Bay', (select id from geographic_boundary_type where description = 'City' ));
+    values ('97aa4833-4eef-46d4-aa12-0297cc499308', 'Palm Bay', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '6acf4f89-55e1-4fcd-9420-36df562ac810');
+    values ( (select id from geographic_boundary where name='Florida'), '97aa4833-4eef-46d4-aa12-0297cc499308');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('dd1ff184-7a9f-43f3-88a1-4defe379c3cb', 'Centennial', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e9eaeb7c-d829-475d-8315-569d6e1d0b75', 'Centennial', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), 'dd1ff184-7a9f-43f3-88a1-4defe379c3cb');
+    values ( (select id from geographic_boundary where name='Colorado'), 'e9eaeb7c-d829-475d-8315-569d6e1d0b75');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('57a8d6be-e300-4c0b-9bd3-3e6875c3acd1', 'Richmond', (select id from geographic_boundary_type where description = 'City' ));
+    values ('35b9f027-6beb-4e46-84f3-7d2ac6170e32', 'Richmond', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '57a8d6be-e300-4c0b-9bd3-3e6875c3acd1');
+    values ( (select id from geographic_boundary where name='California'), '35b9f027-6beb-4e46-84f3-7d2ac6170e32');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('261b539e-5670-4021-95d8-2155f715bae6', 'Ventura', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e41ebd54-9662-4d03-80ea-d5bfd910850e', 'Ventura', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '261b539e-5670-4021-95d8-2155f715bae6');
+    values ( (select id from geographic_boundary where name='California'), 'e41ebd54-9662-4d03-80ea-d5bfd910850e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('b3912195-98bf-492b-a687-cc53a61276e1', 'Pompano Beach', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cb65fa6a-796e-4cef-ba06-37dc9ae17e25', 'Pompano Beach', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), 'b3912195-98bf-492b-a687-cc53a61276e1');
+    values ( (select id from geographic_boundary where name='Florida'), 'cb65fa6a-796e-4cef-ba06-37dc9ae17e25');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7cc79651-9b45-40c0-a8cd-74bfe3eb54f1', 'North Charleston', (select id from geographic_boundary_type where description = 'City' ));
+    values ('003802de-1030-4fdc-91aa-6faba6978282', 'North Charleston', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='South Carolina'), '7cc79651-9b45-40c0-a8cd-74bfe3eb54f1');
+    values ( (select id from geographic_boundary where name='South Carolina'), '003802de-1030-4fdc-91aa-6faba6978282');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('23272738-8dbe-4002-9bf4-bf04781c9de9', 'Everett', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0c869ef6-621f-4379-8227-657caebed63a', 'Everett', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), '23272738-8dbe-4002-9bf4-bf04781c9de9');
+    values ( (select id from geographic_boundary where name='Washington'), '0c869ef6-621f-4379-8227-657caebed63a');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('11782c57-f963-45ab-bd30-94953ccb1eba', 'Waterbury', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1ce584be-0168-48a7-a40a-e17b2ee025c4', 'Waterbury', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Connecticut'), '11782c57-f963-45ab-bd30-94953ccb1eba');
+    values ( (select id from geographic_boundary where name='Connecticut'), '1ce584be-0168-48a7-a40a-e17b2ee025c4');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('e4e848a7-6a06-403a-95b5-92342ff64e91', 'West Palm Beach', (select id from geographic_boundary_type where description = 'City' ));
+    values ('943ad6fc-6673-471e-a142-2626c05c6cda', 'West Palm Beach', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), 'e4e848a7-6a06-403a-95b5-92342ff64e91');
+    values ( (select id from geographic_boundary where name='Florida'), '943ad6fc-6673-471e-a142-2626c05c6cda');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('46c2958a-f841-48a4-9c38-cb47f1a25208', 'Boulder', (select id from geographic_boundary_type where description = 'City' ));
+    values ('924a9a6e-2ae2-4ca2-a018-1d4089273abf', 'Boulder', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '46c2958a-f841-48a4-9c38-cb47f1a25208');
+    values ( (select id from geographic_boundary where name='Colorado'), '924a9a6e-2ae2-4ca2-a018-1d4089273abf');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('214f0c41-74ff-43d8-a2c3-ee812082370f', 'West Covina', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3d54e7c8-d644-41ea-a3e1-935382349f47', 'West Covina', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '214f0c41-74ff-43d8-a2c3-ee812082370f');
+    values ( (select id from geographic_boundary where name='California'), '3d54e7c8-d644-41ea-a3e1-935382349f47');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('45da7144-cd00-409c-aee2-f3c26a6fda0f', 'Broken Arrow', (select id from geographic_boundary_type where description = 'City' ));
+    values ('02bc93e6-43df-4ab0-9c38-c7d92dcc0a41', 'Broken Arrow', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oklahoma'), '45da7144-cd00-409c-aee2-f3c26a6fda0f');
+    values ( (select id from geographic_boundary where name='Oklahoma'), '02bc93e6-43df-4ab0-9c38-c7d92dcc0a41');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('aba9e519-dc51-4342-bf0e-a059342bfc39', 'Clovis', (select id from geographic_boundary_type where description = 'City' ));
+    values ('d7d09661-2500-4507-8f6a-5753e2d4f32b', 'Clovis', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'aba9e519-dc51-4342-bf0e-a059342bfc39');
+    values ( (select id from geographic_boundary where name='California'), 'd7d09661-2500-4507-8f6a-5753e2d4f32b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('c25ae917-ef72-4ebc-b27b-24576f9fb131', 'Daly City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('210e26b2-865c-4372-adad-d3b5c3b8cc1f', 'Daly City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), 'c25ae917-ef72-4ebc-b27b-24576f9fb131');
+    values ( (select id from geographic_boundary where name='California'), '210e26b2-865c-4372-adad-d3b5c3b8cc1f');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('16fbdf08-950d-42cd-ae54-13a9d947f660', 'Lakeland', (select id from geographic_boundary_type where description = 'City' ));
+    values ('0c7ed755-50ee-45e9-8011-7b4d492a59f7', 'Lakeland', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), '16fbdf08-950d-42cd-ae54-13a9d947f660');
+    values ( (select id from geographic_boundary where name='Florida'), '0c7ed755-50ee-45e9-8011-7b4d492a59f7');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('65510f23-d708-4452-b5e7-d9a5566bc0a0', 'Santa Maria', (select id from geographic_boundary_type where description = 'City' ));
+    values ('4863d758-6da0-45ac-8b92-bf6e5030b280', 'Santa Maria', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '65510f23-d708-4452-b5e7-d9a5566bc0a0');
+    values ( (select id from geographic_boundary where name='California'), '4863d758-6da0-45ac-8b92-bf6e5030b280');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('0ddbdaa9-7663-4469-bc8e-c75957385f8b', 'Norwalk', (select id from geographic_boundary_type where description = 'City' ));
+    values ('54b12883-f9c0-4913-b21a-b78eaac7be19', 'Norwalk', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '0ddbdaa9-7663-4469-bc8e-c75957385f8b');
+    values ( (select id from geographic_boundary where name='California'), '54b12883-f9c0-4913-b21a-b78eaac7be19');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('989369bb-885a-4692-a60c-a71898c0c79e', 'Sandy Springs', (select id from geographic_boundary_type where description = 'City' ));
+    values ('3f848898-c310-4ec3-91c2-cec5db1ca229', 'Sandy Springs', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Georgia'), '989369bb-885a-4692-a60c-a71898c0c79e');
+    values ( (select id from geographic_boundary where name='Georgia'), '3f848898-c310-4ec3-91c2-cec5db1ca229');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('54c49255-6688-4a70-8aa6-095a463bf1ab', 'Hillsboro', (select id from geographic_boundary_type where description = 'City' ));
+    values ('89066c51-d401-40d8-8540-3b35fd2ee724', 'Hillsboro', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Oregon'), '54c49255-6688-4a70-8aa6-095a463bf1ab');
+    values ( (select id from geographic_boundary where name='Oregon'), '89066c51-d401-40d8-8540-3b35fd2ee724');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7b73d497-cb4f-4aae-8354-9cb55a1ea481', 'Green Bay', (select id from geographic_boundary_type where description = 'City' ));
+    values ('96a33700-3390-43d5-89bd-42b236988124', 'Green Bay', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Wisconsin'), '7b73d497-cb4f-4aae-8354-9cb55a1ea481');
+    values ( (select id from geographic_boundary where name='Wisconsin'), '96a33700-3390-43d5-89bd-42b236988124');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1a3a12b4-7196-45df-a2ec-4d886b8c0386', 'Tyler', (select id from geographic_boundary_type where description = 'City' ));
+    values ('18154660-d002-4e52-a54f-f47600e6c4b3', 'Tyler', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '1a3a12b4-7196-45df-a2ec-4d886b8c0386');
+    values ( (select id from geographic_boundary where name='Texas'), '18154660-d002-4e52-a54f-f47600e6c4b3');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('8877b5ca-f43a-494c-a34b-bd2497d187c1', 'Wichita Falls', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ed6429da-a10b-4c63-919d-6afa4e528a31', 'Wichita Falls', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '8877b5ca-f43a-494c-a34b-bd2497d187c1');
+    values ( (select id from geographic_boundary where name='Texas'), 'ed6429da-a10b-4c63-919d-6afa4e528a31');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3bf3cf81-8fcd-497a-ae36-a7fa4ff98191', 'Lewisville', (select id from geographic_boundary_type where description = 'City' ));
+    values ('b629ff5d-a3a6-4eae-8fbf-20f8ff0b777e', 'Lewisville', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), '3bf3cf81-8fcd-497a-ae36-a7fa4ff98191');
+    values ( (select id from geographic_boundary where name='Texas'), 'b629ff5d-a3a6-4eae-8fbf-20f8ff0b777e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3d6c8720-5ddb-4ce6-a779-d7dc59efc7e3', 'Burbank', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2de22f62-719f-4de6-8aef-b89e25dbf05b', 'Burbank', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '3d6c8720-5ddb-4ce6-a779-d7dc59efc7e3');
+    values ( (select id from geographic_boundary where name='California'), '2de22f62-719f-4de6-8aef-b89e25dbf05b');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('3992ff58-fdb7-4161-9fa2-72395df205f1', 'Greeley', (select id from geographic_boundary_type where description = 'City' ));
+    values ('29d34b9b-432d-4a24-828c-b99d42767ce0', 'Greeley', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Colorado'), '3992ff58-fdb7-4161-9fa2-72395df205f1');
+    values ( (select id from geographic_boundary where name='Colorado'), '29d34b9b-432d-4a24-828c-b99d42767ce0');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1a0109f9-2136-415e-ad0a-6a2ce26f4eb9', 'San Mateo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('8468909d-1e25-4048-8638-c3e72b63edb5', 'San Mateo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '1a0109f9-2136-415e-ad0a-6a2ce26f4eb9');
+    values ( (select id from geographic_boundary where name='California'), '8468909d-1e25-4048-8638-c3e72b63edb5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('5570f782-a7dc-4390-9bc8-1bb732565575', 'El Cajon', (select id from geographic_boundary_type where description = 'City' ));
+    values ('6c190b0c-53fe-41c9-a391-8f576d4c2625', 'El Cajon', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '5570f782-a7dc-4390-9bc8-1bb732565575');
+    values ( (select id from geographic_boundary where name='California'), '6c190b0c-53fe-41c9-a391-8f576d4c2625');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('1e3bff2f-1126-4a0c-810f-bcb6495f78a7', 'Jurupa Valley', (select id from geographic_boundary_type where description = 'City' ));
+    values ('a9e499cb-2399-4cee-83f3-bb1dc561d995', 'Jurupa Valley', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '1e3bff2f-1126-4a0c-810f-bcb6495f78a7');
+    values ( (select id from geographic_boundary where name='California'), 'a9e499cb-2399-4cee-83f3-bb1dc561d995');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('60eb02ab-6ad0-4ac1-bf36-e9b6bdf51360', 'Rialto', (select id from geographic_boundary_type where description = 'City' ));
+    values ('fe4eebee-892f-4d98-a9e2-c13c0f8aa190', 'Rialto', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '60eb02ab-6ad0-4ac1-bf36-e9b6bdf51360');
+    values ( (select id from geographic_boundary where name='California'), 'fe4eebee-892f-4d98-a9e2-c13c0f8aa190');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('33da46b4-bb9c-4ad2-953b-96ee10f5d490', 'Davenport', (select id from geographic_boundary_type where description = 'City' ));
+    values ('38fbe071-6ed3-478f-aa7b-4e2d6dabddd6', 'Davenport', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Iowa'), '33da46b4-bb9c-4ad2-953b-96ee10f5d490');
+    values ( (select id from geographic_boundary where name='Iowa'), '38fbe071-6ed3-478f-aa7b-4e2d6dabddd6');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('cd29995c-9515-4283-8dee-b0af52626cc2', 'League City', (select id from geographic_boundary_type where description = 'City' ));
+    values ('cff21fd7-1144-4ad1-9d38-d119f2372500', 'League City', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'cd29995c-9515-4283-8dee-b0af52626cc2');
+    values ( (select id from geographic_boundary where name='Texas'), 'cff21fd7-1144-4ad1-9d38-d119f2372500');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('645eb77f-e528-4a79-a4a0-b0f35f0a7bf3', 'Edison', (select id from geographic_boundary_type where description = 'City' ));
+    values ('1aaece06-11c4-4ce1-bd97-b27cc906e962', 'Edison', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Jersey'), '645eb77f-e528-4a79-a4a0-b0f35f0a7bf3');
+    values ( (select id from geographic_boundary where name='New Jersey'), '1aaece06-11c4-4ce1-bd97-b27cc906e962');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('a174381d-7183-4e8a-9457-7fdea35c3d6e', 'Davie', (select id from geographic_boundary_type where description = 'City' ));
+    values ('ac5468df-079d-4a4c-965d-2533592d1260', 'Davie', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Florida'), 'a174381d-7183-4e8a-9457-7fdea35c3d6e');
+    values ( (select id from geographic_boundary where name='Florida'), 'ac5468df-079d-4a4c-965d-2533592d1260');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('7815c791-2958-4705-8a0a-21033f7f7fc1', 'Las Cruces', (select id from geographic_boundary_type where description = 'City' ));
+    values ('24c1237b-27a8-4508-a49c-d634d6e14302', 'Las Cruces', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Mexico'), '7815c791-2958-4705-8a0a-21033f7f7fc1');
+    values ( (select id from geographic_boundary where name='New Mexico'), '24c1237b-27a8-4508-a49c-d634d6e14302');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('58e5174c-46a9-4532-9b19-bc6d028a1cd2', 'South Bend', (select id from geographic_boundary_type where description = 'City' ));
+    values ('247a6728-8d2b-4231-ab8c-1d8384834a5c', 'South Bend', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Indiana'), '58e5174c-46a9-4532-9b19-bc6d028a1cd2');
+    values ( (select id from geographic_boundary where name='Indiana'), '247a6728-8d2b-4231-ab8c-1d8384834a5c');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('46b184f8-84f2-42c1-b50d-d71247ac303b', 'Vista', (select id from geographic_boundary_type where description = 'City' ));
+    values ('bdc7295b-525a-4c20-8198-a7aa8fe2a287', 'Vista', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='California'), '46b184f8-84f2-42c1-b50d-d71247ac303b');
+    values ( (select id from geographic_boundary where name='California'), 'bdc7295b-525a-4c20-8198-a7aa8fe2a287');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('257475ea-fcaf-4dfb-b1db-43513570165f', 'Woodbridge', (select id from geographic_boundary_type where description = 'City' ));
+    values ('dba8dde1-b67d-4bc5-9360-0311020497f6', 'Woodbridge', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Jersey'), '257475ea-fcaf-4dfb-b1db-43513570165f');
+    values ( (select id from geographic_boundary where name='New Jersey'), 'dba8dde1-b67d-4bc5-9360-0311020497f6');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('fa8dc995-4cd3-4129-926f-54aa804efb21', 'Renton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('15c13956-075c-403a-aa9c-74d340953867', 'Renton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Washington'), 'fa8dc995-4cd3-4129-926f-54aa804efb21');
+    values ( (select id from geographic_boundary where name='Washington'), '15c13956-075c-403a-aa9c-74d340953867');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('bfbf5d5f-6490-4cdc-a497-b0363ed40965', 'Lakewood', (select id from geographic_boundary_type where description = 'City' ));
+    values ('34ef6fe0-0445-4568-8033-171b5bac17e5', 'Lakewood', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='New Jersey'), 'bfbf5d5f-6490-4cdc-a497-b0363ed40965');
+    values ( (select id from geographic_boundary where name='New Jersey'), '34ef6fe0-0445-4568-8033-171b5bac17e5');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('ec34285a-c2f2-40ec-826b-31eab154fb10', 'San Angelo', (select id from geographic_boundary_type where description = 'City' ));
+    values ('e4f3976c-b5d4-4ec9-a86b-0887bb0cca1e', 'San Angelo', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Texas'), 'ec34285a-c2f2-40ec-826b-31eab154fb10');
+    values ( (select id from geographic_boundary where name='Texas'), 'e4f3976c-b5d4-4ec9-a86b-0887bb0cca1e');
 
     
   insert into geographic_boundary (id, name, geographic_boundary_type_id)
-    values ('67ca3153-fd31-45ec-94eb-f18b396e082f', 'Clinton', (select id from geographic_boundary_type where description = 'City' ));
+    values ('2dda9719-9030-4be8-9d55-da6c6d43f4a9', 'Clinton', (select id from geographic_boundary_type where description = 'City' ));
   insert into geographic_boundary_association (within_boundary, in_boundary)
-    values ( (select id from geographic_boundary where name='Michigan'), '67ca3153-fd31-45ec-94eb-f18b396e082f');
+    values ( (select id from geographic_boundary where name='Michigan'), '2dda9719-9030-4be8-9d55-da6c6d43f4a9');
 
     
