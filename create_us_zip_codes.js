@@ -3,7 +3,7 @@ const parse = require( 'csv-parse' );
 const transform = require( 'stream-transform' );
 const parser = parse( );
 const rs = fs.createReadStream( './etc/us-zip-codes.csv' )
-const ws = fs.createWriteStream( './sql/06-us-zip-codes.sql' );
+const ws = fs.createWriteStream( './generated-sql/06-us-zip-codes.sql' );
 const uuidv4 = require( 'uuid/v4' );
 
 function pad( n, width, z ) {
