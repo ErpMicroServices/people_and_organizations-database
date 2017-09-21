@@ -8,7 +8,8 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "build": "node create_us_cities_sql.js;node create_us_zip_codes.js;docker build --tag erpmicroservices/party-db --rm .",
+    "build": "npm run build:sql; docker build --tag erpmicroservices/party-db --rm .",
+    "build:sql": "node create_us_cities_sql.js;node create_us_zip_codes.js;",
     "db_admin": "docker run --detach --publish 5050:5050 --name party-db-pgadmin --link party-db:db thajeztah/pgadmin4",
     "push": "docker push erpmicroservices/party-db:latest",
     "start": "docker run --publish 5432:5432 --name party-db erpmicroservices/party-db",
