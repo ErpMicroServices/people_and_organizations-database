@@ -26,6 +26,9 @@ insert into geographic_boundary_association (within_boundary, in_boundary) value
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Delaware', 'DE', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Delaware'));
 
+insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Federated States of Micronesia', 'FM', (select id from geographic_boundary_type where description = 'Territory' ));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Federated States of Micronesia'));
+
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Florida', 'FL', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Florida'));
 
