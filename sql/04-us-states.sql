@@ -1,11 +1,16 @@
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Alabama', 'AL', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Alabama'));
 
+<<<<<<< HEAD
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Alaska', 'AK', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Alaska'));
 
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'American Samoa', 'AS', (select id from geographic_boundary_type where description = 'Territory' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='American Samoa'));
+=======
+insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Alasaka', 'AK', (select id from geographic_boundary_type where description = 'State' ));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Alasaka'));
+>>>>>>> gh_4
 
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Arizona', 'AZ', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Arizona'));
@@ -25,18 +30,24 @@ insert into geographic_boundary_association (within_boundary, in_boundary) value
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Delaware', 'DE', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Delaware'));
 
+<<<<<<< HEAD
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Federated States of Micronesia', 'FM', (select id from geographic_boundary_type where description = 'Territory' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Federated States of Micronesia'));
 
+=======
+>>>>>>> gh_4
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Florida', 'FL', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Florida'));
 
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Georgia', 'GA', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Georgia'));
 
+<<<<<<< HEAD
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Guam', 'GU', (select id from geographic_boundary_type where description = 'Territory' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Guam'));
 
+=======
+>>>>>>> gh_4
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Hawaii', 'HI', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Hawaii'));
 
@@ -118,6 +129,7 @@ insert into geographic_boundary_association (within_boundary, in_boundary) value
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Oregon', 'OR', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Oregon'));
 
+<<<<<<< HEAD
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Paulau', 'PW', (select id from geographic_boundary_type where description = 'Territory' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Paulau'));
 
@@ -127,6 +139,11 @@ insert into geographic_boundary_association (within_boundary, in_boundary) value
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Puerto Rico', 'PR', (select id from geographic_boundary_type where description = 'Territory' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Puerto Rico'));
 
+=======
+insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Pennsylvania', 'PA', (select id from geographic_boundary_type where description = 'State' ));
+insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Pennsylvania'));
+
+>>>>>>> gh_4
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Rhode Island', 'RI', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Rhode Island'));
 
@@ -148,10 +165,14 @@ insert into geographic_boundary_association (within_boundary, in_boundary) value
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Vermont', 'VT', (select id from geographic_boundary_type where description = 'State' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Vermont'));
 
+<<<<<<< HEAD
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Virgin Islands', 'VI', (select id from geographic_boundary_type where description = 'Territory' ));
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Virgin Islands'));
 
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Virginia', 'VA', (select id from geographic_boundary_type where description = 'State' ));
+=======
+insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Virginia', 'VT', (select id from geographic_boundary_type where description = 'State' ));
+>>>>>>> gh_4
 insert into geographic_boundary_association (within_boundary, in_boundary) values ( (select id from geographic_boundary where name='United States'), (select id from geographic_boundary where name='Virginia'));
 
 insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'Washington', 'WA', (select id from geographic_boundary_type where description = 'State' ));
