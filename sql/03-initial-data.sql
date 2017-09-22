@@ -1,33 +1,12 @@
-insert into communication_event_purpose_type (description)
-values ('Support Call');
+insert into communication_event_purpose_type (description) values ('Support Call');
+insert into communication_event_purpose_type (description) values ('Inquiry');
+insert into communication_event_purpose_type (description) values ('Customer Service Call');
+insert into communication_event_purpose_type (description) values ('Sales Follow Up');
+insert into communication_event_purpose_type (description) values ('Meeting');
+insert into communication_event_purpose_type (description) values ('Conference');
+insert into communication_event_purpose_type (description) values ('Activity Request');
 
-
-insert into communication_event_purpose_type (description)
-values ('Inquiry');
-
-
-insert into communication_event_purpose_type (description)
-values ('Customer Service Call');
-
-
-insert into communication_event_purpose_type (description)
-values ('Sales Follow Up');
-
-
-insert into communication_event_purpose_type (description)
-values ('Meeting');
-
-
-insert into communication_event_purpose_type (description)
-values ('Conference');
-
-
-insert into communication_event_purpose_type (description)
-values ('Activity Request');
-
-
-insert into communication_event_type (description)
-values ('Phone Communication');
+insert into communication_event_type (description) values ('Phone Communication');
 
 
 insert into communication_event_type (description) values ('Fax Communication');
@@ -101,9 +80,10 @@ insert into party_role_type (description) values ('Subsidiary');
 insert into party_role_type (description) values ('Supplier');
 insert into party_role_type (description) values ('Webmaster');
 
-insert into party_type (description) values ('Organization');
-insert into party_type (description) values ('Legal Organization');
+insert into party_type (description) values ('Corporation');
 insert into party_type (description) values ('Informal Organization');
+insert into party_type (description) values ('Legal Organization');
+insert into party_type (description) values ('Organization');
 insert into party_type (description) values ('Person');
 
 insert into facility_type (description) values ('Warehouse');
