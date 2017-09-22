@@ -80,7 +80,7 @@ insert into party_role_type (description) values ('Subsidiary');
 insert into party_role_type (description) values ('Supplier');
 insert into party_role_type (description) values ('Webmaster');
 
-insert into party_type (description) values ('Corporation');
+INSERT INTO party_type (description) VALUES ('Corporation');
 insert into party_type (description) values ('Informal Organization');
 insert into party_type (description) values ('Legal Organization');
 insert into party_type (description) values ('Organization');
