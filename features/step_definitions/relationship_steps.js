@@ -9,12 +9,12 @@ defineSupportCode(function({
     Then
 }) {
 
-    Given("an organziation name of {arg1:stringInDoubleQuotes}", function(organization_name) {
+    Given("an organziation name of {stringInDoubleQuotes}", function(organization_name) {
         return this.db.one("insert into party (name, party_type_id) values ($1, $2) returning id", [organization_name, this.party_type_id("Organization")])
             .then(data => this.organization.id = data.id)
     });
 
-    Given('the organization has a role of {role:stringInDoubleQuotes}', function(role) {
+    Given('the organization has a role of {stringInDoubleQuotes}', function(role) {
         return this.db.one("insert into party_role ( party_role_type_id, party_id) values ($1, $2) returning id", [this.party_role_type(role), this.organization.id])
             .then(data => this.organization.roles.push({
                 id: data.id,
@@ -22,7 +22,7 @@ defineSupportCode(function({
             }));
     });
 
-    Given('I have provided a relationship status of {relationship_status:stringInDoubleQuotes}', function (relationship_status, callback) {
+    Given('I have provided a relationship status of {stringInDoubleQuotes}', function (relationship_status, callback) {
          this.relationship.status.description = relationship_status
          callback();
        });

@@ -8,7 +8,7 @@ defineSupportCode(function({
     When,
     Then
 }) {
-    Given('I have provided an email {email:stringInDoubleQuotes}', function(email, callback) {
+    Given('I have provided an email {stringInDoubleQuotes}', function(email, callback) {
         this.person.email_address = email;
         callback();
     });

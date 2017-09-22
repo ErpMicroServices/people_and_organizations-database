@@ -1,6 +1,6 @@
 {
   "name": "party-database",
-  "version": "2.2.0",
+  "version": "1.0.0",
   "description": "Database for the person & group data domain",
   "author": {
     "name": "Jim Barrows",
