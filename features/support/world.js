@@ -39,7 +39,7 @@ function CustomWorld() {
 
   this.email_id = () => this.contact_mechanism_types.find((cm) => cm.description === 'Email Address').id;
 
-  this.party_type_id = (party_type) => this.party_types.find(pt => pt.description === party_type).id;
+  this.party_type_id = (party_type) => this.party_types.get( party_type);
 
   this.party_role_type = (party_role_type) => this.party_role_types.find(pt => pt.description === party_role_type).id;
 
@@ -48,8 +48,8 @@ function CustomWorld() {
   this.party_relationship_status_type = description => this.party_relationship_status_types.find( prst => prst.description === description);
 
   this.result = {
-      error: {},
-      data: {}
+      error: null,
+      data: null
   };
 }
 
