@@ -1,94 +1,112 @@
-insert into communication_event_purpose_type (description) values ('Support Call');
-insert into communication_event_purpose_type (description) values ('Inquiry');
-insert into communication_event_purpose_type (description) values ('Customer Service Call');
-insert into communication_event_purpose_type (description) values ('Sales Follow Up');
-insert into communication_event_purpose_type (description) values ('Meeting');
-insert into communication_event_purpose_type (description) values ('Conference');
-insert into communication_event_purpose_type (description) values ('Activity Request');
+INSERT INTO communication_event_purpose_type (description) VALUES ('Support Call');
+INSERT INTO communication_event_purpose_type (description) VALUES ('Inquiry');
+INSERT INTO communication_event_purpose_type (description) VALUES ('Customer Service Call');
+INSERT INTO communication_event_purpose_type (description) VALUES ('Sales Follow Up');
+INSERT INTO communication_event_purpose_type (description) VALUES ('Meeting');
+INSERT INTO communication_event_purpose_type (description) VALUES ('Conference');
+INSERT INTO communication_event_purpose_type (description) VALUES ('Activity Request');
 
-insert into communication_event_type (description) values ('Phone Communication');
+INSERT INTO communication_event_type (description) VALUES ('Phone Communication');
 
 
-insert into communication_event_type (description) values ('Fax Communication');
-insert into communication_event_type (description) values ('Face-to-Face Communication');
-insert into communication_event_type (description) values ('Letter Correspondence');
-insert into communication_event_type (description) values ('Email Communication');
-insert into communication_event_type (description) values ('Web Site Correspondence');
+INSERT INTO communication_event_type (description) VALUES ('Fax Communication');
+INSERT INTO communication_event_type (description) VALUES ('Face-to-Face Communication');
+INSERT INTO communication_event_type (description) VALUES ('Letter Correspondence');
+INSERT INTO communication_event_type (description) VALUES ('Email Communication');
+INSERT INTO communication_event_type (description) VALUES ('Web Site Correspondence');
 
-insert into contact_mechanism_type (description) values ('Email Address');
-insert into contact_mechanism_type (description) values ('Facebook');
-insert into contact_mechanism_type (description) values ('IP Address');
-insert into contact_mechanism_type (description) values ('Postal Address');
-insert into contact_mechanism_type (description) values ('Telecommunications Number');
-insert into contact_mechanism_type (description) values ('Twitter');
-insert into contact_mechanism_type (description) values ('Web Address');
+INSERT INTO contact_mechanism_type (description) VALUES ('Email Address');
+INSERT INTO contact_mechanism_type (description) VALUES ('Facebook');
+INSERT INTO contact_mechanism_type (description) VALUES ('IP Address');
+INSERT INTO contact_mechanism_type (description) VALUES ('Postal Address');
+INSERT INTO contact_mechanism_type (description) VALUES ('Telecommunications Number');
+INSERT INTO contact_mechanism_type (description) VALUES ('Twitter');
+INSERT INTO contact_mechanism_type (description) VALUES ('Web Address');
 
-insert into geographic_boundary_type (description) values ('Country');
-insert into geographic_boundary_type (description) values ('Postal Code');
-insert into geographic_boundary_type (description) values ('Province');
-insert into geographic_boundary_type (description) values ('Territory');
-insert into geographic_boundary_type (description) values ('State');
-insert into geographic_boundary_type (description) values ('County');
-insert into geographic_boundary_type (description) values ('City');
-insert into geographic_boundary_type (description) values ('Sales Territory');
-insert into geographic_boundary_type (description) values ('Service Territory');
-insert into geographic_boundary_type (description) values ('Region');
+INSERT INTO geographic_boundary_type (description) VALUES ('Country');
+INSERT INTO geographic_boundary_type (description) VALUES ('Postal Code');
+INSERT INTO geographic_boundary_type (description) VALUES ('Province');
+INSERT INTO geographic_boundary_type (description) VALUES ('Territory');
+INSERT INTO geographic_boundary_type (description) VALUES ('State');
+INSERT INTO geographic_boundary_type (description) VALUES ('County');
+INSERT INTO geographic_boundary_type (description) VALUES ('City');
+INSERT INTO geographic_boundary_type (description) VALUES ('Sales Territory');
+INSERT INTO geographic_boundary_type (description) VALUES ('Service Territory');
+INSERT INTO geographic_boundary_type (description) VALUES ('Region');
 
-insert into geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id) values ('', 'United States', 'US', (select id from geographic_boundary_type where description = 'Country' ));
+INSERT INTO geographic_boundary (geo_code, name, abbreviation, geographic_boundary_type_id)
+VALUES ('', 'United States', 'US', (SELECT id
+                                    FROM geographic_boundary_type
+                                    WHERE description = 'Country'));
 
-insert into party_relationship_status_type (description) values ('Leads');
-insert into party_relationship_status_type (description) values ('Prospects');
-insert into party_relationship_status_type (description) values ('Customers');
+INSERT INTO party_relationship_status_type (description) VALUES ('Leads');
+INSERT INTO party_relationship_status_type (description) VALUES ('Prospects');
+INSERT INTO party_relationship_status_type (description) VALUES ('Customers');
 
-insert into party_relationship_type (description) values ('Supplier Relationship');
-insert into party_relationship_type (description) values ('Organization Contact Relationship');
-insert into party_relationship_type (description) values ('Employment');
-insert into party_relationship_type (description) values ('Customer Relationship');
-insert into party_relationship_type (description) values ('Distribution Channel Relationship');
-insert into party_relationship_type (description) values ('Partnership');
-insert into party_relationship_type (description) values ('Organization Rollup');
-insert into party_relationship_type (description) values ('Web Master Assignment');
-insert into party_relationship_type (description) values ('Visitor ISP');
-insert into party_relationship_type (description) values ('Host Server Visitor');
+INSERT INTO party_relationship_type (description) VALUES ('Supplier Relationship');
+INSERT INTO party_relationship_type (description) VALUES ('Organization Contact Relationship');
+INSERT INTO party_relationship_type (description) VALUES ('Employment');
+INSERT INTO party_relationship_type (description) VALUES ('Customer Relationship');
+INSERT INTO party_relationship_type (description) VALUES ('Distribution Channel Relationship');
+INSERT INTO party_relationship_type (description) VALUES ('Partnership');
+INSERT INTO party_relationship_type (description) VALUES ('Organization Rollup');
+INSERT INTO party_relationship_type (description) VALUES ('Web Master Assignment');
+INSERT INTO party_relationship_type (description) VALUES ('Visitor ISP');
+INSERT INTO party_relationship_type (description) VALUES ('Host Server Visitor');
 
-insert into party_role_type (description) values ('Agent');
-insert into party_role_type (description) values ('Association');
-insert into party_role_type (description) values ('Bill to Customer');
-insert into party_role_type (description) values ('Contact');
-insert into party_role_type (description) values ('Competitor');
-insert into party_role_type (description) values ('Contractor');
-insert into party_role_type (description) values ('Customer');
-insert into party_role_type (description) values ('Distributor');
-insert into party_role_type (description) values ('Division');
-insert into party_role_type (description) values ('Department');
-insert into party_role_type (description) values ('Employee');
-insert into party_role_type (description) values ('End user Customer');
-insert into party_role_type (description) values ('Family member');
-insert into party_role_type (description) values ('Household');
-insert into party_role_type (description) values ('Internal Organization');
-insert into party_role_type (description) values ('ISP');
-insert into party_role_type (description) values ('Other Organization Unit');
-insert into party_role_type (description) values ('Parent Organization');
-insert into party_role_type (description) values ('Partner');
-insert into party_role_type (description) values ('Prospect');
-insert into party_role_type (description) values ('Referrer');
-insert into party_role_type (description) values ('Regulatory Agency');
-insert into party_role_type (description) values ('Shareholder');
-insert into party_role_type (description) values ('Ship to Customer');
-insert into party_role_type (description) values ('Subscriber');
-insert into party_role_type (description) values ('Subsidiary');
-insert into party_role_type (description) values ('Supplier');
-insert into party_role_type (description) values ('Webmaster');
+INSERT INTO party_role_type (description) VALUES ('Agent');
+INSERT INTO party_role_type (description) VALUES ('Association');
+INSERT INTO party_role_type (description) VALUES ('Bill to Customer');
+INSERT INTO party_role_type (description) VALUES ('Contact');
+INSERT INTO party_role_type (description) VALUES ('Competitor');
+INSERT INTO party_role_type (description) VALUES ('Contractor');
+INSERT INTO party_role_type (description) VALUES ('Customer');
+INSERT INTO party_role_type (description) VALUES ('Distributor');
+INSERT INTO party_role_type (description) VALUES ('Division');
+INSERT INTO party_role_type (description) VALUES ('Department');
+INSERT INTO party_role_type (description) VALUES ('Employee');
+INSERT INTO party_role_type (description) VALUES ('End user Customer');
+INSERT INTO party_role_type (description) VALUES ('Family member');
+INSERT INTO party_role_type (description) VALUES ('Household');
+INSERT INTO party_role_type (description) VALUES ('Internal Organization');
+INSERT INTO party_role_type (description) VALUES ('ISP');
+INSERT INTO party_role_type (description) VALUES ('Other Organization Unit');
+INSERT INTO party_role_type (description) VALUES ('Parent Organization');
+INSERT INTO party_role_type (description) VALUES ('Partner');
+INSERT INTO party_role_type (description) VALUES ('Prospect');
+INSERT INTO party_role_type (description) VALUES ('Referrer');
+INSERT INTO party_role_type (description) VALUES ('Regulatory Agency');
+INSERT INTO party_role_type (description) VALUES ('Shareholder');
+INSERT INTO party_role_type (description) VALUES ('Ship to Customer');
+INSERT INTO party_role_type (description) VALUES ('Subscriber');
+INSERT INTO party_role_type (description) VALUES ('Subsidiary');
+INSERT INTO party_role_type (description) VALUES ('Supplier');
+INSERT INTO party_role_type (description) VALUES ('Webmaster');
 
-INSERT INTO party_type (description) VALUES ('Corporation');
-insert into party_type (description) values ('Informal Organization');
-insert into party_type (description) values ('Legal Organization');
-insert into party_type (description) values ('Organization');
-insert into party_type (description) values ('Person');
+INSERT INTO party_type (description) VALUES ('Organization');
+INSERT INTO party_type (description) VALUES ('Person');
+INSERT INTO party_type (description, parent_id) VALUES ('Legal Organization', (SELECT id
+                                                                               FROM party
+                                                                               WHERE name = 'Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Informal Organization', (SELECT id
+                                                                                  FROM party
+                                                                                  WHERE name = 'Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Corporation', (SELECT id
+                                                                        FROM party
+                                                                        WHERE name = 'Legal Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Government Agency', (SELECT id
+                                                                              FROM party
+                                                                              WHERE name = 'Legal Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Team', (SELECT id
+                                                                 FROM party
+                                                                 WHERE name = 'Informal Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Family', (SELECT id
+                                                                   FROM party
+                                                                   WHERE name = 'Informal Organization'));
 
-insert into facility_type (description) values ('Warehouse');
-insert into facility_type (description) values ('Plant');
-insert into facility_type (description) values ('Building');
-insert into facility_type (description) values ('Floor');
-insert into facility_type (description) values ('Office');
-insert into facility_type (description) values ('Room');
+INSERT INTO facility_type (description) VALUES ('Warehouse');
+INSERT INTO facility_type (description) VALUES ('Plant');
+INSERT INTO facility_type (description) VALUES ('Building');
+INSERT INTO facility_type (description) VALUES ('Floor');
+INSERT INTO facility_type (description) VALUES ('Office');
+INSERT INTO facility_type (description) VALUES ('Room');

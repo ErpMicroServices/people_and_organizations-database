@@ -20,6 +20,8 @@ function CustomWorld() {
       email_address: ''
   };
 
+	this.party_type = {};
+
   this.organization = {
     id: '',
     roles: []

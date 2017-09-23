@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS party_type (
   id          UUID DEFAULT uuid_generate_v4(),
   description TEXT UNIQUE NOT NULL CONSTRAINT party_type_description_not_empty CHECK (description <> ''),
+  parent_id   UUID REFERENCES party_type (id),
   CONSTRAINT party_type_pk PRIMARY KEY (id)
 );
 
