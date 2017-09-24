@@ -63,12 +63,11 @@ defineSupportCode(function ({
 		callback();
 	});
 
-	Then('the organization description has been updated', function (callback) {
+	Then('the organization description has been updated', function () {
 		expect(this.result.error).to.be.null;
 		expect(this.result.data).to.be.null;
-		this.db.one("select id, description, parent_id from party_type where id = $1", this.party_type.id)
-				.then(data => expect(data.description).to.be.equal(this.party_type.new_description))
-				.then(() => callback());
+		return this.db.one("select id, description, parent_id from party_type where id = $1", [this.party_type.id])
+				.then(data => expect(data.description).to.be.equal(this.party_type.new_description));
 	});
 
 	Then('the party type is not in the database', function () {
