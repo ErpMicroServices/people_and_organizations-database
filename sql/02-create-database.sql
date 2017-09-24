@@ -35,15 +35,10 @@ CREATE TABLE IF NOT EXISTS party_classification (
   CONSTRAINT party_classification_pk PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS role_type (
-  id          UUID DEFAULT uuid_generate_v4(),
-  description TEXT UNIQUE NOT NULL CONSTRAINT role_type_description_not_empty CHECK (description <> ''),
-  CONSTRAINT role_type_pk PRIMARY KEY (id)
-);
-
 CREATE TABLE IF NOT EXISTS party_role_type (
   id          UUID DEFAULT uuid_generate_v4(),
   description TEXT UNIQUE NOT NULL CONSTRAINT party_role_type_description_not_empty CHECK (description <> ''),
+  parent_id   UUID REFERENCES party_role_type (id),
   CONSTRAINT party_role_type_pk PRIMARY KEY (id)
 );
 

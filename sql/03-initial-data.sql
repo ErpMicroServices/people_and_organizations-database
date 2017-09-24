@@ -54,37 +54,72 @@ INSERT INTO party_relationship_type (description) VALUES ('Web Master Assignment
 INSERT INTO party_relationship_type (description) VALUES ('Visitor ISP');
 INSERT INTO party_relationship_type (description) VALUES ('Host Server Visitor');
 
-INSERT INTO party_role_type (description) VALUES ('Agent');
-INSERT INTO party_role_type (description) VALUES ('Association');
-INSERT INTO party_role_type (description) VALUES ('Bill to Customer');
-INSERT INTO party_role_type (description) VALUES ('Contact');
-INSERT INTO party_role_type (description) VALUES ('Competitor');
-INSERT INTO party_role_type (description) VALUES ('Contractor');
-INSERT INTO party_role_type (description) VALUES ('Customer');
-INSERT INTO party_role_type (description) VALUES ('Distributor');
-INSERT INTO party_role_type (description) VALUES ('Division');
-INSERT INTO party_role_type (description) VALUES ('Department');
-INSERT INTO party_role_type (description) VALUES ('Employee');
-INSERT INTO party_role_type (description) VALUES ('End user Customer');
-INSERT INTO party_role_type (description) VALUES ('Family member');
-INSERT INTO party_role_type (description) VALUES ('Household');
-INSERT INTO party_role_type (description) VALUES ('Internal Organization');
-INSERT INTO party_role_type (description) VALUES ('ISP');
-INSERT INTO party_role_type (description) VALUES ('Other Organization Unit');
-INSERT INTO party_role_type (description) VALUES ('Parent Organization');
-INSERT INTO party_role_type (description) VALUES ('Partner');
-INSERT INTO party_role_type (description) VALUES ('Prospect');
-INSERT INTO party_role_type (description) VALUES ('Referrer');
-INSERT INTO party_role_type (description) VALUES ('Regulatory Agency');
-INSERT INTO party_role_type (description) VALUES ('Shareholder');
-INSERT INTO party_role_type (description) VALUES ('Ship to Customer');
-INSERT INTO party_role_type (description) VALUES ('Subscriber');
-INSERT INTO party_role_type (description) VALUES ('Subsidiary');
-INSERT INTO party_role_type (description) VALUES ('Supplier');
-INSERT INTO party_role_type (description) VALUES ('Webmaster');
+INSERT INTO party_role_type (description) VALUES ('Person Role');
+INSERT INTO party_role_type (description, parent_id) VALUES ('Employee', (SELECT id
+                                                                          FROM party_role_type
+                                                                          WHERE description = 'Person Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Contractor', (SELECT id
+                                                                            FROM party_role_type
+                                                                            WHERE description = 'Person Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Family Member', (SELECT id
+                                                                               FROM party_role_type
+                                                                               WHERE description = 'Person Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Contact', (SELECT id
+                                                                         FROM party_role_type
+                                                                         WHERE description = 'Person Role'));
 
-INSERT INTO party_type (description) VALUES ('Organization');
-INSERT INTO party_type (description) VALUES ('Person');
+INSERT INTO party_role_type (description) VALUES ('Organization Role');
+INSERT INTO party_role_type (description, parent_id) VALUES ('Distribution Channel', (SELECT id
+                                                                                      FROM party_role_type
+                                                                                      WHERE description =
+                                                                                            'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Agent', (SELECT id
+                                                                       FROM party_role_type
+                                                                       WHERE description = 'Distribution Channel'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Distributor', (SELECT id
+                                                                             FROM party_role_type
+                                                                             WHERE
+                                                                               description = 'Distribution Channel'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Partner', (SELECT id
+                                                                         FROM party_role_type
+                                                                         WHERE description = 'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Competitor', (SELECT id
+                                                                            FROM party_role_type
+                                                                            WHERE description = 'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Household', (SELECT id
+                                                                           FROM party_role_type
+                                                                           WHERE description = 'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Regulatory Agency', (SELECT id
+                                                                                   FROM party_role_type
+                                                                                   WHERE description =
+                                                                                         'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Supplier', (SELECT id
+                                                                          FROM party_role_type
+                                                                          WHERE description = 'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Association', (SELECT id
+                                                                             FROM party_role_type
+                                                                             WHERE description = 'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Organization Unit', (SELECT id
+                                                                                   FROM party_role_type
+                                                                                   WHERE description =
+                                                                                         'Organization Role'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Parent Organization', (SELECT id
+                                                                                     FROM party_role_type
+                                                                                     WHERE description =
+                                                                                           'Organization Unit'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Department', (SELECT id
+                                                                            FROM party_role_type
+                                                                            WHERE description = 'Organization Unit'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Subsidiary', (SELECT id
+                                                                            FROM party_role_type
+                                                                            WHERE description = 'Organization Unit'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Division', (SELECT id
+                                                                          FROM party_role_type
+                                                                          WHERE description = 'Organization Unit'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Internal Organization', (SELECT id
+                                                                                       FROM party_role_type
+                                                                                       WHERE description =
+                                                                                             'Organization Role'));
 INSERT INTO party_type (description, parent_id) VALUES ('Legal Organization', (SELECT id
                                                                                FROM party
                                                                                WHERE name = 'Organization'));
@@ -100,9 +135,19 @@ INSERT INTO party_type (description, parent_id) VALUES ('Government Agency', (SE
 INSERT INTO party_type (description, parent_id) VALUES ('Team', (SELECT id
                                                                  FROM party
                                                                  WHERE name = 'Informal Organization'));
-INSERT INTO party_type (description, parent_id) VALUES ('Family', (SELECT id
-                                                                   FROM party
-                                                                   WHERE name = 'Informal Organization'));
+INSERT INTO party_role_type (description) VALUES ('Customer');
+INSERT INTO party_role_type (description, parent_id) VALUES ('Bill to Customer', (SELECT id
+                                                                                  FROM party_role_type
+                                                                                  WHERE description = 'Customer'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('Ship to Customer', (SELECT id
+                                                                                  FROM party_role_type
+                                                                                  WHERE description = 'Customer'));
+INSERT INTO party_role_type (description, parent_id) VALUES ('End User Customer', (SELECT id
+                                                                                   FROM party_role_type
+                                                                                   WHERE description = 'Customer'));
+INSERT INTO party_role_type (description) VALUES ('Prospect');
+INSERT INTO party_role_type (description) VALUES ('Shareholder');
+
 
 INSERT INTO facility_type (description) VALUES ('Warehouse');
 INSERT INTO facility_type (description) VALUES ('Plant');
