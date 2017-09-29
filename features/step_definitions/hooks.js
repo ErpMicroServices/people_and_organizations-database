@@ -12,6 +12,18 @@ defineSupportCode(function ({Before, After}) {
 			error: null
 		}
 
+		this.person = {
+			id           : '',
+			first_name   : '',
+			last_name    : '',
+			title        : '',
+			nickname     : '',
+			date_of_birth: '',
+			comment      : '',
+			email_address: '',
+			roles: []
+		};
+
 		this.db.any("delete from party_contact_mechanism")
 				.then(() => this.db.none("delete from contact_mechanism"))
 				.then(() => this.db.none("delete from party_relationship"))

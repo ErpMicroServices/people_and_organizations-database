@@ -149,6 +149,15 @@ defineSupportCode(function ({
 		callback();
 	});
 
+	Then('the person is still in the database', function () {
+		return this.db.any("select id, first_name, last_name, title, nickname, date_of_birth, comment from party where id = $1", [this.person.id])
+				.then(data => {
+					expect(data).to.be.instanceof(Array);
+					expect(data.length).to.be.equal(1);
+					expect(data[0].first_name).to.be.equal( this.person.first_name);
+					expect(data[0].last_name).to.be.equal( this.person.last_name);
+				});
+	});
 	Then('the person is no longer in the database', function () {
 		return this.db.any("select id, first_name, last_name, title, nickname, date_of_birth, comment from party where id = $1", [this.person.id])
 				.then(data => {

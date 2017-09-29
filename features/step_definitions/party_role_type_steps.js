@@ -8,15 +8,16 @@ defineSupportCode(function ({
 	                            Then
                             }) {
 
-	Given('a party role type  with a description of {stringInDoubleQuotes}', function (description, callback) {
+	Given('a party role type with a description of {stringInDoubleQuotes}', function (description, callback) {
 		this.party_role_type = {description};
 		callback();
 	});
 
-	Given('a party role type with a description of {stringInDoubleQuotes} has been saved to the database', function (description) {
+	Given('a party role type with a description of {stringInDoubleQuotes} is in the database', function (description) {
 		return this.db.one("insert into party_role_type (description) values ($1) returning id", [description])
 				.then(data => this.party_role_type = {id: data.id, description});
 	});
+
 
 	When('I save the party role type', function () {
 		return this.db.one("insert into party_role_type (description) values ($1) returning id", this.party_role_type.description)
@@ -46,12 +47,19 @@ defineSupportCode(function ({
 				.catch(error => this.result.error = error);
 	});
 
-	Then('The party role type is in the database', function () {
+	Then('the party role type is in the database', function () {
 		expect(this.result.error).to.be.null;
 		expect(this.result.data).to.not.be.null;
 		return this.db.one("select id, description, parent_id from party_role_type where id = $1", [this.result.data.id])
 				.then(data => {
 					expect(data.description).to.be.equal(this.party_role_type.description);
+				});
+	});
+
+	Then('the party role type {stringInDoubleQuotes} is in the database', function (description) {
+		return this.db.one("select id, description, parent_id from party_role_type where description = $1", [description])
+				.then(data => {
+					expect(data.description).to.be.equal(description);
 				});
 	});
 
