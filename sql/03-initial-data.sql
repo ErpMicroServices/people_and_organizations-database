@@ -120,21 +120,7 @@ INSERT INTO party_role_type (description, parent_id) VALUES ('Internal Organizat
                                                                                        FROM party_role_type
                                                                                        WHERE description =
                                                                                              'Organization Role'));
-INSERT INTO party_type (description, parent_id) VALUES ('Legal Organization', (SELECT id
-                                                                               FROM party
-                                                                               WHERE name = 'Organization'));
-INSERT INTO party_type (description, parent_id) VALUES ('Informal Organization', (SELECT id
-                                                                                  FROM party
-                                                                                  WHERE name = 'Organization'));
-INSERT INTO party_type (description, parent_id) VALUES ('Corporation', (SELECT id
-                                                                        FROM party
-                                                                        WHERE name = 'Legal Organization'));
-INSERT INTO party_type (description, parent_id) VALUES ('Government Agency', (SELECT id
-                                                                              FROM party
-                                                                              WHERE name = 'Legal Organization'));
-INSERT INTO party_type (description, parent_id) VALUES ('Team', (SELECT id
-                                                                 FROM party
-                                                                 WHERE name = 'Informal Organization'));
+
 INSERT INTO party_role_type (description) VALUES ('Customer');
 INSERT INTO party_role_type (description, parent_id) VALUES ('Bill to Customer', (SELECT id
                                                                                   FROM party_role_type
@@ -148,6 +134,27 @@ INSERT INTO party_role_type (description, parent_id) VALUES ('End User Customer'
 INSERT INTO party_role_type (description) VALUES ('Prospect');
 INSERT INTO party_role_type (description) VALUES ('Shareholder');
 
+
+INSERT INTO party_type (description) VALUES ('Person');
+
+INSERT INTO party_type (description) VALUES ('Organization');
+
+INSERT INTO party_type (description, parent_id) VALUES ('Legal Organization', (SELECT id
+                                                                               FROM party_type
+                                                                               WHERE description = 'Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Informal Organization', (SELECT id
+                                                                                  FROM party_type
+                                                                                  WHERE description = 'Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Corporation', (SELECT id
+                                                                        FROM party_type
+                                                                        WHERE description = 'Legal Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Government Agency', (SELECT id
+                                                                              FROM party_type
+                                                                              WHERE
+                                                                                description = 'Legal Organization'));
+INSERT INTO party_type (description, parent_id) VALUES ('Team', (SELECT id
+                                                                 FROM party_type
+                                                                 WHERE description = 'Informal Organization'));
 
 INSERT INTO facility_type (description) VALUES ('Warehouse');
 INSERT INTO facility_type (description) VALUES ('Plant');

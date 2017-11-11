@@ -1,0 +1,119 @@
+ALTER TABLE public.valid_contact_mechanism_role
+  DROP CONSTRAINT valid_contact_mechanism_role_contact_mechanism_type_id_fkey;
+ALTER TABLE public.valid_contact_mechanism_role
+  DROP CONSTRAINT valid_contact_mechanism_role_communication_event_role_type_fkey;
+ALTER TABLE public.party_contact_mechanism
+  DROP CONSTRAINT party_contact_mechanism_party_id_fkey;
+ALTER TABLE public.party_contact_mechanism
+  DROP CONSTRAINT party_contact_mechanism_contact_mechanism_id_fkey;
+ALTER TABLE public.party_classification
+  DROP CONSTRAINT party_classification_party_id_fkey;
+ALTER TABLE public.party_classification
+  DROP CONSTRAINT party_classification_party_classification_type_id_fkey;
+ALTER TABLE public.geographic_boundary_association
+  DROP CONSTRAINT geographic_boundary_association_within_boundary_fkey;
+ALTER TABLE public.geographic_boundary_association
+  DROP CONSTRAINT geographic_boundary_association_in_boundary_fkey;
+ALTER TABLE public.facility_role
+  DROP CONSTRAINT facility_role_described_by_fkey;
+ALTER TABLE public.facility_role
+  DROP CONSTRAINT facility_role_party_id_fkey;
+ALTER TABLE public.facility_contact_mechanism
+  DROP CONSTRAINT facility_contact_mechanism_facility_id_fkey;
+ALTER TABLE public.facility_contact_mechanism
+  DROP CONSTRAINT facility_contact_mechanism_contact_mechanism_id_fkey;
+ALTER TABLE public.contact_mechanism_geographic_boundary
+  DROP CONSTRAINT contact_mechanism_geographic_boundary_contact_mechanism_id_fkey;
+ALTER TABLE public.contact_mechanism_geographic_boundary
+  DROP CONSTRAINT contact_mechanism_geographic_bounda_geographic_boundary_id_fkey;
+ALTER TABLE public.communication_event_work_effort
+  DROP CONSTRAINT communication_event_work_effort_communication_event_id_fkey;
+ALTER TABLE public.case_role
+  DROP CONSTRAINT case_role_case_id_fkey;
+ALTER TABLE public.case_role
+  DROP CONSTRAINT case_role_case_role_type_id_fkey;
+ALTER TABLE public.case_role
+  DROP CONSTRAINT case_role_party_id_fkey;
+ALTER TABLE public.party_relationship
+  DROP CONSTRAINT party_relationship_from_party_role_id_fkey;
+ALTER TABLE public.party_relationship
+  DROP CONSTRAINT party_relationship_to_party_role_id_fkey;
+ALTER TABLE public.party_relationship
+  DROP CONSTRAINT party_relationship_party_relationship_type_id_fkey;
+ALTER TABLE public.party_relationship
+  DROP CONSTRAINT party_relationship_party_relationship_status_type_id_fkey;
+ALTER TABLE public.communication_event
+  DROP CONSTRAINT communication_event_contact_mechanism_type_id_fkey;
+ALTER TABLE public.communication_event
+  DROP CONSTRAINT communication_event_party_relationship_id_fkey;
+ALTER TABLE public.communication_event
+  DROP CONSTRAINT communication_event_communication_event_status_type_id_fkey;
+ALTER TABLE public.communication_event
+  DROP CONSTRAINT communication_event_case_id_fkey;
+ALTER TABLE public.communication_event_role
+  DROP CONSTRAINT communication_event_role_communication_event_id_fkey;
+ALTER TABLE public.communication_event_role
+  DROP CONSTRAINT communication_event_role_communication_event_role_type_id_fkey;
+ALTER TABLE public.communication_event_role
+  DROP CONSTRAINT communication_event_role_party_id_fkey;
+ALTER TABLE public.party_role
+  DROP CONSTRAINT party_role_party_role_type_id_fkey;
+ALTER TABLE public.party_role
+  DROP CONSTRAINT party_role_party_id_fkey;
+ALTER TABLE public.party_relationship_type
+  DROP CONSTRAINT party_relationship_type_from_party_role_type_fkey;
+ALTER TABLE public.party_relationship_type
+  DROP CONSTRAINT party_relationship_type_to_party_role_type_fkey;
+ALTER TABLE public.facility
+  DROP CONSTRAINT facility_part_of_fkey;
+ALTER TABLE public.facility
+  DROP CONSTRAINT facility_described_by_fkey;
+ALTER TABLE public.party_type
+  DROP CONSTRAINT party_type_parent_id_fkey;
+ALTER TABLE public.party_role_type
+  DROP CONSTRAINT party_role_type_parent_id_fkey;
+ALTER TABLE public.party
+  DROP CONSTRAINT party_party_type_id_fkey;
+ALTER TABLE public.geographic_boundary
+  DROP CONSTRAINT geographic_boundary_geographic_boundary_type_id_fkey;
+ALTER TABLE public.contact_mechanism
+  DROP CONSTRAINT contact_mechanism_contact_mechanism_type_id_fkey;
+ALTER TABLE public."case"
+  DROP CONSTRAINT case_case_status_type_id_fkey;
+DROP TABLE public.valid_contact_mechanism_role;
+DROP TABLE public.party_contact_mechanism;
+DROP TABLE public.party_classification;
+DROP TABLE public.geographic_boundary_association;
+DROP TABLE public.facility_role;
+DROP TABLE public.facility_contact_mechanism;
+DROP TABLE public.contact_mechanism_geographic_boundary;
+DROP TABLE public.communication_event_work_effort;
+DROP TABLE public.case_role;
+DROP TABLE public.party_relationship;
+DROP TABLE public.communication_event;
+DROP TABLE public.communication_event_role;
+DROP TABLE public.party_role;
+DROP TABLE public.party_relationship_type;
+DROP TABLE public.facility;
+DROP TABLE public.party_type;
+DROP TABLE public.party_role_type;
+DROP TABLE public.party;
+DROP TABLE public.geographic_boundary;
+DROP TABLE public.contact_mechanism;
+DROP TABLE public."case";
+DROP TABLE public.party_relationship_status_type;
+DROP TABLE public.party_classification_type;
+DROP TABLE public.geographic_boundary_type;
+DROP TABLE public.facility_type;
+DROP TABLE public.facility_role_type;
+DROP TABLE public.contact_mechanism_type;
+DROP TABLE public.communication_event_status_type;
+DROP TABLE public.communication_event_role_type;
+DROP TABLE public.case_status_type;
+DROP TABLE public.case_role_type;
+DROP TABLE public.priority_type;
+DROP TABLE public.databasechangeloglock;
+DROP TABLE public.databasechangelog;
+DROP TABLE public.communication_event_type;
+DROP TABLE public.communication_event_purpose_type;
+DROP TABLE public.communication_event_purpose;
