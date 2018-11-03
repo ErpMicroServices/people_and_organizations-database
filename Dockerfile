@@ -1,8 +1,8 @@
-FROM postgres:9.6.1
+FROM postgres:10
 
-ENV POSTGRES_DB=party_database
-ENV POSTGRES_USER=party_database
-ENV POSTGRES_PASSWORD=party_database
+ENV POSTGRES_DB=people_and_organizations
+ENV POSTGRES_USER=people_and_organizations
+ENV POSTGRES_PASSWORD=people_and_organizations
 
 RUN apt-get update -qq && \
     apt-get install -y apt-utils postgresql-contrib
