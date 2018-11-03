@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - preConditions:
+    - runningAs:
+        username: party_database
+
+  - changeSet:
+      id: Create and load all data
+      author: Jim Barrows
+      changes:
+        - sqlFile:
+            path: ./sql/01-install-extensions.sql
+        - sqlFile:
+            path: ./sql/02-create-database.sql
+        - sqlFile:
+            path: ./sql/03-initial-data.sql
+            splitStatements: false
+        - sqlFile:
+            path: ./sql/04-us-states.sql
+            splitStatements: false
+        - sqlFile:
+            splitStatements: false
+            path: ./sql/05-us-cities.sql
+      rollback:
+        - sqlFile:
+            path: ./sql/rollback_database.sql
+  - changeSet:
+      id: Load Zip codes
+      author: Jim Barrows
+      changes:
+        - sqlFile:
+            path: ./sql/06-us-zip-codes.sql

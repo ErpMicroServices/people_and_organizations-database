@@ -2,11 +2,17 @@
 
 ## Build the docker image
 '''
-docker build --tag party-database .
-docker run --detach --publish 5432:5432 --name party-database-1 party-database
+npm run build
+'''
+'''
+npm start
 '''
 
 ## Inspect the database
 '''
-docker run --detach --publish 5050:5050 --name pgadmin --link party-database-1:party-database-1 thajeztah/pgadmin4
+npm run db_admin
 '''
+
+## Data massagers
+These should only be needed once, however I don't want to forget how I did it.  Since we're using liquibase, new data loads should be a new change set.
+In such a case, these scripts are here for postertity to copy and paste as needed.
