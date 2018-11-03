@@ -1,0 +1,3 @@
+"ID","AUTHOR","FILENAME","DATEEXECUTED","ORDEREXECUTED","EXECTYPE","MD5SUM","DESCRIPTION","COMMENTS","TAG","LIQUIBASE","CONTEXTS","LABELS"
+"Create and load all data","Jim Barrows","./database_change_log.yml","2018-11-03T09:55:54.230","1","EXECUTED","7:d7d72d4684e1d0326511aea945d43086","sqlFile; sqlFile; sqlFile; sqlFile; sqlFile","","","3.5.3","()","","1256951993"
+"Load Zip codes","Jim Barrows","./database_change_log.yml","2018-11-03T09:56:13.508","2","EXECUTED","7:8d651bb816a483000a9fb92bb380f732","sqlFile",,"","3.5.3","()","","1256951993"

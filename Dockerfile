@@ -7,4 +7,4 @@ ENV POSTGRES_PASSWORD=people_and_organizations
 RUN apt-get update -qq && \
     apt-get install -y apt-utils postgresql-contrib
 
-ADD generated-sql/*.sql /docker-entrypoint-initdb.d/
+ADD build/database_up.sql /docker-entrypoint-initdb.d/

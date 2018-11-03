@@ -1,3 +1,5 @@
 node_modules/
 generated-sql/*
 .idea/
+/build/
+/people_and_organizations-database.iml

@@ -3,7 +3,7 @@ const parse     = require( 'csv-parse' );
 const transform = require( 'stream-transform' );
 const parser    = parse( );
 const rs        = fs.createReadStream('./data_massagers/cities.csv');
-const ws        = fs.createWriteStream('./sql/05-us-cities.sql');
+const ws        = fs.createWriteStream('./build/05-us-cities.sql');
 const uuidv4    = require( 'uuid/v4' );
 
 var transformer = transform( function( record, callback ) {
