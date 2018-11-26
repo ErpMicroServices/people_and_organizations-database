@@ -8,7 +8,7 @@
  },
  "license" : "Apache-2.0",
  "scripts" : {
-	"build" : "run build:database; npm run build:docker",
+	"build" : "npm run build:database; npm run build:docker",
 	"build:docker" : "docker build --tag erpmicroservices/people_and_organizations-database --rm .",
 	"build:cities_sql" : "mkdir -p build;node data_massagers/create_us_cities_sql.js",
 	"build:us_zip_codes_sql" : "mkdir -p build;node data_massagers/create_us_zip_codes.js;",

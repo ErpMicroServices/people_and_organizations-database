@@ -7,14 +7,7 @@ CREATE TABLE IF NOT EXISTS party_type (
 
 CREATE TABLE IF NOT EXISTS party (
 	id            UUID DEFAULT uuid_generate_v4(),
-	government_id TEXT UNIQUE,
-	first_name    TEXT,
-	last_name     TEXT,
-	name          TEXT,
-	title         TEXT,
-	nickname      TEXT,
-	date_of_birth DATE,
-	COMMENT       TEXT,
+	comment       TEXT,
 	party_type_id UUID NOT NULL REFERENCES party_type (id),
 	CONSTRAINT party_pk PRIMARY KEY (id)
 );
