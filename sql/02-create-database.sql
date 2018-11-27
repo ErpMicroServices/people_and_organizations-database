@@ -12,6 +12,23 @@ CREATE TABLE IF NOT EXISTS party (
 	CONSTRAINT party_pk PRIMARY KEY (id)
 );
 
+CREATE TABLE IF NOT EXISTS name_type (
+	id          UUID DEFAULT uuid_generate_v4(),
+	description TEXT UNIQUE NOT NULL CONSTRAINT name_type_description_not_empty CHECK (description <> ''),
+	parent_id   UUID REFERENCES name_type (id),
+	CONSTRAINT name_type_pk PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS party_name (
+	id           UUID          DEFAULT uuid_generate_v4(),
+	name         TEXT,
+	from_date    DATE NOT NULL DEFAULT CURRENT_DATE,
+	thru_date    DATE,
+	party_id     UUID NOT NULL REFERENCES party (id),
+	name_type_id UUID NOT NULL REFERENCES name_type (id),
+	CONSTRAINT party_name_pk PRIMARY KEY (id)
+);
+
 CREATE TABLE IF NOT EXISTS party_classification_type (
 	id          UUID DEFAULT uuid_generate_v4(),
 	description TEXT UNIQUE NOT NULL CONSTRAINT party_classification_type_description_not_empty CHECK (description <> ''),

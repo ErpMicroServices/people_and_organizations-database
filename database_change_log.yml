@@ -27,5 +27,5 @@ databaseChangeLog:
     id: Load Zip codes
     author: Jim Barrows
     changes:
-      - sqlFile:
-          path: ./build/06-us-zip-codes.sql
+    - sqlFile:
+        path: ./build/06-us-zip-codes.sql
