@@ -230,6 +230,12 @@ CREATE TABLE IF NOT EXISTS case_role_type (
 	CONSTRAINT case_role_type_pk PRIMARY KEY (id)
 );
 
+CREATE TABLE IF NOT EXISTS case_type (
+	id          UUID DEFAULT uuid_generate_v4(),
+	description TEXT UNIQUE NOT NULL CONSTRAINT case_type_description_not_empty CHECK (description <> ''),
+	parent_id   UUID REFERENCES case_type (id),
+	CONSTRAINT case_type_pk PRIMARY KEY (id)
+);
 CREATE TABLE IF NOT EXISTS "case" (
 	id                  UUID DEFAULT uuid_generate_v4(),
 	description         TEXT UNIQUE NOT NULL CONSTRAINT communication_event_status_type_description_not_empty CHECK (
