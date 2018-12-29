@@ -287,7 +287,7 @@ CREATE TABLE IF NOT EXISTS "case"
 (
 	id                  UUID               DEFAULT uuid_generate_v4(),
 	description         TEXT      NOT NULL
-		CONSTRAINT communication_event_status_type_description_not_empty CHECK (
+		CONSTRAINT case_description_not_empty CHECK (
 			description <> ''),
 	started_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	case_type_id        UUID      NOT NULL REFERENCES case_type (id),
@@ -297,10 +297,12 @@ CREATE TABLE IF NOT EXISTS "case"
 
 CREATE TABLE IF NOT EXISTS case_role
 (
-	id                UUID DEFAULT uuid_generate_v4(),
+	id                UUID          DEFAULT uuid_generate_v4(),
 	case_id           UUID NOT NULL REFERENCES "case" (id),
 	case_role_type_id UUID NOT NULL REFERENCES case_role_type (id),
 	party_id          UUID NOT NULL REFERENCES party (id),
+	from_date         DATE NOT NULL DEFAULT CURRENT_DATE,
+	thru_date         DATE,
 	CONSTRAINT case_role_pk PRIMARY KEY (id)
 );
 
