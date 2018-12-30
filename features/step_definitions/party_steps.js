@@ -1,3 +1,12 @@
-/**
- * Created by JimBarrows on 2018-12-30.
- */
+var {
+	    defineSupportCode
+    } = require('cucumber')
+
+
+defineSupportCode(function ({
+	                            Given,
+	                            When,
+	                            Then
+                            }) {
+
+})
