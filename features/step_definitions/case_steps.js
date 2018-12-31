@@ -107,6 +107,15 @@ defineSupportCode(function ({
 				case_type_id       : this.case.case_type_id,
 				case_status_type_id: this.case.case_status_type_id
 			})
+			if (this.case.roles && this.case.roles.length > 0) {
+				for (let role of this.case.roles) {
+					await this.db.none('insert into case_role( case_id, case_role_type_id, party_id) values (${case_id}, ${case_role_type_id}, ${party_id})', {
+						case_id          : this.result.data.id,
+						case_role_type_id: role.case_role_type_id,
+						party_id         : role.party_id
+					})
+				}
+			}
 		} catch (error) {
 			this.result.error = error
 		}
@@ -162,13 +171,6 @@ defineSupportCode(function ({
 	Then('{int} of them are cases in status {string}', async function (expected_cases, case_status_description) {
 		let case_status = await this.db.one('select id, description, parent_id from case_status_type where description = ${case_status_description}', {case_status_description})
 		expect(this.result.data.filter(c => c.case_status_type_id === case_status.id).length).to.be.equal(expected_cases)
-	})
-
-	Then('I get the case back', function (callback) {
-		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
-		expect(this.result.data).to.not.be.null
-		expect(this.result.data.id).to.not.be.null
-		callback()
 	})
 
 	Then('the case is in the database', async function () {

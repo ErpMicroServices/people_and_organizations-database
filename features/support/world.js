@@ -13,19 +13,29 @@ function CustomWorld() {
 		description        : '',
 		started_at         : null,
 		case_type_id       : '',
-		case_status_type_id: ''
+		case_status_type_id: '',
+		roles              : []
+	}
+
+	this.case_role_type = {
+		id         : '',
+		description: '',
+		parent_id  : '',
+		children   : [],
 	}
 
 	this.case_type = {
 		id         : '',
 		description: '',
-		parent_id  : ''
+		parent_id  : '',
+		children   : [],
 	}
 
 	this.case_status_type = {
 		id         : '',
 		description: '',
-		parent_id  : ''
+		parent_id  : '',
+		children   : [],
 	}
 
 	this.config = config
@@ -39,7 +49,22 @@ function CustomWorld() {
 		table_name : '',
 
 	}
-	this.result   = {
+
+	this.party = {
+		comment        : '',
+		identifications: [],
+		party_type_id  : '',
+		names          : []
+	}
+
+	this.party_type = {
+		id         : '',
+		description: '',
+		parent_id  : '',
+		children   : [],
+	}
+
+	this.result = {
 		error: null,
 		data : null
 	}
