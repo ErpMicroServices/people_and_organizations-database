@@ -283,6 +283,7 @@ CREATE TABLE IF NOT EXISTS case_type
 	parent_id   UUID REFERENCES case_type (id),
 	CONSTRAINT case_type_pk PRIMARY KEY (id)
 );
+
 CREATE TABLE IF NOT EXISTS "case"
 (
 	id                  UUID               DEFAULT uuid_generate_v4(),

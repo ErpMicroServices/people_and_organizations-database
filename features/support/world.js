@@ -8,6 +8,26 @@ var {
 
 function CustomWorld() {
 
+	this.case = {
+		id                 : '',
+		description        : '',
+		started_at         : null,
+		case_type_id       : '',
+		case_status_type_id: ''
+	}
+
+	this.case_type = {
+		id         : '',
+		description: '',
+		parent_id  : ''
+	}
+
+	this.case_status_type = {
+		id         : '',
+		description: '',
+		parent_id  : ''
+	}
+
 	this.config = config
 
 	this.db = database
