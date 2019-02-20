@@ -2,15 +2,15 @@ import 'babel-polyfill'
 import {convert_to_table_name} from '../util'
 
 var {
-	    defineSupportCode
-    } = require('cucumber')
+			defineSupportCode
+		} = require('cucumber')
 
 
 defineSupportCode(function ({
-	                            Given,
-	                            When,
-	                            Then
-                            }) {
+															Given,
+															When,
+															Then
+														}) {
 
 	Given('the case is saved to the database', async function () {
 		let case_id = await this.db.one('insert into "case" (description, case_type_id, case_status_type_id) values( ${description}, ${case_type_id}, ${case_status_type_id}) returning id', {
@@ -19,9 +19,9 @@ defineSupportCode(function ({
 			case_status_type_id: this.case.case_status_type_id
 		})
 		this.case   = Object.assign(this.case,
-			{
-				id: case_id.id
-			})
+																{
+																	id: case_id.id
+																})
 	})
 
 	Given('a case type of {string}', async function (case_type_description) {
@@ -49,26 +49,14 @@ defineSupportCode(function ({
 	})
 
 	Given('there are {int} cases with a type of {string} with a status of {string} in the database', async function (number_of_cases, case_type_description, case_status_type_description) {
-		let case_type_id        = ''
-		let case_status_type_id = ''
-
-		let case_type  = await this.db.one('insert into case_type (description) values (${case_type_description}) returning id ', {case_type_description})
-		case_type_id   = case_type.id
-		this.case_type = Object.assign(this.case_type, {id: case_type_id, description: case_type_description})
-
-		let case_status_type  = await this.db.one('insert into case_status_type (description) values (${case_status_type_description}) returning id', {case_status_type_description})
-		case_status_type_id   = case_status_type.id
-		this.case_status_type = Object.assign(this.case_status_type, {
-			id         : case_status_type_id,
-			description: case_status_type_description
-		})
-
+		let case_type        = await this.db.one('select id, description, parent_id from case_type where description = ${case_type_description}', {case_type_description})
+		let case_status_type = await this.db.one('select id, description, parent_id from case_status_type where description = ${case_status_type_description}', {case_status_type_description})
 
 		for (let count = 0; count < number_of_cases; count++) {
 			let params = {
 				description        : `Case number ${count}`,
-				case_type_id       : case_type_id,
-				case_status_type_id: case_status_type_id
+				case_type_id       : case_type.id,
+				case_status_type_id: case_status_type.id
 			}
 			await this.db.one('insert into "case" (description, case_type_id, case_status_type_id) values (${description}, ${case_type_id}, ${case_status_type_id}) returning id', params)
 		}
@@ -125,7 +113,7 @@ defineSupportCode(function ({
 		try {
 			let case_status  = await this.db.one('select id, description, parent_id from case_status_type where description = ${case_status_description}', {case_status_description})
 			this.result.data = await this.db.any('select id, description, started_at, case_type_id, case_status_type_id from "case" where case_status_type_id = ${case_status_type_id}',
-				{case_status_type_id: case_status.id})
+																					 {case_status_type_id: case_status.id})
 		} catch (error) {
 			this.result.error = error
 		}
@@ -135,7 +123,7 @@ defineSupportCode(function ({
 		try {
 			let case_type    = await this.db.one('select id, description, parent_id from case_type where description = ${case_type_description}', {case_type_description})
 			this.result.data = await this.db.any('select id, description, started_at, case_type_id, case_status_type_id from "case" where case_type_id = ${case_type_id}',
-				{case_type_id: case_type.id})
+																					 {case_type_id: case_type.id})
 		} catch (error) {
 			this.result.error = error
 		}
