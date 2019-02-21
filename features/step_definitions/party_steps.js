@@ -9,6 +9,11 @@ defineSupportCode(function ({
 															Then
 														}) {
 
+	Given('a comment of {string}', function (comment, callback) {
+		this.party.comment = comment
+		callback()
+	})
+
 	Given('a party with a comment of {string} and a type of {string} is in the database', async function (comment, party_type_description) {
 		let party_type = await this.db.one('select id, description, parent_id from party_type where description = ${party_type_description}', {party_type_description})
 		let party_id   = await this.db.one('insert into party (comment, party_type_id) values (${comment}, ${party_type_id}) returning id', {
@@ -29,7 +34,7 @@ defineSupportCode(function ({
 
 	Given('no comment field', function (callback) {
 		this.party.comment = null
-		callback(null, 'pending')
+		callback()
 	})
 
 	When('I delete the party', async function () {
@@ -37,8 +42,13 @@ defineSupportCode(function ({
 	})
 
 	When('I save the party', async function () {
-		let id           = await this.db.one('insert into party (comment, party_type_id) values (${comment}, ${party_type_id})', this.party)
-		this.result.data = await this.db.one('select id, comment, party_type_id from party where id = ${id}', id.id)
+		let id                = await this.db.one('insert into party (comment, party_type_id) values (${comment}, ${party_type_id}) returning id', {
+			comment      : this.party.comment,
+			party_type_id: this.erp_type.id
+		})
+		this.party.id         = id.id
+		this.party.party_type = this.erp_type
+		this.result.data      = await this.db.one('select id, comment, party_type_id from party where id = ${id}', id)
 	})
 
 	When('I search for the party by id', async function () {
