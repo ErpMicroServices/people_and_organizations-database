@@ -27,8 +27,22 @@ defineSupportCode(function ({
 		callback()
 	})
 
+	Given('no comment field', function (callback) {
+		this.party.comment = null
+		callback(null, 'pending')
+	})
+
 	When('I delete the party', async function () {
 		await this.db.none('delete from party where id = ${id}', {id: this.party.id})
+	})
+
+	When('I save the party', async function () {
+		let id           = await this.db.one('insert into party (comment, party_type_id) values (${comment}, ${party_type_id})', this.party)
+		this.result.data = await this.db.one('select id, comment, party_type_id from party where id = ${id}', id.id)
+	})
+
+	When('I search for the party by id', async function () {
+		this.result.data = await this.db.one('select id, comment, party_type_id from party where id=${id}', this.party)
 	})
 
 	When('I update the party', async function () {
