@@ -151,7 +151,7 @@ defineSupportCode(function ({
 	})
 
 	Then('I get {string} back', function (value, callback) {
-		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
+		expect(this.result.error).to.be.null
 		expect(this.result.data).to.not.be.null
 		callback()
 	})

@@ -96,26 +96,6 @@ defineSupportCode(function ({
 		expect(case_roles.length).to.be.equal(number_of_roles)
 	})
 
-	Then('the party is in the database', async function () {
-		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
-		expect(this.result.data).to.not.be.null
-		let party_id = ''
-		if (this.party.id && this.party.id !== '') {
-			party_id = this.party.id
-		} else {
-			party_id = this.result.data.id
-		}
-
-		let party = await this.db.one('select id, comment, party_type_id from party where id = ${party_id}', {party_id})
-		if (this.party.comment) {
-			expect(party.comment).to.be.equal(this.party.comment)
-		} else {
-			expect(party.comment).to.not.be.ok
-		}
-
-		expect(party.party_type_id).to.be.equal(this.party_type.id)
-	})
-
 	Then('the {int} roles have type {string}', async function (role_count, case_role_type_description) {
 		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
 		expect(this.result.data).to.be.ok
