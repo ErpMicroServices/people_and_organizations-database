@@ -58,6 +58,10 @@ defineSupportCode(function ({
 		this.result.data      = await this.db.one('select id, comment, party_type_id from party where id = ${id}', id)
 	})
 
+	When('I search for all parties', async function () {
+		this.result.data = await this.db.any('select id, comment, party_type_id from party')
+	})
+
 	When('I search for parties of type {string}', async function (party_type_description) {
 		this.result.data = await this.db.any('select party.id as id, comment, party_type_id from party, party_type where party.party_type_id = party_type.id and party_type.description = ${party_type_description}', {party_type_description})
 	})
