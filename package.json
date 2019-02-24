@@ -35,9 +35,12 @@
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"chai": "^4.1.2",
+		"csv-parse": "^4.3.3",
 		"cucumber": "^3.1.0",
 		"graphql": "^14.1.1",
 		"graphql-tag": "^2.10.0",
-		"node-fetch": "^2.2.0"
+		"node-fetch": "^2.2.0",
+		"stream-transform": "^1.0.8",
+		"uuid": "^3.3.2"
 	}
 }
