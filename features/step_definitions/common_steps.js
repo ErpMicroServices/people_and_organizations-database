@@ -14,8 +14,8 @@ defineSupportCode(function ({
 															Then
 														}) {
 	Then('the operation was successful', function (callback) {
-		expect(this.result.error, 'Error is: ', this.result.error).to.not.be.ok
 		expect(this.result).to.be.ok
+		expect(this.result.error, `Error is: ${this.result.error}`).to.not.be.ok
 		expect(this.result.data).to.be.ok
 		callback()
 	})
