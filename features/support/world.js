@@ -1,12 +1,12 @@
 // features/support/world.js
-import config from "./config"
+import config   from "./config"
 import database from "./database"
 
 var {
-	    defineSupportCode
-    } = require('cucumber')
+			defineSupportCode
+		} = require('cucumber')
 
-function CustomWorld() {
+function CustomWorld () {
 
 	this.case = {
 		id                 : '',
@@ -15,6 +15,15 @@ function CustomWorld() {
 		case_type_id       : '',
 		case_status_type_id: '',
 		roles              : []
+	}
+
+	this.case_role = {
+		id               : '',
+		case_id          : '',
+		case_role_type_id: '',
+		party_id         : '',
+		from_date        : null,
+		thru_date        : null
 	}
 
 	this.case_role_type = {
@@ -38,7 +47,17 @@ function CustomWorld() {
 		children   : [],
 	}
 
-	this.config = config
+	this.communication_event = {
+		id                                : '',
+		started                           : '',
+		ended                             : '',
+		note                              : '',
+		contact_mechanism_type_id         : '',
+		party_relationship_id             : '',
+		communication_event_status_type_id: '',
+		case_id                           : ''
+	}
+	this.config              = config
 
 	this.db = database
 
@@ -71,7 +90,7 @@ function CustomWorld() {
 }
 
 defineSupportCode(function ({
-	                            setWorldConstructor
-                            }) {
+															setWorldConstructor
+														}) {
 	setWorldConstructor(CustomWorld)
 })

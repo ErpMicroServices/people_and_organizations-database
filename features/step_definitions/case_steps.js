@@ -13,15 +13,12 @@ defineSupportCode(function ({
 														}) {
 
 	Given('the case is saved to the database', async function () {
-		let case_id = await this.db.one('insert into "case" (description, case_type_id, case_status_type_id) values( ${description}, ${case_type_id}, ${case_status_type_id}) returning id', {
+		let case_id  = await this.db.one('insert into "case" (description, case_type_id, case_status_type_id) values( ${description}, ${case_type_id}, ${case_status_type_id}) returning id', {
 			description        : this.case.description,
 			case_type_id       : this.case.case_type_id,
 			case_status_type_id: this.case.case_status_type_id
 		})
-		this.case   = Object.assign(this.case,
-																{
-																	id: case_id.id
-																})
+		this.case.id = case_id.id
 	})
 
 	Given('a case type of {string}', async function (case_type_description) {
@@ -35,7 +32,7 @@ defineSupportCode(function ({
 	})
 
 	Given('a case description of {string}', function (case_description, callback) {
-		this.case = Object.assign(this.case, {description: case_description})
+		this.case.description = case_description
 		callback()
 	})
 
@@ -64,7 +61,7 @@ defineSupportCode(function ({
 
 	When('I delete the case', async function () {
 		try {
-			this.result.data = await this.db.any('delete from "case" where id = ($1)', [this.case.id])
+			this.result.data = await this.db.any('delete from "case" where id = (${id})', this.case)
 		} catch (error) {
 			this.result.error = error
 		}
@@ -72,9 +69,12 @@ defineSupportCode(function ({
 
 	When('I update the case description to {string}', async function (description) {
 		try {
-			await this.db.none('update "case" set description = ($1) where id = ($2)', [description, this.case.id])
-			this.result.data = await this.db.one('select id, description, started_at, case_type_id, case_status_type_id from "case" where id = ($1)', [this.case.id])
-			this.case        = Object.assign(this.case, {description})
+			await this.db.none('update "case" set description = ${description} where id = ${id}', {
+				description,
+				id: this.case.id
+			})
+			this.result.data      = await this.db.one('select id, description, started_at, case_type_id, case_status_type_id from "case" where id = ${id}', this.case)
+			this.case.description = description
 		} catch (error) {
 			this.result.error = error
 		}
@@ -82,7 +82,7 @@ defineSupportCode(function ({
 
 	When('I search for the case by id', async function () {
 		try {
-			this.result.data = await this.db.one('select id, description, started_at, case_type_id, case_status_type_id from "case" where id = ($1)', [this.case.id])
+			this.result.data = await this.db.one('select id, description, started_at, case_type_id, case_status_type_id from "case" where id = ${id}', this.case)
 		} catch (error) {
 			this.result.error = error
 		}
@@ -90,20 +90,23 @@ defineSupportCode(function ({
 
 	When('I save the case', async function () {
 		try {
-			this.result.data = await this.db.one('insert into "case" (description, case_type_id, case_status_type_id) values (${description}, ${case_type_id}, ${case_status_type_id}) returning id', {
+			const case_id = await this.db.one('insert into "case" (description, case_type_id, case_status_type_id) values (${description}, ${case_type_id}, ${case_status_type_id}) returning id', {
 				description        : this.case.description,
 				case_type_id       : this.case.case_type_id,
 				case_status_type_id: this.case.case_status_type_id
 			})
+
 			if (this.case.roles && this.case.roles.length > 0) {
 				for (let role of this.case.roles) {
 					await this.db.none('insert into case_role( case_id, case_role_type_id, party_id) values (${case_id}, ${case_role_type_id}, ${party_id})', {
-						case_id          : this.result.data.id,
+						case_id          : case_id.id,
 						case_role_type_id: role.case_role_type_id,
 						party_id         : role.party_id
 					})
 				}
 			}
+			this.case.id     = case_id.id
+			this.result.data = await this.db.one('select id, description, started_at, case_type_id, case_status_type_id from "case" where id=${id}', case_id)
 		} catch (error) {
 			this.result.error = error
 		}
@@ -162,16 +165,7 @@ defineSupportCode(function ({
 	})
 
 	Then('the case is in the database', async function () {
-		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
-		expect(this.result.data).to.not.be.null
-		let case_id = ''
-		if (this.case.id && this.case.id !== '') {
-			case_id = this.case.id
-		} else {
-			case_id = this.result.data.id
-		}
-
-		let actual_case = await this.db.one('select id, description, started_at, case_type_id, case_status_type_id from "case" where id = ($1)', [case_id])
+		let actual_case = await this.db.one('select id, description, started_at, case_type_id, case_status_type_id from "case" where id = ${id}', {id: this.case.id})
 		if (this.case.description) {
 			expect(actual_case.description).to.be.equal(this.case.description)
 		} else {
@@ -185,4 +179,5 @@ defineSupportCode(function ({
 		let case_type = await this.db.one('select id, description, parent_id from case_type where description = ${case_type_description}', {case_type_description})
 		expect(this.result.data.filter(c => c.case_type_id === case_type.id).length).to.be.equal(number_of_cases)
 	})
+
 })
