@@ -14,7 +14,7 @@ function pad( n, width, z ) {
 		: new Array( width - n.length + 1 ).join( z ) + n;
 }
 
-var transformer = transform( function( record, callback ) {
+var transformer = transform(function (record, done) {
 	let zip_uuid = uuidv4( );
 	let sql = "";
 	if (( record[1] === 'AE' ) || ( record[1] === 'AA' ) || ( record[1] === 'AP' )) {
@@ -44,7 +44,7 @@ var transformer = transform( function( record, callback ) {
 
     `;
 	}
-	callback( null, sql );
+	done(null, sql)
 }, { parallel: 100 });
 
 rs.pipe( parser ).pipe( transformer ).pipe( ws );

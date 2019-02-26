@@ -69,12 +69,18 @@ function CustomWorld () {
 
 	}
 
+	this.parties = []
+
+	this.party_relationship = null
+
 	this.party = {
 		comment        : '',
 		identifications: [],
 		party_type_id  : '',
 		names          : []
 	}
+
+	this.party_roles = []
 
 	this.party_type = {
 		id         : '',

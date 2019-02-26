@@ -6,7 +6,7 @@ const rs        = fs.createReadStream('./data_massagers/cities.csv');
 const ws        = fs.createWriteStream('./build/05-us-cities.sql');
 const uuidv4    = require( 'uuid/v4' );
 
-var transformer = transform( function( record, callback ) {
+var transformer = transform(function (record, done) {
 	let city_uuid = uuidv4( );
 	let city_sql = "";
 	if ( record[1] === 'District of Columbia' ) {
@@ -26,7 +26,7 @@ var transformer = transform( function( record, callback ) {
 
     `;
 	}
-	callback( null, city_sql );
+	done(null, city_sql)
 }, { parallel: 10 });
 
 rs.pipe( parser ).pipe( transformer ).pipe( ws );

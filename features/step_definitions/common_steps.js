@@ -13,10 +13,10 @@ defineSupportCode(function ({
 															When,
 															Then
 														}) {
-	Then('the operation was successful', function (callback) {
+	Then('the operation was successful', function (done) {
 		expect(this.result).to.be.ok
 		expect(this.result.error, `Error is: ${this.result.error}`).to.not.be.ok
 		expect(this.result.data).to.be.ok
-		callback()
+		done()
 	})
 })

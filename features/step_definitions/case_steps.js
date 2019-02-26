@@ -31,9 +31,9 @@ defineSupportCode(function ({
 		this.case.case_status_type_id = case_status_type_id.id
 	})
 
-	Given('a case description of {string}', function (case_description, callback) {
+	Given('a case description of {string}', function (case_description, done) {
 		this.case.description = case_description
-		callback()
+		done()
 	})
 
 	Given('the following types:', async function (dataTable) {
@@ -140,23 +140,23 @@ defineSupportCode(function ({
 		}
 	})
 
-	Then('I get {int} cases', function (number_of_cases, callback) {
+	Then('I get {int} cases', function (number_of_cases, done) {
 		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
 		expect(this.result.data).to.be.ok
 		expect(this.result.data.length).to.be.equal(number_of_cases)
-		callback()
+		done()
 	})
 
-	Then('the case is not in the database', function (callback) {
+	Then('the case is not in the database', function (done) {
 		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
 		expect(this.result.data).to.not.be.null
-		callback()
+		done()
 	})
 
-	Then('I get {string} back', function (value, callback) {
+	Then('I get {string} back', function (value, done) {
 		expect(this.result.error).to.be.null
 		expect(this.result.data).to.not.be.null
-		callback()
+		done()
 	})
 
 	Then('{int} of them are cases in status {string}', async function (expected_cases, case_status_description) {

@@ -1,3 +1,6 @@
+import ErpType from '../support/ErpType'
+import Party   from '../support/Party'
+
 var {
 			defineSupportCode
 		} = require('cucumber')
@@ -9,9 +12,9 @@ defineSupportCode(function ({
 															Then
 														}) {
 
-	Given('a comment of {string}', function (comment, callback) {
+	Given('a comment of {string}', function (comment, done) {
 		this.party.comment = comment
-		callback()
+		done()
 	})
 
 	Given('a party with a comment of {string} and a type of {string} is in the database', async function (comment, party_type_description) {
@@ -27,20 +30,22 @@ defineSupportCode(function ({
 		}
 	})
 
-	Given('I change the comment to {string}', function (newComment, callback) {
+	Given('I change the comment to {string}', function (newComment, done) {
 		this.party.comment = newComment
-		callback()
+		done()
 	})
 
-	Given('no comment field', function (callback) {
+	Given('no comment field', function (done) {
 		this.party.comment = null
-		callback()
+		done()
 	})
 
 	Given('there are {int} parties with a type of {string} in the database', async function (count, party_type_description) {
-		const party_type = await this.db.one('select id from party_type where description = ${party_type_description}', {party_type_description})
+		const {id, description, parent_id} = await this.db.one('select id, description, parent_id from party_type where description = ${party_type_description}', {party_type_description})
+		const party_type                   = new ErpType({id, description, parent_id})
 		for (let i = 0; i < count; i++) {
-			await this.db.none('insert into party (party_type_id) values (${id})', party_type)
+			let party = await this.db.one('insert into party (party_type_id) values (${id}) returning id', party_type)
+			this.parties.push(new Party(party.id, '', party_type.id))
 		}
 	})
 
@@ -112,17 +117,17 @@ defineSupportCode(function ({
 
 	})
 
-	Then('I get {int} parties', function (count, callback) {
+	Then('I get {int} parties', function (count, done) {
 		expect(this.result.data.length).to.be.equal(count)
-		callback()
+		done()
 	})
 
-	Then('I get the party back', function (callback) {
+	Then('I get the party back', function (done) {
 		expect(this.result.data).to.not.be.null
 		expect(this.result.data.id).to.be.equal(this.party.id, "Party ids must be the same")
 		expect(this.result.data.comment).to.be.equal(this.party.comment, "Party comments must be the same.")
 		expect(this.result.data.party_type_id.toString()).to.be.equal(this.party.party_type.id.toString(), "Party type ids must be the same")
-		callback()
+		done()
 	})
 
 	Then('the party is in the database', async function () {
