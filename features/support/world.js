@@ -47,16 +47,10 @@ function CustomWorld () {
 		children   : [],
 	}
 
-	this.communication_event = {
-		id                                : '',
-		started                           : '',
-		ended                             : '',
-		note                              : '',
-		contact_mechanism_type_id         : '',
-		party_relationship_id             : '',
-		communication_event_status_type_id: '',
-		case_id                           : ''
-	}
+	this.communication_event = null
+
+	this.communication_event_list = []
+
 	this.config              = config
 
 	this.db = database

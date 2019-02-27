@@ -319,15 +319,15 @@ CREATE TABLE IF NOT EXISTS communication_event_type
 CREATE TABLE IF NOT EXISTS communication_event
 (
   id                                 UUID                 DEFAULT uuid_generate_v4(),
-  started                            TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  started                            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   ended                              TIMESTAMP,
-  note                               TEXT UNIQUE NOT NULL
+  note                               TEXT      NOT NULL
     CONSTRAINT communication_event_note_not_empty CHECK (note <>
                                                          ''),
-  contact_mechanism_type_id          UUID        NOT NULL REFERENCES contact_mechanism_type (id),
-  party_relationship_id              UUID        NOT NULL REFERENCES party_relationship (id),
-  communication_event_status_type_id UUID        NOT NULL REFERENCES communication_event_status_type (id),
-  communication_event_type_id        UUID        NOT NULL REFERENCES communication_event_type (id),
+  contact_mechanism_type_id          UUID      NOT NULL REFERENCES contact_mechanism_type (id),
+  party_relationship_id              UUID      NOT NULL REFERENCES party_relationship (id),
+  communication_event_status_type_id UUID      NOT NULL REFERENCES communication_event_status_type (id),
+  communication_event_type_id        UUID      NOT NULL REFERENCES communication_event_type (id),
   case_id                            UUID REFERENCES "case" (id),
   CONSTRAINT communication_event_pk PRIMARY KEY (id)
 );

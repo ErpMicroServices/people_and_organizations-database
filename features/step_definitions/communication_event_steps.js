@@ -11,7 +11,7 @@ defineSupportCode(function ({
 															When,
 															Then
 														}) {
-	Given('a communication event note of {string}', function (note, done) {
+	Given('a communication event with a note of {string}', function (note, done) {
 		if (this.communication_event) {
 			this.communication_event.note = note
 		} else {
@@ -52,9 +52,21 @@ defineSupportCode(function ({
 		this.communication_event.communication_event_type_id = this.communication_event_type.id
 	})
 
+	Given('the communication event is in the database', async function () {
+		this.communication_event_list.push(await this.db.one('insert into communication_event(note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, communication_event_type_id) values(${note}, ${contact_mechanism_type_id}, ${party_relationship_id}, ${communication_event_status_type_id}, ${communication_event_type_id}) returning id, started, ended, note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id, communication_event_type_id', this.communication_event))
+	})
+
 	When('I create a communication event', async function () {
 		try {
 			this.result.data = await this.db.one('insert into communication_event(note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, communication_event_type_id) values(${note}, ${contact_mechanism_type_id}, ${party_relationship_id}, ${communication_event_status_type_id}, ${communication_event_type_id}) returning id, started, ended, note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id, communication_event_type_id', this.communication_event)
+		} catch (error) {
+			this.result.error = error
+		}
+	})
+
+	When('I search for communication events of type {string}', async function (communication_event_type_description) {
+		try {
+			this.result.data = await this.db.any('select communication_event.id as id, started, ended, note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id, communication_event_type_id from communication_event, communication_event_type where communication_event_type.description = ${communication_event_type_description} and communication_event.communication_event_type_id = communication_event_type.id', {communication_event_type_description})
 		} catch (error) {
 			this.result.error = error
 		}
@@ -66,5 +78,17 @@ defineSupportCode(function ({
 		expect(this.result.data.party_relationship_id).to.equal(this.communication_event.party_relationship_id)
 		expect(this.result.data.communication_event_status_type_id).to.equal(this.communication_event.communication_event_status_type_id)
 		done()
+	})
+
+	Then('the communication event of type {string} is found', async function (communication_event_type_description) {
+		const communicationEventType = await this.db.one('select id, description, parent_id from communication_event_type where description = ${communication_event_type_description}', {communication_event_type_description})
+		let communicationEvent       = this.communication_event_list.find(ce => ce.communication_event_type_id === communicationEventType.id)
+		this.result.data.forEach(event => expect(event).to.deep.equal(communicationEvent))
+	})
+
+	Then('the communication event of type {string} is not found', async function (communication_event_type_description) {
+		const communicationEventType = await this.db.one('select id, description, parent_id from communication_event_type where description = ${communication_event_type_description}', {communication_event_type_description})
+		let communicationEvent       = this.communication_event_list.find(ce => ce.communication_event_type_id === communicationEventType.id)
+		this.result.data.forEach(event => expect(event).to.not.deep.equal(communicationEvent))
 	})
 })
