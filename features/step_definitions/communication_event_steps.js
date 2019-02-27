@@ -47,9 +47,14 @@ defineSupportCode(function ({
 		}
 	})
 
+	Given('a communication event has a type of {string}', async function (communication_event_type_description) {
+		this.communication_event_type                        = new ErpType(await this.db.one('select id, description, parent_id from communication_event_type where description = ${communication_event_type_description}', {communication_event_type_description}))
+		this.communication_event.communication_event_type_id = this.communication_event_type.id
+	})
+
 	When('I create a communication event', async function () {
 		try {
-			this.result.data = await this.db.one('insert into communication_event(note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id) values(${note}, ${contact_mechanism_type_id}, ${party_relationship_id}, ${communication_event_status_type_id}) returning id, started, ended, note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id', this.communication_event)
+			this.result.data = await this.db.one('insert into communication_event(note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, communication_event_type_id) values(${note}, ${contact_mechanism_type_id}, ${party_relationship_id}, ${communication_event_status_type_id}, ${communication_event_type_id}) returning id, started, ended, note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id, communication_event_type_id', this.communication_event)
 		} catch (error) {
 			this.result.error = error
 		}
