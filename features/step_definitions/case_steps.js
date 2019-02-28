@@ -140,6 +140,18 @@ defineSupportCode(function ({
 		}
 	})
 
+	When('I add the communication event to the case', async function () {
+		try {
+			this.result.data = await this.db.one('update communication_event set case_id = ${case_id} where id =${communication_event_id} returning id, started, ended, note, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id', {
+				case_id               : this.case.id,
+				communication_event_id: this.communication_event_list[0].id
+			})
+		} catch (error) {
+			this.result.error = error
+		}
+	})
+
+
 	Then('I get {int} cases', function (number_of_cases, done) {
 		expect(this.result.error, JSON.stringify(this.result.error)).to.be.null
 		expect(this.result.data).to.be.ok
@@ -178,6 +190,11 @@ defineSupportCode(function ({
 	Then('{int} of them are cases of type {string}', async function (number_of_cases, case_type_description) {
 		let case_type = await this.db.one('select id, description, parent_id from case_type where description = ${case_type_description}', {case_type_description})
 		expect(this.result.data.filter(c => c.case_type_id === case_type.id).length).to.be.equal(number_of_cases)
+	})
+
+	Then('the case contains the communication event', function (done) {
+		expect(this.result.data.case_id).to.be.equal(this.case.id)
+		done()
 	})
 
 })
