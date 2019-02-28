@@ -1,7 +1,8 @@
 /**
  * Created by JimBarrows on 2019-02-25.
  */
-import {now} from 'moment'
+
+import moment from 'moment'
 
 export default class CommunicationEvent {
 	id
@@ -15,7 +16,7 @@ export default class CommunicationEvent {
 
 	constructor ({
 								 id = null,
-								 started = now(),
+								 started = moment(),
 								 ended = null,
 								 note,
 								 contact_mechanism_type_id,

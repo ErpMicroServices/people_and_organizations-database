@@ -1,47 +1,47 @@
 {
-	"name": "people_and_organizations-database",
-	"version": "1.0.0",
-	"description": "Database for the person & group data domain",
-	"author": {
-		"name": "Jim Barrows",
-		"email": "Jim.Barrows@gmail.com"
-	},
-	"license": "Apache-2.0",
-	"scripts": {
-		"build": "npm run build:database; npm run build:docker",
-		"build:docker": "docker build --tag erpmicroservices/people_and_organizations-database --rm .",
-		"build:cities_sql": "mkdir -p build;node data_massagers/create_us_cities_sql.js",
-		"build:us_zip_codes_sql": "mkdir -p build;node data_massagers/create_us_zip_codes.js;",
-		"build:database": "npm run build:cities_sql;npm run build:us_zip_codes_sql;liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
-		"clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/people_and_organizations-database; yes | docker volume prune",
-		"update_database": "liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/people_and_organizations' --username=people_and_organizations --password=people_and_organizations update",
-		"push": "docker push erpmicroservices/people_and_organizations-database:latest",
-		"start": "docker run --publish 5432:5432 --name people_and_organizations-database erpmicroservices/people_and_organizations-database",
-		"test": "cucumber-js --tags @party_database --compiler es6:babel-core/register  -r ./features ../people_and_organizations-features"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ErpMicroServices/party-database.git"
-	},
-	"bugs": {
-		"url": "https://github.com/ErpMicroServices/party-database/issues"
-	},
-	"homepage": "https://github.com/ErpMicroServices/party-database#readme",
-	"dependencies": {
-		"babel-preset-env": "^1.7.0",
-		"moment": "^2.22.2",
-		"pg-promise": "^7.4.1"
-	},
-	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"chai": "^4.1.2",
-		"csv-parse": "^4.3.3",
-		"cucumber": "^3.1.0",
-		"graphql": "^14.1.1",
-		"graphql-tag": "^2.10.0",
-		"node-fetch": "^2.2.0",
-		"stream-transform": "^1.0.8",
-		"uuid": "^3.3.2"
-	}
+  "name": "people_and_organizations-database",
+  "version": "1.0.0",
+  "description": "Database for the person & group data domain",
+  "author": {
+    "name": "Jim Barrows",
+    "email": "Jim.Barrows@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "npm run build:database; npm run build:docker",
+    "build:docker": "docker build --tag erpmicroservices/people_and_organizations-database --rm .",
+    "build:cities_sql": "mkdir -p build;node data_massagers/create_us_cities_sql.js",
+    "build:us_zip_codes_sql": "mkdir -p build;node data_massagers/create_us_zip_codes.js;",
+    "build:database": "npm run build:cities_sql;npm run build:us_zip_codes_sql;liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
+    "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/people_and_organizations-database; yes | docker volume prune",
+    "update_database": "liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/people_and_organizations' --username=people_and_organizations --password=people_and_organizations update",
+    "push": "docker push erpmicroservices/people_and_organizations-database:latest",
+    "start": "docker run --publish 5432:5432 --name people_and_organizations-database erpmicroservices/people_and_organizations-database",
+    "test": "cucumber-js --tags @party_database --compiler es6:babel-core/register  -r ./features ../people_and_organizations-features"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErpMicroServices/party-database.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ErpMicroServices/party-database/issues"
+  },
+  "homepage": "https://github.com/ErpMicroServices/party-database#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "moment": "^2.22.2",
+    "pg-promise": "^7.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "chai": "^4.1.2",
+    "csv-parse": "^4.3.3",
+    "cucumber": "^3.1.0",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.0",
+    "node-fetch": "^2.2.0",
+    "stream-transform": "^1.0.8",
+    "uuid": "^3.3.2"
+  }
 }

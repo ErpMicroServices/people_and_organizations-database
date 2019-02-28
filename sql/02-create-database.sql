@@ -286,13 +286,13 @@ CREATE TABLE IF NOT EXISTS case_type
 
 CREATE TABLE IF NOT EXISTS "case"
 (
-  id                  UUID               DEFAULT uuid_generate_v4(),
-  description         TEXT      NOT NULL
+  id                  UUID                              DEFAULT uuid_generate_v4(),
+  description         TEXT                     NOT NULL
     CONSTRAINT case_description_not_empty CHECK (
       description <> ''),
-  started_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  case_type_id        UUID      NOT NULL REFERENCES case_type (id),
-  case_status_type_id UUID      NOT NULL REFERENCES case_status_type (id),
+  started_at          TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  case_type_id        UUID                     NOT NULL REFERENCES case_type (id),
+  case_status_type_id UUID                     NOT NULL REFERENCES case_status_type (id),
   CONSTRAINT case_pk PRIMARY KEY (id)
 );
 
@@ -318,16 +318,16 @@ CREATE TABLE IF NOT EXISTS communication_event_type
 
 CREATE TABLE IF NOT EXISTS communication_event
 (
-  id                                 UUID                 DEFAULT uuid_generate_v4(),
-  started                            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  ended                              TIMESTAMP,
-  note                               TEXT      NOT NULL
+  id                                 UUID                              DEFAULT uuid_generate_v4(),
+  started                            TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  ended                              TIMESTAMP WITH TIME ZONE,
+  note                               TEXT                     NOT NULL
     CONSTRAINT communication_event_note_not_empty CHECK (note <>
                                                          ''),
-  contact_mechanism_type_id          UUID      NOT NULL REFERENCES contact_mechanism_type (id),
-  party_relationship_id              UUID      NOT NULL REFERENCES party_relationship (id),
-  communication_event_status_type_id UUID      NOT NULL REFERENCES communication_event_status_type (id),
-  communication_event_type_id        UUID      NOT NULL REFERENCES communication_event_type (id),
+  contact_mechanism_type_id          UUID                     NOT NULL REFERENCES contact_mechanism_type (id),
+  party_relationship_id              UUID                     NOT NULL REFERENCES party_relationship (id),
+  communication_event_status_type_id UUID                     NOT NULL REFERENCES communication_event_status_type (id),
+  communication_event_type_id        UUID                     NOT NULL REFERENCES communication_event_type (id),
   case_id                            UUID REFERENCES "case" (id),
   CONSTRAINT communication_event_pk PRIMARY KEY (id)
 );
