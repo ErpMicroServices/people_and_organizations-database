@@ -119,6 +119,18 @@ defineSupportCode(function ({
 		}
 	})
 
+	When('I search for communication events using a party relationship of type {string} and party role {string} and party role {string}', async function (party_relationship_type_description, from_party_role_description, to_party_role_description) {
+		try {
+			this.result.data = await this.db.any('select communication_event.id, started, ended, note, communication_event_type_id, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id from communication_event, party_relationship, party_relationship_type where party_relationship.from_party_role_id = (select party_role.id from party_role, party_role_type where party_role_type.description = ${from_party_role_description} and party_role.party_role_type_id = party_role_type.id) and party_relationship.to_party_role_id = (select party_role.id from party_role, party_role_type where party_role_type.description = ${to_party_role_description} and party_role.party_role_type_id = party_role_type.id) and party_relationship_type.description = ${party_relationship_type_description} and party_relationship.party_relationship_type_id = party_relationship_type.id and communication_event.party_relationship_id = party_relationship.id', {
+				party_relationship_type_description,
+				from_party_role_description,
+				to_party_role_description
+			})
+		} catch (error) {
+			this.result.error = error
+		}
+	})
+
 	Then('I find the communication event in the database', function (done) {
 		expect(this.result.data.note).to.equal(this.communication_event.note)
 		expect(this.result.data.contact_mechanism_type_id).to.equal(this.communication_event.contact_mechanism_type_id)
