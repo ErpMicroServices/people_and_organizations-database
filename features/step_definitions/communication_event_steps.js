@@ -153,6 +153,35 @@ defineSupportCode(function ({
 		}
 	})
 
+	When('I search for communication events that belongs to party {int}', async function (party_index) {
+		try {
+			this.result.data = await this.db.any('select communication_event.id, ' +
+																						 '       started, ' +
+																						 '       ended, ' +
+																						 '       note, ' +
+																						 '       communication_event_type_id, ' +
+																						 '       contact_mechanism_type_id, ' +
+																						 '       party_relationship_id, ' +
+																						 '       communication_event_status_type_id, ' +
+																						 '       case_id ' +
+																						 'from communication_event, ' +
+																						 '     party_relationship ' +
+																						 'where communication_event.party_relationship_id = party_relationship.id ' +
+																						 '  and (party_relationship.from_party_role_id in (select party_role.id ' +
+																						 '                                                 from party_role, ' +
+																						 '                                                      party ' +
+																						 '                                                 where party_role.party_id = party.id ' +
+																						 '                                                   and party.id = ${id}) ' +
+																						 '  or party_relationship.to_party_role_id in (select party_role.id ' +
+																						 '                                             from party_role, ' +
+																						 '                                                  party ' +
+																						 '                                             where party_role.party_id = party.id ' +
+																						 '                                               and party.id = ${id}))', this.parties[party_index - 1])
+		} catch (error) {
+			this.result.error = error
+		}
+	})
+
 	Then('I find the communication event in the database', function (done) {
 		expect(this.result.data.note).to.equal(this.communication_event.note)
 		expect(this.result.data.contact_mechanism_type_id).to.equal(this.communication_event.contact_mechanism_type_id)
