@@ -81,6 +81,12 @@ defineSupportCode(function ({
 		done()
 	})
 
+	Given('the communication event is  part of the case', async function () {
+		const last_ce   = this.communication_event_list[this.communication_event_list.length - 1]
+		last_ce.case_id = this.case.id
+		this.db.none('update communication_event set case_id = ${case_id} where communication_event.id = ${id}', last_ce)
+	})
+
 
 	When('I create a communication event', async function () {
 		try {
@@ -134,6 +140,14 @@ defineSupportCode(function ({
 	When('I search for communication events with a status of {string}', async function (communication_event_status_description) {
 		try {
 			this.result.data = await this.db.any('select communication_event.id, started, ended, note, communication_event_type_id, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id from communication_event, communication_event_status_type where communication_event_status_type.description = ${communication_event_status_description} and communication_event.communication_event_status_type_id = communication_event_status_type.id', {communication_event_status_description})
+		} catch (error) {
+			this.result.error = error
+		}
+	})
+
+	When('I search for communication events that belongs to a case with description of {string}', async function (case_description) {
+		try {
+			this.result.data = await this.db.any('select  communication_event.id, started, ended, note, communication_event_type_id, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id from communication_event, "case" where "case".description = ${case_description} and communication_event.case_id = "case".id', {case_description})
 		} catch (error) {
 			this.result.error = error
 		}
