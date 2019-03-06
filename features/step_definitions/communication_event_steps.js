@@ -204,4 +204,6 @@ defineSupportCode(function ({
 		expect(this.result.data).to.be.an('array')
 		this.result.data.forEach(event => expect(event).to.not.deep.equal(communicationEvent))
 	})
+
+
 })

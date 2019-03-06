@@ -8,6 +8,7 @@ defineSupportCode(function ({Before, After}) {
 
 	Before(function (result, done) {
 		this.db.any('delete from party_contact_mechanism')
+			.then(() => this.db.any('delete from communication_event_purpose'))
 			.then(() => this.db.any('delete from communication_event'))
 			.then(() => this.db.any('delete from case_role'))
 			.then(() => this.db.any('delete from "case"'))

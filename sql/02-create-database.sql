@@ -210,15 +210,6 @@ CREATE TABLE IF NOT EXISTS party_contact_mechanism
   CONSTRAINT party_contact_mechanism_pk PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS communication_event_purpose_type
-(
-  id          UUID DEFAULT uuid_generate_v4(),
-  description TEXT UNIQUE NOT NULL
-    CONSTRAINT communication_event_purpose_type_description_not_empty CHECK (description
-      <> ''),
-  parent_id   UUID REFERENCES communication_event_purpose_type (id),
-  CONSTRAINT communication_event_purpose_type_pk PRIMARY KEY (id)
-);
 
 CREATE TABLE IF NOT EXISTS communication_event_role_type
 (
@@ -230,13 +221,14 @@ CREATE TABLE IF NOT EXISTS communication_event_role_type
   CONSTRAINT communication_event_role_type_pk PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS communication_event_purpose
+CREATE TABLE IF NOT EXISTS communication_event_purpose_type
 (
   id          UUID DEFAULT uuid_generate_v4(),
   description TEXT UNIQUE NOT NULL
-    CONSTRAINT communication_event_purpose__description_not_empty CHECK (description <>
-                                                                         ''),
-  CONSTRAINT communication_event_purpose_pk PRIMARY KEY (id)
+    CONSTRAINT communication_event_purpose_type_description_not_empty CHECK (description
+      <> ''),
+  parent_id   UUID REFERENCES communication_event_purpose_type (id),
+  CONSTRAINT communication_event_purpose_type_pk PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS valid_contact_mechanism_role
@@ -331,6 +323,15 @@ CREATE TABLE IF NOT EXISTS communication_event
   case_id                            UUID REFERENCES "case" (id),
   CONSTRAINT communication_event_pk PRIMARY KEY (id)
 );
+
+CREATE TABLE IF NOT EXISTS communication_event_purpose
+(
+  communication_event_id              UUID REFERENCES communication_event (id)              NOT NULL,
+  communication_event_purpose_type_id UUID REFERENCES communication_event_purpose_type (id) NOT NULL,
+  description                         TEXT,
+  CONSTRAINT communication_event_purpose_pk PRIMARY KEY (communication_event_id, communication_event_purpose_type_id)
+);
+
 
 CREATE TABLE IF NOT EXISTS communication_event_work_effort
 (
