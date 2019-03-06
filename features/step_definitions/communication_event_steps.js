@@ -111,6 +111,14 @@ defineSupportCode(function ({
 		}
 	})
 
+	When('I search for communication events using contact mechanism {string}', async function (contact_mechanism_type_description) {
+		try {
+			this.result.data = await this.db.any('select communication_event.id, started, ended, note, communication_event_type_id, contact_mechanism_type_id, party_relationship_id, communication_event_status_type_id, case_id from communication_event, contact_mechanism_type where contact_mechanism_type.description = ${contact_mechanism_type_description} and contact_mechanism_type.id = communication_event.contact_mechanism_type_id', {contact_mechanism_type_description})
+		} catch (error) {
+			this.result.error = error
+		}
+	})
+
 	Then('I find the communication event in the database', function (done) {
 		expect(this.result.data.note).to.equal(this.communication_event.note)
 		expect(this.result.data.contact_mechanism_type_id).to.equal(this.communication_event.contact_mechanism_type_id)
