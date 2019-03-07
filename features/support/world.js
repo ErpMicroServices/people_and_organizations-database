@@ -51,7 +51,9 @@ function CustomWorld () {
 
 	this.communication_event_list = []
 
-	this.config              = config
+	this.communication_event_purpose = null
+
+	this.config = config
 
 	this.db = database
 
