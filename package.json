@@ -17,7 +17,7 @@
     "update_database": "liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/people_and_organizations' --username=people_and_organizations --password=people_and_organizations update",
     "push": "docker push erpmicroservices/people_and_organizations-database:latest",
     "start": "docker run --publish 5432:5432 --name people_and_organizations-database erpmicroservices/people_and_organizations-database",
-    "test": "cucumber-js --tags @party_database --compiler es6:babel-core/register  -r ./features ../people_and_organizations-features "
+    "test": "cucumber-js --tags @party_database --compiler es6:babel-core/register  -r ./features ../people_and_organizations-features"
   },
   "repository": {
     "type": "git",

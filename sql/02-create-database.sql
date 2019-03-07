@@ -345,7 +345,7 @@ CREATE TABLE IF NOT EXISTS communication_event_role
 (
   id                               UUID DEFAULT uuid_generate_v4(),
   communication_event_id           UUID NOT NULL REFERENCES communication_event (id),
-  communication_event_role_type_id UUID NOT NULL REFERENCES communication_event_role (id),
+  communication_event_role_type_id UUID NOT NULL REFERENCES communication_event_role_type (id),
   party_id                         UUID NOT NULL REFERENCES party (id),
   CONSTRAINT communication_event_role_pk PRIMARY KEY (id)
 );

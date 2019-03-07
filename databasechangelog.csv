@@ -1,2 +1,2 @@
 "ID","AUTHOR","FILENAME","DATEEXECUTED","ORDEREXECUTED","EXECTYPE","MD5SUM","DESCRIPTION","COMMENTS","TAG","LIQUIBASE","CONTEXTS","LABELS"
-"Create and load all data","Jim Barrows","./database_change_log.yml","2019-03-06T11:35:00.843","1"            ,"EXECUTED","7:24a08c834656c3b593b5507abc6be6ac","sqlFile; sqlFile; sqlFile",          ,""   ,"3.5.3"    ,"()"      ,""      ,"1893700702"
+"Create and load all data","Jim Barrows","./database_change_log.yml","2019-03-07T09:10:46.595","1"            ,"EXECUTED","7:89959b56a97638fb9d9a09ff51ab6811","sqlFile; sqlFile; sqlFile",          ,""   ,"3.5.3"    ,"()"      ,""      ,"1971446515"
