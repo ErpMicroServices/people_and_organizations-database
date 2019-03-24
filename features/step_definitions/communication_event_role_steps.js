@@ -26,6 +26,11 @@ defineSupportCode(function ({
 		}
 	})
 
+	When('I change the party {int} to party {int} for communication event role of {string}', function (int, int2, string, callback) {
+		// Write code here that turns the phrase above into concrete actions
+		callback(null, 'pending');
+	});
+
 	Then('the communication event has party {int} in communication event role of {string}', async function (party_index, communication_event_role_type_description) {
 		const party                      = this.parties[party_index - 1]
 		const communicationEvent         = this.communication_event_list[this.communication_event_list.length - 1]
