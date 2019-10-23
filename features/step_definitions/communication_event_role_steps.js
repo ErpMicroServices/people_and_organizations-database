@@ -26,9 +26,7 @@ defineSupportCode(function ({
 		}
 	})
 
-	When('I change the party {int} to party {int} for communication event role of {string}', function (int, int2, string, callback) {
-		// Write code here that turns the phrase above into concrete actions
-		callback(null, 'pending');
+	When('I change the party {int} to party {int} for communication event role of {string}', async function (party_1_index, party_2_index, communication_event_role_description) {
 	});
 
 	Then('the communication event has party {int} in communication event role of {string}', async function (party_index, communication_event_role_type_description) {

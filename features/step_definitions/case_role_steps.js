@@ -1,4 +1,4 @@
-import 'babel-polyfill'
+
 
 var {
 			defineSupportCode
@@ -123,7 +123,7 @@ defineSupportCode(function ({
 		case_roles.forEach(case_role => expect(case_role.party_id).to.be.oneOf(party_id_list))
 	})
 
-	Then('the role include the new party', function (done) {
+	Then('the role includes the party', function (done) {
 		expect(this.result.data.party_id).to.be.equal(this.party.id)
 		done()
 	})

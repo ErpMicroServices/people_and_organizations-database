@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import {convert_to_table_name} from '../util'
 
 var {

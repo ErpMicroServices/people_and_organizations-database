@@ -1,7 +1,7 @@
 /**
  * Created by JimBarrows on 2019-02-24.
  */
-import 'babel-polyfill'
+
 
 var {
 			defineSupportCode
