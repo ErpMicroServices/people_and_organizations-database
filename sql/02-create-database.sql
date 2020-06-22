@@ -199,15 +199,34 @@ CREATE TABLE IF NOT EXISTS contact_mechanism_geographic_boundary
     CONSTRAINT contact_mechanism_geographic_boundary_pk PRIMARY KEY (id)
 );
 
+CREATE TABLE IF NOT EXISTS party_contact_mechanism_purpose_type
+(
+    id          UUID DEFAULT uuid_generate_v4(),
+    description TEXT NOT NULL
+        CONSTRAINT party_contact_mechanism_purpose_type_not_empty CHECK (description <> ''),
+    parent_id   UUID REFERENCES party_contact_mechanism_purpose_type (id),
+    CONSTRAINT party_contact_mechanism_purpose_type_pk PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS party_contact_mechanism_purpose
+(
+    id                                UUID          DEFAULT uuid_generate_v4(),
+    from_date                         DATE NOT NULL DEFAULT CURRENT_DATE,
+    thru_date                         DATE,
+    contact_mechanism_purpose_type_id UUID REFERENCES party_contact_mechanism_purpose_type (id),
+    CONSTRAINT party_contact_mechanism_purpose_pk PRIMARY KEY (id)
+);
+
 CREATE TABLE IF NOT EXISTS party_contact_mechanism
 (
-    id                       UUID          DEFAULT uuid_generate_v4(),
-    from_date                DATE NOT NULL DEFAULT CURRENT_DATE,
-    thru_date                DATE,
-    do_not_solicit_indicator BOOLEAN       DEFAULT TRUE,
-    COMMENT                  TEXT,
-    party_id                 UUID REFERENCES party (id),
-    contact_mechanism_id     UUID REFERENCES contact_mechanism (id),
+    id                                 UUID          DEFAULT uuid_generate_v4(),
+    from_date                          DATE NOT NULL DEFAULT CURRENT_DATE,
+    thru_date                          DATE,
+    do_not_solicit_indicator           BOOLEAN       DEFAULT TRUE,
+    COMMENT                            TEXT,
+    party_id                           UUID REFERENCES party (id),
+    contact_mechanism_id               UUID REFERENCES contact_mechanism (id),
+    party_contact_mechanism_purpose_id UUID REFERENCES party_contact_mechanism_purpose (id),
     CONSTRAINT party_contact_mechanism_pk PRIMARY KEY (id)
 );
 
@@ -277,7 +296,7 @@ CREATE TABLE IF NOT EXISTS case_type
     CONSTRAINT case_type_pk PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS "case"
+CREATE TABLE IF NOT EXISTS kase
 (
     id                  UUID                              DEFAULT uuid_generate_v4(),
     description         TEXT                     NOT NULL
@@ -292,7 +311,7 @@ CREATE TABLE IF NOT EXISTS "case"
 CREATE TABLE IF NOT EXISTS case_role
 (
     id                UUID          DEFAULT uuid_generate_v4(),
-    case_id           UUID NOT NULL REFERENCES "case" (id),
+    case_id           UUID NOT NULL REFERENCES kase (id),
     case_role_type_id UUID NOT NULL REFERENCES case_role_type (id),
     party_id          UUID NOT NULL REFERENCES party (id),
     from_date         DATE NOT NULL DEFAULT CURRENT_DATE,
@@ -321,16 +340,17 @@ CREATE TABLE IF NOT EXISTS communication_event
     party_relationship_id              UUID                     NOT NULL REFERENCES party_relationship (id),
     communication_event_status_type_id UUID                     NOT NULL REFERENCES communication_event_status_type (id),
     communication_event_type_id        UUID                     NOT NULL REFERENCES communication_event_type (id),
-    case_id                            UUID REFERENCES "case" (id),
+    case_id                            UUID REFERENCES kase (id),
     CONSTRAINT communication_event_pk PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS communication_event_purpose
 (
+    id                                  UUID DEFAULT uuid_generate_v4(),
     communication_event_id              UUID REFERENCES communication_event (id)              NOT NULL,
     communication_event_purpose_type_id UUID REFERENCES communication_event_purpose_type (id) NOT NULL,
     description                         TEXT,
-    CONSTRAINT communication_event_purpose_pk PRIMARY KEY (communication_event_id, communication_event_purpose_type_id)
+    CONSTRAINT communication_event_purpose_pk PRIMARY KEY (id)
 );
 
 
@@ -362,12 +382,12 @@ CREATE TABLE IF NOT EXISTS facility_type
 
 CREATE TABLE IF NOT EXISTS facility
 (
-    id             UUID DEFAULT uuid_generate_v4(),
-    description    TEXT NOT NULL
+    id               UUID DEFAULT uuid_generate_v4(),
+    description      TEXT NOT NULL
         CONSTRAINT facility_description_not_empty CHECK (description <> ''),
-    square_footage BIGINT,
-    part_of        UUID REFERENCES facility (id),
-    described_by   UUID NOT NULL REFERENCES facility_type (id),
+    square_footage   BIGINT,
+    part_of          UUID REFERENCES facility (id),
+    facility_type_id UUID NOT NULL REFERENCES facility_type (id),
     CONSTRAINT _pk PRIMARY KEY (id)
 );
 
@@ -382,9 +402,10 @@ CREATE TABLE IF NOT EXISTS facility_role_type
 
 CREATE TABLE IF NOT EXISTS facility_role
 (
-    id           UUID DEFAULT uuid_generate_v4(),
-    described_by UUID NOT NULL REFERENCES facility_role_type (id),
-    party_id     UUID NOT NULL REFERENCES party (id),
+    id                    UUID DEFAULT uuid_generate_v4(),
+    facility_id           UUID NOT NULL REFERENCES facility (id),
+    facility_role_type_id UUID NOT NULL REFERENCES facility_role_type (id),
+    party_id              UUID NOT NULL REFERENCES party (id),
     CONSTRAINT facility_role_pk PRIMARY KEY (id)
 );
 
@@ -395,3 +416,4 @@ CREATE TABLE IF NOT EXISTS facility_contact_mechanism
     contact_mechanism_id UUID NOT NULL REFERENCES contact_mechanism (id),
     CONSTRAINT facility_contact_mechanism_pk PRIMARY KEY (id)
 );
+
