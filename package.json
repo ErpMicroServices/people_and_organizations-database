@@ -28,23 +28,22 @@
   },
   "homepage": "https://github.com/ErpMicroServices/party-database#readme",
   "dependencies": {
-
-    "moment": "^2.22.2",
-		"pg-promise": "^9.3.3"
+    "moment": "^2.29.1",
+    "pg-promise": "^10.9.2"
   },
   "devDependencies": {
-		"@babel/plugin-proposal-class-properties": "^7.5.5",
-		"@babel/core": "^7.6.4",
-		"@babel/polyfill": "^7.6.0",
-		"@babel/preset-env": "^7.6.3",
-		"@babel/register": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/core": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
     "chai": "^4.1.2",
-		"csv-parse": "^4.6.5",
-		"cucumber": "^6.0.2",
-		"graphql": "^14.5.8",
-    "graphql-tag": "^2.10.0",
-		"node-fetch": "^2.6.0",
-		"stream-transform": "^2.0.1",
-		"uuid": "^3.3.3"
+    "csv-parse": "^4.15.0",
+    "cucumber": "^7.0.0-rc.0",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0",
+    "node-fetch": "^2.6.1",
+    "stream-transform": "^2.0.4",
+    "uuid": "^8.3.2"
   }
 }
