@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/ErpMicroServices/party-database#readme",
   "dependencies": {
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "pg-promise": "^10.9.2"
   },
   "devDependencies": {
