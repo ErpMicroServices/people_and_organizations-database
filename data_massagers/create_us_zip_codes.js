@@ -1,17 +1,17 @@
-const fs        = require('fs');
-const parse     = require( 'csv-parse' );
-const transform = require( 'stream-transform' );
-const parser    = parse( );
-const rs        = fs.createReadStream('./data_massagers/us-zip-codes.csv');
-const ws        = fs.createWriteStream('./build/06-us-zip-codes.sql');
-const uuidv4    = require( 'uuid/v4' );
+const fs           = require('fs')
+const parse        = require('csv-parse')
+const transform    = require('stream-transform')
+const parser       = parse()
+const rs           = fs.createReadStream('./data_massagers/us-zip-codes.csv')
+const ws           = fs.createWriteStream('./build/06-us-zip-codes.sql')
+const {v4: uuidv4} = require('uuid')
 
-function pad( n, width, z ) {
-	z = z || '0';
-	n = n + '';
+function pad (n, width, z) {
+	z = z || '0'
+	n = n + ''
 	return n.length >= width
-		? n
-		: new Array( width - n.length + 1 ).join( z ) + n;
+				 ? n
+				 : new Array(width - n.length + 1).join(z) + n
 }
 
 var transformer = transform(function (record, done) {
