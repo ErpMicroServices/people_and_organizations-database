@@ -48,3 +48,23 @@ databaseChangeLog:
               name: thru_date
               type: Date
 
+  - changeSet:
+      id: Add fromDate and thruDate need to be part of FacilityContactMechanism
+      author: Jim Barrows
+      changes:
+        - addColumn:
+            catalogName: people_and_organizations
+            schemaName: public
+            tableName: facility_contact_mechanism
+            column:
+              name: from_date
+              type: Date
+              defaultValueComputed: CURRENT_TIMESTAMP
+        - addColumn:
+            catalogName: people_and_organizations
+            schemaName: public
+            tableName: facility_contact_mechanism
+            column:
+              name: thru_date
+              type: Date
+
