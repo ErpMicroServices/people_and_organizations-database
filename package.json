@@ -14,6 +14,7 @@
     "build:us_zip_codes_sql": "mkdir -p build;node data_massagers/create_us_zip_codes.js;",
     "build:database": "npm run build:cities_sql;npm run build:us_zip_codes_sql;liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
     "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/people_and_organizations-database; yes | docker volume prune",
+    "createDiagrams": "for diagram in ERD/*.puml; do base_name=\"${diagram%.*}\"; puml generate ${base_name}.puml -o ${base_name}.png; done;",
     "update_database": "liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/people_and_organizations' --username=people_and_organizations --password=people_and_organizations update",
     "push": "docker push erpmicroservices/people_and_organizations-database:latest",
     "run:docker": "docker run -p 5432:5432 -d erpmicroservices/people_and_organizations-database",
@@ -31,6 +32,7 @@
   "dependencies": {
     "liquibase": "^4.28.1",
     "moment": "^2.29.4",
+    "node-plantuml": "^0.9.0",
     "pg-promise": "^10.9.2",
     "typescript": "^5.7.2"
   },
