@@ -8,5 +8,8 @@ skinparam linetype ortho
 Party ||..|{ PartyContactMechanism
 ContactMechanism ||..|{ PartyContactMechanism
 ContactMechanismType ||..|{ ContactMechanism
+PartyContactMechanism ||..|{ PartyContactMechanismPurpose
+PartyContactMechanismPurposeType ||..|{ PartyContactMechanismPurpose
+PartyRoleType ||..|{ PartyContactMechanism
 
 @enduml
