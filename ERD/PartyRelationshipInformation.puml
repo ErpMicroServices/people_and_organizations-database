@@ -1,0 +1,15 @@
+@startuml
+' hide the spot
+' hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+PartyRelationship "from"  ||..|{ PartyRole
+PartyRelationship "to"  ||..|{ PartyRole
+PartyRelationshipType ||..|{ PartyRelationship
+PartyRelationship ||..|{ CommunicationEvent
+PriorityType ||..|{ PartyRelationship
+StatusType ||..|{ PartyRelationship
+
+@enduml
