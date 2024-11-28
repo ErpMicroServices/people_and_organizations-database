@@ -1,0 +1,20 @@
+@startuml
+' hide the spot
+' hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity Party {
+}
+
+entity PartyClassification {
+}
+
+entity PartyType {
+}
+
+Party ||..|{ PartyClassification
+PartyClassification ||..|{ PartyType
+
+@enduml

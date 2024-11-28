@@ -31,6 +31,7 @@
   "dependencies": {
     "liquibase": "^4.28.1",
     "moment": "^2.29.4",
+    "node-plantuml": "^0.9.0",
     "pg-promise": "^10.9.2",
     "typescript": "^5.7.2"
   },
