@@ -1,0 +1,17 @@
+@startuml
+' hide the spot
+' hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+CaseType ||..|{ Case
+Case ||..|{ CaseRole
+CaseRoleType ||..|{ CaseRole
+Party ||..|{ CaseRole
+Case ||..|{ CommunicationEvent
+CommunicationEvent ||..|{ CommunicationEventPurpose
+CommunicationEvent ||..|{ CommunicationEventWorkEffort
+WorkEffort ||..|{ CommunicationEventWorkEffort
+
+@enduml
