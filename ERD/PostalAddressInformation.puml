@@ -1,0 +1,16 @@
+@startuml
+' hide the spot
+' hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+Party ||..|{ PartyPostalAddress
+PostalAddress ||..|{ PartyPostalAddress
+PostalAddress ||..|{ PostalAddressBoundary
+GeographicBoundary ||..|{ PostalAddressBoundary
+GeographicBoundary "from" ||..|{ "within" GeographicBoundaryAssociation
+GeographicBoundary "to" ||..|{ "in" GeographicBoundaryAssociation
+GeographicBoundaryType ||..|{ GeographicBoundary
+
+@enduml
