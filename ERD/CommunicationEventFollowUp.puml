@@ -5,17 +5,25 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml
+!include Entities.puml!case_role
+!include Entities.puml!case_role_type
+!include Entities.puml!case_type
+!include Entities.puml!communication_event
+!include Entities.puml!communication_event_purpose
+!include Entities.puml!communication_event_work_effort
+!include Entities.puml!kase
+!include Entities.puml!party
+!include Entities.puml!work_effort
 
 note top of WorkEffort : This reference will be via UUID, since work effort will be in a different database
 
-CaseType ||..|{ Case
-Case ||..|{ CaseRole
-CaseRoleType ||..|{ CaseRole
-Party ||..|{ CaseRole
-Case ||..|{ CommunicationEvent
-CommunicationEvent ||..|{ CommunicationEventPurpose
-CommunicationEvent ||..|{ CommunicationEventWorkEffort
-WorkEffort ||..|{ CommunicationEventWorkEffort
+case_type ||..|{ kase
+kase ||..|{ case_role
+case_role_type ||..|{ case_role
+party ||..|{ case_role
+kase ||..|{ communication_event
+communication_event ||..|{ communication_event_purpose
+communication_event ||..|{ CommunicationEventWorkEffort
+work_effort ||..|{ communication_event_work_effort
 
 @enduml

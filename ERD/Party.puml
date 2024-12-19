@@ -5,30 +5,36 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!Party
-!include Entities.puml!PartyClassification
-!include Entities.puml!PartyContactMechanism
-!include Entities.puml!PartyId
-!include Entities.puml!PartyName
-!include Entities.puml!PartyRelationship
-!include Entities.puml!PartyRole
-!include Entities.puml!PartyType
+!include Entities.puml!party
+!include Entities.puml!party_classification
+!include Entities.puml!party_classification_type
+!include Entities.puml!party_contact_mechanism
+!include Entities.puml!party_contact_mechanism_type
+!include Entities.puml!party_id
+!include Entities.puml!party_id_type
+!include Entities.puml!party_name
+!include Entities.puml!party_name_type
+!include Entities.puml!party_relationship
+!include Entities.puml!party_relationship_type
+!include Entities.puml!party_role
+!include Entities.puml!party_role_type
+!include Entities.puml!party_type
 
-Party ||..|{ PartyClassification
-Party ||..|{ PartyContactMechanism
-Party ||..|{ PartyId
-Party ||..|{ PartyName
-Party ||..|{ PartyRelationship
-Party ||..|{ PartyRole
-Party ||..|{ PartyType
+party ||..|{ party_classification
+party ||..|{ party_contact_mechanism
+party ||..|{ party_id
+party ||..|{ party_name
+party ||..|{ party_relationship
+party ||..|{ party_role
+party ||..|{ party_type
 
 
-PartyClassification ||..|{ PartyClassificationType
-PartyContactMechanism ||..|{ PartyContactMechanismType
-PartyId ||..|{ PartyIdType
-PartyName ||..|{ PartyNameType
-PartyRelationship ||..|{ PartyRelationshipType
-PartyRole ||..|{ PartyRoleType
+party_classification ||..|{ party_classification_type
+party_contact_mechanism ||..|{ party_contact_mechanism_type
+party_id ||..|{ party_id_type
+party_name ||..|{ party_name_type
+party_relationship ||..|{ party_relationship_type
+party_role ||..|{ party_role_type
 
 
 @enduml

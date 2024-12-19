@@ -5,12 +5,18 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-Party ||..|{ PartyPostalAddress
-PostalAddress ||..|{ PartyPostalAddress
-PostalAddress ||..|{ PostalAddressBoundary
-GeographicBoundary ||..|{ PostalAddressBoundary
-GeographicBoundary "from" ||..|{ "within" GeographicBoundaryAssociation
-GeographicBoundary "to" ||..|{ "in" GeographicBoundaryAssociation
-GeographicBoundaryType ||..|{ GeographicBoundary
+!include Entities.puml!geographic_boundary
+!include Entities.puml!geographic_boundary_association
+!include Entities.puml!geographic_boundary_type
+!include Entities.puml!party
+!include Entities.puml!party_postal_address
+
+party ||..|{ party_postal_address
+party_postal_address }|..|| postal_address
+postal_address ||..|{ geographic_boundary
+geographic_boundary "from" ||..|{ "within" geographic_boundary_association
+geographic_boundary "to" ||..|{ "in" geographic_boundary_association
+geographic_boundary }|..|| geographic_boundary_type
+
 
 @enduml

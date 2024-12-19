@@ -5,10 +5,13 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml
+!include Entities.puml!contact_mechanism
+!include Entities.puml!contact_mechanism_type
+!include Entities.puml!contact_mechanism_geographic_boundary
+!include Entities.puml!geographic_boundary
 
-ContactMechanism }|..|| ContactMechanismType
-ContactMechanism }|..|| ContactMechanismGeographicBoundary
+contact_mechanism }|..|| contact_mechanism_type
+contact_mechanism }|..|| contact_mechanism_geographic_boundary
 
-ContactMechanismGeographicBoundary }|..|| GeographicBoundary
+contact_mechanism_geographic_boundary }|..|| geographic_boundary
 @enduml

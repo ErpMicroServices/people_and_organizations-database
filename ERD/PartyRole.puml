@@ -5,7 +5,11 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-Party ||..|{ PartyRole
-PartyRoleType ||..|{ PartyRole
+!include Entities.puml!party
+!include Entities.puml!party_role
+!include Entities.puml!party_role_type
+
+party ||..|{ party_role
+party_role_type ||..|{ party_role
 
 @enduml

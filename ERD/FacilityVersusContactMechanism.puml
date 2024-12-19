@@ -5,14 +5,20 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml
+!include Entities.puml!contact_mechanism
+!include Entities.puml!facility
+!include Entities.puml!facility_role
+!include Entities.puml!facility_role_type
+!include Entities.puml!facility_type
+!include Entities.puml!party
+!include Entities.puml!party_contact_mechanism
 
-Party ||..|{ PartyContactMechanism
-Party ||..|{ FacilityRole
-FacilityRoleType ||..|{ FacilityRole
-Facility ||..|{ FacilityRole
-FacilityType ||..|{ Facility
-Facility "madeUpOf" ||..|{ "partOf" Facility
-ContactMechanism ||..|{ PartyContactMechanism
+party ||..|{ party_contact_mechanism
+party ||..|{ facility_role
+facility_role_type ||..|{ facility_role
+facility ||..|{ facility_role
+facility_type ||..|{ facility
+facility "madeUpOf" ||..|{ "partOf" facility
+contact_mechanism ||..|{ party_contact_mechanism
 
 @enduml

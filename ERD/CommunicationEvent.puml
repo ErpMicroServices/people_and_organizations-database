@@ -5,28 +5,27 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!Party
-!include Entities.puml!PartyRole
-!include Entities.puml!PartyRelationship
-!include Entities.puml!ContactMechanismType
-!include Entities.puml!CommunicationEventRoleType
-!include Entities.puml!ContactMechanismType
-!include Entities.puml!CommunicationEvent
-!include Entities.puml!CommunicationEventPurpose
-!include Entities.puml!CommunicationEventPurposeType
-!include Entities.puml!CommunicationEventRole
-!include Entities.puml!ValidContactMechanismRole
+!include Entities.puml!party
+!include Entities.puml!party_role
+!include Entities.puml!party_relationship
+!include Entities.puml!contact_mechanism_type
+!include Entities.puml!communication_event_role_type
+!include Entities.puml!contact_mechanism_type
+!include Entities.puml!communication_event
+!include Entities.puml!communication_event_purpose
+!include Entities.puml!communication_event_purpose_type
+!include Entities.puml!communication_event_role
+!include Entities.puml!valid_contact_mechanism_role
 
-Party  ||..|{ PartyRole
-Party ||..|{ CommunicationEventRole
-PartyRole ||..|{ "establishedTo" PartyRelationship
-PartyRole ||..|{ "establishedFrom" PartyRelationship
-PartyRelationship ||..|{ CommunicationEvent
-ContactMechanismType ||..|{ CommunicationEvent
-CommunicationEventRoleType ||..|{ CommunicationEventRole
-CommunicationEventRoleType ||..|{ ValidContactMechanismRole
-ContactMechanismType ||..|{ ValidContactMechanismRole
-CommunicationEvent ||..|{ CommunicationEventPurpose
-CommunicationEventPurposeType ||..|{ CommunicationEventPurpose
+party  ||..|{ party_role
+party ||..|{ communication_event_role
+party_role ||..|{ "establishedTo" party_relationship
+party_role ||..|{ "establishedFrom" party_relationship
+party_relationship ||..|{ communication_event
+contact_mechanism_type ||..|{ communication_event
+communication_event_role_type ||..|{ communication_event_role
+communication_event_role_type ||..|{ valid_contact_mechanism_role
+communication_event ||..|{ communication_event_purpose
+communication_event_purpose_type ||..|{ communication_event_purpose
 
 @enduml
