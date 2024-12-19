@@ -5,6 +5,8 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
+!include Entities.puml
+
 PartyRelationship "from"  ||..|{ PartyRole
 PartyRelationship "to"  ||..|{ PartyRole
 PartyRelationship }|..|| PartyRelationshipType

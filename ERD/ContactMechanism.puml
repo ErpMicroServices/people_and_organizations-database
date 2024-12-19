@@ -1,0 +1,14 @@
+@startuml
+' hide the spot
+' hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+!include Entities.puml
+
+ContactMechanism }|..|| ContactMechanismType
+ContactMechanism }|..|| ContactMechanismGeographicBoundary
+
+ContactMechanismGeographicBoundary }|..|| GeographicBoundary
+@enduml

@@ -5,6 +5,8 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
+!include Entities.puml
+
 Party ||..|{ PartyContactMechanism
 Party ||..|{ FacilityRole
 FacilityRoleType ||..|{ FacilityRole

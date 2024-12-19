@@ -5,50 +5,14 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-entity Party {
-}
-
-entity PartyClassification {
-}
-
-entity PartyClassificationType {
-}
-
-entity PartyContactMechanism {
-}
-
-entity PartyContactMechanismType {
-}
-
-entity PartyId {
-}
-
-entity PartyIdType{
-}
-
-entity PartyName {
-
-}
-
-entity PartyNameType {
-
-}
-
-entity PartyRelationship {
-
-}
-
-entity PartyRelationshipType {
-
-}
-
-entity PartyRole {
-}
-
-entity PartyType {
-}
-
-
+!include Entities.puml!Party
+!include Entities.puml!PartyClassification
+!include Entities.puml!PartyContactMechanism
+!include Entities.puml!PartyId
+!include Entities.puml!PartyName
+!include Entities.puml!PartyRelationship
+!include Entities.puml!PartyRole
+!include Entities.puml!PartyType
 
 Party ||..|{ PartyClassification
 Party ||..|{ PartyContactMechanism

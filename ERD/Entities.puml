@@ -1,0 +1,56 @@
+@startuml entities
+' hide the spot
+' hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity ContactMechanism {}
+entity ContactMechanismType {}
+entity ContactMechanismGeographicBoundary {}
+entity GeographicBoundary {}
+entity Party {
+}
+
+entity PartyClassification {
+}
+
+entity PartyClassificationType {
+}
+
+entity PartyContactMechanism {
+}
+
+entity PartyContactMechanismType {
+}
+
+entity PartyId {
+}
+
+entity PartyIdType{
+}
+
+entity PartyName {
+
+}
+
+entity PartyNameType {
+
+}
+
+entity PartyRelationship {
+
+}
+
+entity PartyRelationshipType {
+
+}
+
+entity PartyRole {
+}
+
+entity PartyType {
+}
+
+entity WorkEffort {}
+@enduml

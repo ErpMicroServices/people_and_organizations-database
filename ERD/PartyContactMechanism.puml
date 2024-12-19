@@ -5,11 +5,18 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-Party ||..|{ PartyContactMechanism
-ContactMechanism ||..|{ PartyContactMechanism
-ContactMechanismType ||..|{ ContactMechanism
+!include Entities.puml!Party
+!include Entities.puml!PartyContactMechanism
+!include Entities.puml!ContactMechanism
+!include Entities.puml!ContactMechanismType
+!include Entities.puml!PartyContactMechanismPurpose
+
+PartyContactMechanism }|..|| ContactMechanism
+PartyContactMechanism }|..|| Party
 PartyContactMechanism ||..|{ PartyContactMechanismPurpose
-PartyContactMechanismPurposeType ||..|{ PartyContactMechanismPurpose
-PartyRoleType ||..|{ PartyContactMechanism
+
+ContactMechanism }|..|| ContactMechanismType
+PartyContactMechanismPurpose }|..|| PartyContactMechanismPurposeType
+
 
 @enduml
