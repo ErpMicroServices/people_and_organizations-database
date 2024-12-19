@@ -11,10 +11,60 @@ entity Party {
 entity PartyClassification {
 }
 
+entity PartyClassificationType {
+}
+
+entity PartyContactMechanism {
+}
+
+entity PartyContactMechanismType {
+}
+
+entity PartyId {
+}
+
+entity PartyIdType{
+}
+
+entity PartyName {
+
+}
+
+entity PartyNameType {
+
+}
+
+entity PartyRelationship {
+
+}
+
+entity PartyRelationshipType {
+
+}
+
+entity PartyRole {
+}
+
 entity PartyType {
 }
 
+
+
 Party ||..|{ PartyClassification
-PartyClassification ||..|{ PartyType
+Party ||..|{ PartyContactMechanism
+Party ||..|{ PartyId
+Party ||..|{ PartyName
+Party ||..|{ PartyRelationship
+Party ||..|{ PartyRole
+Party ||..|{ PartyType
+
+
+PartyClassification ||..|{ PartyClassificationType
+PartyContactMechanism ||..|{ PartyContactMechanismType
+PartyId ||..|{ PartyIdType
+PartyName ||..|{ PartyNameType
+PartyRelationship ||..|{ PartyRelationshipType
+PartyRole ||..|{ PartyRoleType
+
 
 @enduml
