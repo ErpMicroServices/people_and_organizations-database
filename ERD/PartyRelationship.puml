@@ -7,9 +7,9 @@ skinparam linetype ortho
 
 PartyRelationship "from"  ||..|{ PartyRole
 PartyRelationship "to"  ||..|{ PartyRole
-PartyRelationshipType ||..|{ PartyRelationship
-PartyRelationship ||..|{ CommunicationEvent
-PriorityType ||..|{ PartyRelationship
-StatusType ||..|{ PartyRelationship
+PartyRelationship }|..|| PartyRelationshipType
+PartyRelationship }|..|| CommunicationEvent
+PartyRelationship }|..|| PriorityType
+PartyRelationship }|..|| PartyRelationshipStatusType
 
 @enduml
