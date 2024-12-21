@@ -5,27 +5,26 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!party
-!include Entities.puml!party_role
-!include Entities.puml!party_relationship
-!include Entities.puml!contact_mechanism_type
-!include Entities.puml!communication_event_role_type
-!include Entities.puml!contact_mechanism_type
+!include Entities.puml!case
 !include Entities.puml!communication_event
 !include Entities.puml!communication_event_purpose
 !include Entities.puml!communication_event_purpose_type
 !include Entities.puml!communication_event_role
-!include Entities.puml!valid_contact_mechanism_role
+!include Entities.puml!communication_event_role_type
+!include Entities.puml!contact_mechanism_type
+!include Entities.puml!party
+!include Entities.puml!party_relationship
 
-party  ||..|{ party_role
-party ||..|{ communication_event_role
-party_role ||..|{ "establishedTo" party_relationship
-party_role ||..|{ "establishedFrom" party_relationship
-party_relationship ||..|{ communication_event
-contact_mechanism_type ||..|{ communication_event
-communication_event_role_type ||..|{ communication_event_role
-communication_event_role_type ||..|{ valid_contact_mechanism_role
-communication_event ||..|{ communication_event_purpose
-communication_event_purpose_type ||..|{ communication_event_purpose
+communication_event }|..|| communication_event_type
+communication_event }|..|| communication_event_purpose
+communication_event }|..|| party_relationship
+communication_event }|..|| contact_mechanism_type
+communication_event ||..|{ communication_event_role
+communication_event ||..|{ communication_event_status_type
+communication_event ||..|{ case
+
+communication_event_role }|..|| communication_event_role_type
+communication_event_role }|..|| party
+communication_event_purpose ||..|{ communication_event_purpose_type
 
 @enduml
