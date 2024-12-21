@@ -15,15 +15,18 @@ skinparam linetype ortho
 !include Entities.puml!party
 !include Entities.puml!work_effort
 
-note top of WorkEffort : This reference will be via UUID, since work effort will be in a different database
+'note top of work_effort : This reference will be via UUID, since work effort will be in a different database
 
-case_type ||..|{ kase
+kase }|..|| case_type
 kase ||..|{ case_role
-case_role_type ||..|{ case_role
-party ||..|{ case_role
 kase ||..|{ communication_event
+
+case_role }|..|| case_role_type
+case_role }|..|| party
+
+
 communication_event ||..|{ communication_event_purpose
-communication_event ||..|{ CommunicationEventWorkEffort
+communication_event ||..|{ communication_event_work_effort
 work_effort ||..|{ communication_event_work_effort
 
 @enduml
