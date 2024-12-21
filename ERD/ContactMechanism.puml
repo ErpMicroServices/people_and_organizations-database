@@ -11,7 +11,7 @@ skinparam linetype ortho
 !include Entities.puml!geographic_boundary
 
 contact_mechanism }|..|| contact_mechanism_type
-contact_mechanism }|..|| contact_mechanism_geographic_boundary
+contact_mechanism }o..|| contact_mechanism_geographic_boundary
 
 contact_mechanism_geographic_boundary }|..|| geographic_boundary
 @enduml

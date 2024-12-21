@@ -13,12 +13,15 @@ skinparam linetype ortho
 !include Entities.puml!party
 !include Entities.puml!party_contact_mechanism
 
-party ||..|{ party_contact_mechanism
-party ||..|{ facility_role
-facility_role_type ||..|{ facility_role
 facility ||..|{ facility_role
-facility_type ||..|{ facility
+facility ||..|{ facility_type
 facility "madeUpOf" ||..|{ "partOf" facility
-contact_mechanism ||..|{ party_contact_mechanism
+facility ||..|{ facility_contact_mechanism
+
+facility_role ||..|{ facility_role_type
+facility_role ||..|{ party
+
+facility_contact_mechanism }|..|| contact_mechanism
+
 
 @enduml
