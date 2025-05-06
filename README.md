@@ -22,47 +22,57 @@ The database schema is represented by several Entity Relationship Diagrams (ERDs
 1. **Party.png**: Represents the core party entities and their relationships.
    ![Party Diagram](ERD/Party.png)
 
+   This diagram shows how parties are structured and how they relate to each other. Parties can be people or organizations, and they can play various roles in relationships with other parties.
+
 2. **PartyRole.png**: Shows the roles that parties can play.
    ![Party Role Diagram](ERD/PartyRole.png)
+
+   This diagram illustrates the different roles that parties can assume in various contexts, such as customer, supplier, employee, etc.
 
 3. **PartyRelationship.png**: Illustrates the relationships between parties.
    ![Party Relationship Diagram](ERD/PartyRelationship.png)
 
+   This diagram shows how parties can be related to each other through different types of relationships, such as employment, partnership, or customer-supplier relationships.
+
 4. **PartyContactMechanism.png**: Depicts how parties are associated with contact mechanisms.
    ![Party Contact Mechanism Diagram](ERD/PartyContactMechanism.png)
+
+   This diagram illustrates how contact information is stored and associated with parties, including the purpose of each contact mechanism.
 
 5. **ContactMechanism.png**: Shows the structure of contact mechanisms.
    ![Contact Mechanism Diagram](ERD/ContactMechanism.png)
 
+   This diagram details the different types of contact mechanisms and how they are structured, including their relationships with geographic boundaries.
+
 6. **PostalAddressInformation.png**: Provides details about postal addresses.
    ![Postal Address Information Diagram](ERD/PostalAddressInformation.png)
+
+   This diagram shows how postal addresses are structured and related to geographic boundaries, allowing for detailed address information.
 
 7. **CommunicationEvent.png**: Represents communication events between parties.
    ![Communication Event Diagram](ERD/CommunicationEvent.png)
 
+   This diagram shows how communications between parties are recorded, including the purpose, status, and type of communication.
+
 8. **CommunicationEventFollowUp.png**: Shows follow-up actions related to communication events.
    ![Communication Event Follow Up Diagram](ERD/CommunicationEventFollowUp.png)
+
+   This diagram illustrates how follow-up actions related to communication events are tracked, including cases and work efforts.
 
 9. **Facility.png**: Depicts facilities and their relationships to parties.
    ![Facility Diagram](ERD/Facility.png)
 
+   This diagram depicts physical locations and how they relate to parties and contact mechanisms, including facility roles and types.
+
 10. **SpecificPartyRelationships.png**: Illustrates specific types of relationships between parties.
     ![Specific Party Relationships Diagram](ERD/SpecificPartyRelationships.png)
+
+    This diagram provides a more detailed view of specific types of relationships between parties, showing how party roles are involved in these relationships.
 
 11. **Entities.png**: Contains definitions for all entities used in the other diagrams.
     ![Entities Diagram](ERD/Entities.png)
 
-### Diagram Explanations
-
-- **Party Diagrams**: These diagrams (Party.png, PartyRole.png, PartyRelationship.png) show how parties are structured and how they relate to each other. Parties can be people or organizations, and they can play various roles in relationships with other parties.
-
-- **Contact Mechanism Diagrams**: These diagrams (PartyContactMechanism.png, ContactMechanism.png, PostalAddressInformation.png) illustrate how contact information is stored and associated with parties. Contact mechanisms can include email addresses, phone numbers, postal addresses, and more.
-
-- **Communication Event Diagrams**: These diagrams (CommunicationEvent.png, CommunicationEventFollowUp.png) show how communications between parties are recorded, including the purpose, status, and type of communication, as well as any follow-up actions.
-
-- **Facility Diagrams**: The Facility.png diagram depicts physical locations and how they relate to parties and contact mechanisms.
-
-- **Entity Definitions**: The Entities.png file contains definitions for all entities used in the other diagrams, providing a central reference for entity structures.
+    This diagram provides a central reference for all entity structures used in the database, showing their attributes and relationships.
 
 ## Usage
 
