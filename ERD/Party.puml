@@ -9,11 +9,11 @@ skinparam linetype ortho
 !include Entities.puml!party_classification
 !include Entities.puml!party_classification_type
 !include Entities.puml!party_contact_mechanism
-!include Entities.puml!party_contact_mechanism_type
+!include Entities.puml!party_contact_mechanism_purpose_type
 !include Entities.puml!party_id
-!include Entities.puml!party_id_type
+!include Entities.puml!id_type
 !include Entities.puml!party_name
-!include Entities.puml!party_name_type
+!include Entities.puml!name_type
 !include Entities.puml!party_relationship
 !include Entities.puml!party_relationship_type
 !include Entities.puml!party_role
@@ -30,9 +30,9 @@ party ||..|{ party_type
 
 
 party_classification ||..|{ party_classification_type
-party_contact_mechanism ||..|{ party_contact_mechanism_type
-party_id ||..|{ party_id_type
-party_name ||..|{ party_name_type
+party_contact_mechanism ||..|{ party_contact_mechanism_purpose_type
+party_id ||..|{ id_type
+party_name ||..|{ name_type
 party_relationship ||..|{ party_relationship_type
 party_role ||..|{ party_role_type
 

@@ -68,15 +68,15 @@ entity party_contact_mechanism_purpose {}
 
 entity party_contact_mechanism_purpose_type {}
 
-entity PartyContactMechanismType {}
+entity communication_event_status_type {}
 
 entity party_id {}
 
-entity PartyIdType{}
+entity id_type{}
 
 entity party_name {}
 
-entity PartyNameType {}
+entity name_type {}
 
 entity party_relationship {}
 
@@ -92,5 +92,5 @@ entity party_type {}
 entity priority_type{}
 
 entity valid_contact_mechanism_role {}
-entity WorkEffort {}
+entity work_effort {}
 @enduml

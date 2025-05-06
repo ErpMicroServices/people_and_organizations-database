@@ -7,6 +7,7 @@ skinparam linetype ortho
 
 !include Entities.puml!contact_mechanism
 !include Entities.puml!facility
+!include Entities.puml!facility_contact_mechanism
 !include Entities.puml!facility_role
 !include Entities.puml!facility_role_type
 !include Entities.puml!facility_type
