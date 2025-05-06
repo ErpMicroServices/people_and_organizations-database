@@ -4,10 +4,13 @@
 
 ' avoid problems with angled crows feet
 skinparam linetype ortho
-!include Entities.puml!party
-!include Entities.puml!party_role
-!include Entities.puml!party_role_type
-!include Entities.puml!party_relationship
+
+' Define only the entities used in this diagram
+entity party {}
+entity party_role {}
+entity party_role_type {}
+entity party_relationship {}
+entity party_relationship_type {}
 
 party ||..|{ party_role
 party_role_type ||..|{ party_role

@@ -5,11 +5,13 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!geographic_boundary
-!include Entities.puml!geographic_boundary_association
-!include Entities.puml!geographic_boundary_type
-!include Entities.puml!party
-!include Entities.puml!party_postal_address
+' Define only the entities used in this diagram
+entity party {}
+entity party_postal_address {}
+entity postal_address {}
+entity geographic_boundary {}
+entity geographic_boundary_association {}
+entity geographic_boundary_type {}
 
 party ||..|{ party_postal_address
 party_postal_address }|..|| postal_address

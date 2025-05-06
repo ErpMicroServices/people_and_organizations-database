@@ -14,7 +14,7 @@
     "build:us_zip_codes_sql": "mkdir -p build;node data_massagers/create_us_zip_codes.js;",
     "build:database": "npm run build:cities_sql;npm run build:us_zip_codes_sql;liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
     "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/people_and_organizations-database; yes | docker volume prune",
-    "createDiagrams": "for diagram in ERD/*.puml; do base_name=\"${diagram%.*}\"; puml generate ${base_name}.puml -o ${base_name}.png; done;",
+    "createDiagrams": "for diagram in ERD/*.puml; do base_name=\"${diagram%.*}\"; npx puml generate ${base_name}.puml -o ${base_name}.png; done;",
     "update_database": "liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/people_and_organizations' --username=people_and_organizations --password=people_and_organizations update",
     "push": "docker push erpmicroservices/people_and_organizations-database:latest",
     "run:docker": "docker run -p 5432:5432 -d erpmicroservices/people_and_organizations-database",
@@ -31,24 +31,24 @@
   "homepage": "https://github.com/ErpMicroServices/party-database#readme",
   "dependencies": {
     "liquibase": "^4.28.1",
-    "moment": "^2.29.4",
-    "node-plantuml": "^0.9.0",
-    "pg-promise": "^10.9.2",
-    "typescript": "^5.7.2"
+    "moment": "^2.30.1",
+    "node-plantuml-back": "^1.1.4",
+    "pg-promise": "^10.15.4",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/core": "^7.27.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/register": "^7.12.10",
-    "chai": "^4.1.2",
-    "csv-parse": "^4.15.0",
+    "@babel/preset-env": "^7.27.1",
+    "@babel/register": "^7.27.1",
+    "chai": "^4.5.0",
+    "csv-parse": "^4.16.3",
     "cucumber": "^7.0.0-rc.0",
-    "graphql": "^15.5.0",
-    "graphql-tag": "^2.11.0",
-    "node-fetch": "^2.6.7",
-    "stream-transform": "^2.0.4",
+    "graphql": "^15.10.1",
+    "graphql-tag": "^2.12.6",
+    "node-fetch": "^2.7.0",
+    "stream-transform": "^2.1.3",
     "uuid": "^8.3.2"
   }
 }

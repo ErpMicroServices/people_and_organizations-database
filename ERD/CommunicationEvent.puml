@@ -5,17 +5,18 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!kase
-!include Entities.puml!communication_event
-!include Entities.puml!communication_event_purpose
-!include Entities.puml!communication_event_purpose_type
-!include Entities.puml!communication_event_role
-!include Entities.puml!communication_event_role_type
-!include Entities.puml!communication_event_status_type
-!include Entities.puml!communication_event_type
-!include Entities.puml!contact_mechanism_type
-!include Entities.puml!party
-!include Entities.puml!party_relationship
+' Define only the entities used in this diagram
+entity communication_event {}
+entity communication_event_type {}
+entity communication_event_purpose {}
+entity party_relationship {}
+entity contact_mechanism_type {}
+entity communication_event_role {}
+entity communication_event_status_type {}
+entity kase {}
+entity communication_event_role_type {}
+entity party {}
+entity communication_event_purpose_type {}
 
 communication_event }|..|| communication_event_type
 communication_event ||..|{ communication_event_purpose
@@ -23,7 +24,7 @@ communication_event }|..|| party_relationship
 communication_event }|..|| contact_mechanism_type
 communication_event ||..|{ communication_event_role
 communication_event ||..|{ communication_event_status_type
-communication_event ||..|{ kase
+communication_event }|..|| kase
 
 communication_event_role }|..|| communication_event_role_type
 communication_event_role }|..|| party

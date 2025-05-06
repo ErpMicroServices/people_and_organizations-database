@@ -5,15 +5,16 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!case_role
-!include Entities.puml!case_role_type
-!include Entities.puml!case_type
-!include Entities.puml!communication_event
-!include Entities.puml!communication_event_purpose
-!include Entities.puml!communication_event_work_effort
-!include Entities.puml!kase
-!include Entities.puml!party
-!include Entities.puml!work_effort
+' Define only the entities used in this diagram
+entity kase {}
+entity case_type {}
+entity case_role {}
+entity communication_event {}
+entity case_role_type {}
+entity party {}
+entity communication_event_purpose {}
+entity communication_event_work_effort {}
+entity work_effort {}
 
 'note top of work_effort : This reference will be via UUID, since work effort will be in a different database
 

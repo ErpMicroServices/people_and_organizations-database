@@ -5,20 +5,21 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!party
-!include Entities.puml!party_classification
-!include Entities.puml!party_classification_type
-!include Entities.puml!party_contact_mechanism
-!include Entities.puml!party_contact_mechanism_purpose_type
-!include Entities.puml!party_id
-!include Entities.puml!id_type
-!include Entities.puml!party_name
-!include Entities.puml!name_type
-!include Entities.puml!party_relationship
-!include Entities.puml!party_relationship_type
-!include Entities.puml!party_role
-!include Entities.puml!party_role_type
-!include Entities.puml!party_type
+' Define only the entities used in this diagram
+entity party {}
+entity party_classification {}
+entity party_contact_mechanism {}
+entity party_id {}
+entity party_name {}
+entity party_relationship {}
+entity party_role {}
+entity party_type {}
+entity party_classification_type {}
+entity party_contact_mechanism_purpose_type {}
+entity id_type {}
+entity name_type {}
+entity party_relationship_type {}
+entity party_role_type {}
 
 party ||..|{ party_classification
 party ||..|{ party_contact_mechanism

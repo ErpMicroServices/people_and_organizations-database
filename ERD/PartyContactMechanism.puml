@@ -5,12 +5,13 @@
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-!include Entities.puml!party
-!include Entities.puml!party_contact_mechanism
-!include Entities.puml!contact_mechanism
-!include Entities.puml!contact_mechanism_type
-!include Entities.puml!party_contact_mechanism_purpose
-!include Entities.puml!party_contact_mechanism_purpose_type
+' Define only the entities used in this diagram
+entity party_contact_mechanism {}
+entity contact_mechanism {}
+entity party {}
+entity party_contact_mechanism_purpose {}
+entity contact_mechanism_type {}
+entity party_contact_mechanism_purpose_type {}
 
 party_contact_mechanism }|..|| contact_mechanism
 party_contact_mechanism }|..|| party
