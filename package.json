@@ -33,7 +33,7 @@
     "liquibase": "^4.28.1",
     "moment": "^2.30.1",
     "node-plantuml-back": "^1.1.4",
-    "pg-promise": "^10.15.4",
+    "pg-promise": "^11.5.5",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
