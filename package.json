@@ -8,17 +8,15 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "build": "npm run build:database; npm run build:docker",
-    "build:docker": "docker build --tag erpmicroservices/people_and_organizations-database --rm .",
-    "build:cities_sql": "mkdir -p build;node data_massagers/create_us_cities_sql.js",
-    "build:us_zip_codes_sql": "mkdir -p build;node data_massagers/create_us_zip_codes.js;",
-    "build:database": "npm run build:cities_sql;npm run build:us_zip_codes_sql;liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
-    "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/people_and_organizations-database; yes | docker volume prune",
-    "createDiagrams": "for diagram in ERD/*.puml; do base_name=\"${diagram%.*}\"; npx puml generate ${base_name}.puml -o ${base_name}.png; done;",
-    "update_database": "liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/people_and_organizations' --username=people_and_organizations --password=people_and_organizations update",
-    "push": "docker push erpmicroservices/people_and_organizations-database:latest",
-    "run:docker": "docker run -p 5432:5432 -d erpmicroservices/people_and_organizations-database",
-    "start": "docker run --publish 5432:5432 --name people_and_organizations-database erpmicroservices/people_and_organizations-database",
+    "build": "npm run build:database && npm run build:docker",
+    "build:docker": "docker build --tag erpmicroservices/people-and-organizations-database --rm .",
+    "build:database": "mkdir -p build && cat sql/V_peop*.sql > build/database_up.sql",
+    "clean": "rm -rf build && rm -rf generated-sql && yes | docker rmi --force erpmicroservices/people-and-organizations-database && yes | docker volume prune && docker rm people-and-organizations-database",
+    "migrate": "npx flyway -configFiles=flyway.conf -url=jdbc:postgresql://${DB_HOST:-localhost}:${DB_PORT:-5432}/${DB_NAME:-people_and_organizations} -user=${DB_USER:-people_and_organizations} -password=${DB_PASSWORD:-people_and_organizations} migrate",
+    "migrate:info": "npx flyway -configFiles=flyway.conf -url=jdbc:postgresql://${DB_HOST:-localhost}:${DB_PORT:-5432}/${DB_NAME:-people_and_organizations} -user=${DB_USER:-people_and_organizations} -password=${DB_PASSWORD:-people_and_organizations} info",
+    "migrate:validate": "npx flyway -configFiles=flyway.conf -url=jdbc:postgresql://${DB_HOST:-localhost}:${DB_PORT:-5432}/${DB_NAME:-people_and_organizations} -user=${DB_USER:-people_and_organizations} -password=${DB_PASSWORD:-people_and_organizations} validate",
+    "push": "docker push erpmicroservices/people-and-organizations-database:latest",
+    "start": "docker run --publish 5432:5432 --name people-and-organizations-database erpmicroservices/people-and-organizations-database",
     "test": "cucumber-js --tags @party_database  --require-module @babel/register --require-module @babel/polyfill  -r ./features ../people_and_organizations-features"
   },
   "repository": {
@@ -45,6 +43,8 @@
     "chai": "^4.5.0",
     "csv-parse": "^4.16.3",
     "cucumber": "^7.0.0-rc.0",
+    "dotenv": "^16.0.3",
+    "node-flywaydb": "^3.0.7",
     "stream-transform": "^2.1.3",
     "uuid": "^8.3.2"
   }

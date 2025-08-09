@@ -1,10 +1,12 @@
-FROM postgres:15
+FROM postgres:latest
 
 ENV POSTGRES_DB=people_and_organizations
 ENV POSTGRES_USER=people_and_organizations
 ENV POSTGRES_PASSWORD=people_and_organizations
 
-RUN apt-get update &&  \
-    apt-get install -y postgresql-contrib
+# Copy all migration files to init directory
+# PostgreSQL will execute these in alphabetical order on first run
+COPY sql/V_peop*.sql /docker-entrypoint-initdb.d/
 
-COPY build/database_up.sql /docker-entrypoint-initdb.d/
+# Ensure the container uses UTF-8 encoding
+ENV LANG=en_US.utf8
